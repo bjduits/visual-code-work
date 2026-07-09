@@ -1,0 +1,10 @@
+{
+  "BTC": {
+    "avg_price": 25000,
+    "quantity": 0.02
+  },
+  "GME": {
+    "avg_price": 100,
+    "quantity": 10
+  }
+}
