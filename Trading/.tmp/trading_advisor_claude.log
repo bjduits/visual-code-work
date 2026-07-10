@@ -1,7 +1,0 @@
-2026-07-10 11:27:02,205 - ERROR - Claude request failed: ANTHROPIC_API_KEY is required in .env to use Claude.
-2026-07-10 11:29:39,873 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
-2026-07-10 11:29:39,874 - ERROR - Claude request failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cct9BZHa451SBJ31eWtBF'}
-2026-07-10 12:05:21,199 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-10 12:05:21,227 - INFO - Claude advisor output saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_advisor_claude_output.txt
-2026-07-10 12:06:04,467 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-10 12:06:04,482 - INFO - Claude advisor output saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_advisor_claude_output.txt
