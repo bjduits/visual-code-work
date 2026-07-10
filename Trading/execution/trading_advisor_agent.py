@@ -18,7 +18,7 @@ from typing import Dict, List, Optional
 from dotenv import load_dotenv
 
 # Load environment variables
-env_path = Path(__file__).parent.parent / ".env"
+env_path = Path(__file__).parent.parent.parent / ".env"
 load_dotenv(env_path)
 
 root_dir = Path(__file__).parent.parent

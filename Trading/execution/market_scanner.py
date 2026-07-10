@@ -40,7 +40,7 @@ from gather_trading_research import (
     tmp_dir,
 )
 
-env_path = Path(__file__).parent.parent / ".env"
+env_path = Path(__file__).parent.parent.parent / ".env"
 load_dotenv(env_path)
 
 logging.basicConfig(

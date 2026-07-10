@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 """
-Free, offline AI trading advisor using a local model via the gpt4all package.
+AI Trading Advisor using Claude (Anthropic API).
 
-Reads USE_LOCAL_LLM and GPT4ALL_MODEL_PATH from .env and uses the existing
-trading_research_report.json as input. No API key or network call to a
-third-party LLM provider is required -- inference runs entirely on this
-machine. The model file is downloaded automatically on first run (from
-gpt4all's own official model list) and cached under ~/.cache/gpt4all.
+Uses the existing trading_research_report.json as input and generates an
+advisor summary via the Anthropic Messages API.
 """
 
 import os
@@ -16,7 +13,15 @@ import logging
 from pathlib import Path
 from typing import Dict
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 from dotenv import load_dotenv
+
+try:
+    import anthropic
+except ImportError:
+    anthropic = None
 
 env_path = Path(__file__).parent.parent.parent / ".env"
 load_dotenv(env_path)
@@ -29,17 +34,18 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(tmp_dir / "trading_advisor_local.log"),
+        logging.FileHandler(tmp_dir / "trading_advisor_claude.log"),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
 REPORT_PATH = tmp_dir / "trading_research_report.json"
-OUTPUT_PATH = tmp_dir / "trading_advisor_local_output.txt"
-
-USE_LOCAL_LLM = os.getenv("USE_LOCAL_LLM", "0") == "1"
-MODEL_NAME = os.getenv("GPT4ALL_MODEL_PATH", "")
+OUTPUT_PATH = tmp_dir / "trading_advisor_claude_output.txt"
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+# Defaults to Opus (most capable). For a cheaper/faster model, set CLAUDE_MODEL
+# in .env to e.g. "claude-sonnet-5" or "claude-haiku-4-5".
+CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-opus-4-8")
 
 PROMPT_TEMPLATE = (
     "You are a trading research advisor. Analyze the following asset data for "
@@ -69,42 +75,29 @@ def build_prompt(report: Dict) -> str:
     return "\n".join(lines)
 
 
-def run_local_llm(prompt: str) -> str:
-    try:
-        from gpt4all import GPT4All
-    except ImportError:
-        raise ImportError(
-            "Install the local LLM package with: python -m pip install gpt4all"
-        )
+def run_claude(prompt: str) -> str:
+    if anthropic is None:
+        raise ImportError("Install the Anthropic SDK with: python -m pip install anthropic")
+    if not ANTHROPIC_API_KEY:
+        raise ValueError("ANTHROPIC_API_KEY is required in .env to use Claude.")
 
-    if not MODEL_NAME:
-        raise ValueError(
-            "GPT4ALL_MODEL_PATH is not set in .env. Set it to an official gpt4all "
-            "model filename, e.g. Llama-3.2-3B-Instruct-Q4_0.gguf"
-        )
-
-    logger.info(
-        f"Loading local model '{MODEL_NAME}' (downloads automatically on first "
-        "run and is cached under ~/.cache/gpt4all -- this can take a while)..."
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    response = client.messages.create(
+        model=CLAUDE_MODEL,
+        max_tokens=2048,
+        system="You are a trading research advisor. This is not financial advice.",
+        messages=[{"role": "user", "content": prompt}],
     )
-    model = GPT4All(MODEL_NAME, allow_download=True, n_ctx=4096)
-
-    with model.chat_session(system_prompt="You are a trading research advisor."):
-        response = model.generate(prompt, max_tokens=600, temp=0.7)
-    return response.strip()
+    return "".join(block.text for block in response.content if block.type == "text").strip()
 
 
 def save_output(content: str) -> None:
     with open(OUTPUT_PATH, "w", encoding="utf-8") as fh:
         fh.write(content)
-    logger.info(f"Local advisor output saved to {OUTPUT_PATH}")
+    logger.info(f"Claude advisor output saved to {OUTPUT_PATH}")
 
 
 def main() -> None:
-    if not USE_LOCAL_LLM:
-        logger.error("USE_LOCAL_LLM is not enabled. Set USE_LOCAL_LLM=1 in .env to use this script.")
-        sys.exit(1)
-
     try:
         report = load_report()
     except Exception as exc:
@@ -113,9 +106,9 @@ def main() -> None:
 
     prompt = build_prompt(report)
     try:
-        answer = run_local_llm(prompt)
+        answer = run_claude(prompt)
     except Exception as exc:
-        logger.error(f"Local LLM request failed: {exc}")
+        logger.error(f"Claude request failed: {exc}")
         return
 
     save_output(answer)
