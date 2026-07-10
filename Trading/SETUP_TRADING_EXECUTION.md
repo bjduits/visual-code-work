@@ -8,6 +8,7 @@ This guide helps you set up the short-term trading research and execution plan t
 - `Trading/execution/trading_execution_template.py`
 - `Trading/execution/trading_advisor_agent.py`
 - `Trading/execution/trading_advisor_openai.py`
+- `Trading/execution/trading_advisor_local.py`
 - `Trading/execution/market_scanner.py`
 - `.tmp/trading_research_report.json`
 - `.tmp/trading_research_summary.txt`
@@ -155,17 +156,40 @@ python -m pip install openai
 
 3. The advisor can use OpenAI for richer guidance once the script is extended to call the OpenAI API.
 
-### Local LLM option (free)
+### Local LLM option (free, fully offline)
 
-1. Install `llama-cpp-python`:
+1. Install `gpt4all` (ships prebuilt Windows wheels, no C++ compiler needed):
 
 ```powershell
-python -m pip install llama-cpp-python
+python -m pip install gpt4all
 ```
 
-2. Set `USE_LOCAL_LLM=1` and `GPT4ALL_MODEL_PATH` in `.env`.
+2. In `.env`, set `USE_LOCAL_LLM=1` and `GPT4ALL_MODEL_PATH` to an official
+   gpt4all model filename (not a local file path). A good lightweight default:
 
-3. Use a free local LLM model binary, such as GPT4All, for offline advisor support.
+```text
+USE_LOCAL_LLM=1
+GPT4ALL_MODEL_PATH=Llama-3.2-3B-Instruct-Q4_0.gguf
+```
+
+   The model (~1.9 GB) downloads automatically on first run and is cached
+   under `~/.cache/gpt4all` -- no manual download needed. For an even
+   smaller/faster model use `Llama-3.2-1B-Instruct-Q4_0.gguf`; for higher
+   quality (more RAM/disk) use `Meta-Llama-3-8B-Instruct.Q4_0.gguf`. Run
+   `python -c "from gpt4all import GPT4All; [print(m['filename']) for m in GPT4All.list_models()]"`
+   to see the full current list.
+
+3. Run the local advisor:
+
+```powershell
+cd c:\Users\Bram-JanDuits\visual-code-work
+python Trading\execution\trading_advisor_local.py
+```
+
+This writes `.tmp/trading_advisor_local_output.txt`. No API key and no
+network calls to a third-party LLM provider are required -- inference runs
+entirely on your machine (only the one-time model download talks to the
+network).
 
 ## What each script does
 

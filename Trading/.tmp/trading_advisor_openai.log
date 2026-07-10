@@ -1,0 +1,1 @@
+2026-07-10 10:43:43,170 - ERROR - OpenAI request failed: OPENAI_API_KEY is required in .env to use OpenAI.

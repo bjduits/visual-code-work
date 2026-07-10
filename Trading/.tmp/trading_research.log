@@ -32,3 +32,10 @@
 2026-07-10 10:36:32,227 - INFO - Fetched 10 quotes for screener 'most_actives'
 2026-07-10 10:36:37,006 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_report.json
 2026-07-10 10:36:37,007 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_summary.txt
+2026-07-10 10:39:09,479 - INFO - Fetched crypto universe of 100 assets
+2026-07-10 10:39:09,878 - INFO - Fetched 15 trending crypto ids
+2026-07-10 10:39:10,894 - INFO - Fetched 10 quotes for screener 'day_gainers'
+2026-07-10 10:39:15,788 - INFO - Fetched 10 quotes for screener 'day_losers'
+2026-07-10 10:39:20,787 - INFO - Fetched 10 quotes for screener 'most_actives'
+2026-07-10 10:39:25,751 - INFO - Report saved to c:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_report.json
+2026-07-10 10:39:25,751 - INFO - Summary saved to c:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_summary.txt

@@ -1,4 +1,4 @@
-Trading Advisor Summary - 2026-07-10 08:08 UTC
+Trading Advisor Summary - 2026-07-10 08:41 UTC
 
 Short-Term Watchlist (week):
 - PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%

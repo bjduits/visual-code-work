@@ -1,44 +1,44 @@
-Market Scanner Report - 2026-07-10 08:36 UTC
+Market Scanner Report - 2026-07-10 08:39 UTC
 
 This is an unfiltered market discovery scan, NOT limited to CRYPTO_FOCUS/STOCK_FOCUS.
 Verify liquidity, fees, and actual platform availability before acting on anything here.
 This is not financial advice.
 
 Crypto - Trending (search interest):
-- Cash Cat (CASHCAT) [Coinmerce]: $0.154192 | 24h: 51.76% | 7d: 129612459.13% | momentum: strong uptrend | risk: high | score: 91
-- The Black Bull (ANSEM) [Coinmerce]: $0.214545 | 24h: -27.59% | 7d: 24.96% | momentum: neutral | risk: high | score: 51
-- SKALE (SKL) [Coinmerce]: $0.00582361 | 24h: 65.74% | 7d: 60.68% | momentum: strong uptrend | risk: high | score: 91
-- LAB (LAB) [Coinmerce]: $1.12 | 24h: -3.9% | 7d: -87.77% | momentum: strong downtrend | risk: high | score: 24
-- Arbitrum (ARB) [Coinmerce]: $0.093779 | 24h: 8.87% | 7d: 20.04% | momentum: strong uptrend | risk: high | score: 88
-- Solana (SOL) [Coinmerce]: $79.3 | 24h: 1.38% | 7d: -2.02% | momentum: neutral | risk: low | score: 51
-- Bitcoin (BTC) [Coinmerce]: $64265 | 24h: 2.02% | 7d: 4.22% | momentum: moderate uptrend | risk: low | score: 59
-- Ethereum (ETH) [Coinmerce]: $1785.68 | 24h: 1.71% | 7d: 3.99% | momentum: moderate uptrend | risk: low | score: 57
-- DeXe (DEXE) [Coinmerce]: $35.2 | 24h: 22.9% | 7d: 55.61% | momentum: strong uptrend | risk: high | score: 91
-- EVAA Protocol (EVAA) [Coinmerce]: $2.67 | 24h: 7.25% | 7d: 181.24% | momentum: strong uptrend | risk: high | score: 84
+- Cash Cat (CASHCAT) [Coinmerce]: $0.1546 | 24h: 51.96% | 7d: 129955914.99% | momentum: strong uptrend | risk: high | score: 91
+- The Black Bull (ANSEM) [Coinmerce]: $0.2119 | 24h: -29.03% | 7d: 23.42% | momentum: neutral | risk: high | score: 51
+- SKALE (SKL) [Coinmerce]: $0.00579557 | 24h: 65.05% | 7d: 59.9% | momentum: strong uptrend | risk: high | score: 91
+- LAB (LAB) [Coinmerce]: $1.13 | 24h: -3.44% | 7d: -87.71% | momentum: strong downtrend | risk: high | score: 25
+- Arbitrum (ARB) [Coinmerce]: $0.093716 | 24h: 8.79% | 7d: 19.96% | momentum: strong uptrend | risk: medium | score: 87
+- Solana (SOL) [Coinmerce]: $79.29 | 24h: 1.37% | 7d: -2.03% | momentum: neutral | risk: low | score: 51
+- Bitcoin (BTC) [Coinmerce]: $64146 | 24h: 1.83% | 7d: 4.03% | momentum: moderate uptrend | risk: low | score: 58
+- Ethereum (ETH) [Coinmerce]: $1783.85 | 24h: 1.61% | 7d: 3.88% | momentum: moderate uptrend | risk: low | score: 57
+- DeXe (DEXE) [Coinmerce]: $35.23 | 24h: 22.99% | 7d: 55.72% | momentum: strong uptrend | risk: high | score: 91
+- EVAA Protocol (EVAA) [Coinmerce]: $2.67 | 24h: 7.33% | 7d: 181.43% | momentum: strong uptrend | risk: high | score: 84
 
 Crypto - Top Gainers (24h, HOT):
-- DeXe (DEXE) [Coinmerce]: $35.2 | 24h: 22.9% | 7d: 55.61% | momentum: strong uptrend | risk: high | score: 91
-- Morpho (MORPHO) [Coinmerce]: $2.29 | 24h: 11.11% | 7d: 13.8% | momentum: strong uptrend | risk: high | score: 83
-- Arbitrum (ARB) [Coinmerce]: $0.093779 | 24h: 8.87% | 7d: 20.04% | momentum: strong uptrend | risk: high | score: 88
-- Aave (AAVE) [Coinmerce]: $94.81 | 24h: 6.99% | 7d: 10.32% | momentum: strong uptrend | risk: medium | score: 74
-- Zcash (ZEC) [Coinmerce]: $499.91 | 24h: 6.6% | 7d: 13.73% | momentum: strong uptrend | risk: medium | score: 77
-- Stellar (XLM) [Coinmerce]: $0.192437 | 24h: 6.15% | 7d: -3.5% | momentum: neutral | risk: medium | score: 60
+- DeXe (DEXE) [Coinmerce]: $35.23 | 24h: 22.99% | 7d: 55.72% | momentum: strong uptrend | risk: high | score: 91
+- Morpho (MORPHO) [Coinmerce]: $2.29 | 24h: 11.18% | 7d: 13.87% | momentum: strong uptrend | risk: high | score: 83
+- Arbitrum (ARB) [Coinmerce]: $0.093716 | 24h: 8.79% | 7d: 19.96% | momentum: strong uptrend | risk: medium | score: 87
+- Aave (AAVE) [Coinmerce]: $94.74 | 24h: 6.91% | 7d: 10.23% | momentum: strong uptrend | risk: medium | score: 74
+- Zcash (ZEC) [Coinmerce]: $499.85 | 24h: 6.59% | 7d: 13.72% | momentum: strong uptrend | risk: medium | score: 77
+- Stellar (XLM) [Coinmerce]: $0.192664 | 24h: 6.27% | 7d: -3.38% | momentum: neutral | risk: medium | score: 60
 - Uniswap (UNI) [Coinmerce]: $3.56 | 24h: 6.13% | 7d: 11.05% | momentum: strong uptrend | risk: medium | score: 74
-- Gram (prev. Toncoin) (GRAM) [Coinmerce]: $1.67 | 24h: 5.08% | 7d: 0.17% | momentum: neutral | risk: medium | score: 61
-- ADI (ADI) [Coinmerce]: $6.28 | 24h: 4.8% | 7d: 8.98% | momentum: moderate uptrend | risk: medium | score: 67
-- JUST (JST) [Coinmerce]: $0.099694 | 24h: 3.71% | 7d: 12.28% | momentum: strong uptrend | risk: medium | score: 69
+- ADI (ADI) [Coinmerce]: $6.28 | 24h: 4.79% | 7d: 8.97% | momentum: moderate uptrend | risk: medium | score: 67
+- Gram (prev. Toncoin) (GRAM) [Coinmerce]: $1.67 | 24h: 4.78% | 7d: -0.11% | momentum: neutral | risk: low | score: 60
+- JUST (JST) [Coinmerce]: $0.099705 | 24h: 3.76% | 7d: 12.29% | momentum: strong uptrend | risk: medium | score: 69
 
 Crypto - Top Losers (24h, NOT):
-- Beldex (BDX) [Coinmerce]: $0.09008 | 24h: -7.26% | 7d: 2.57% | momentum: neutral | risk: medium | score: 38
-- 币安人生 (BinanceLife) (币安人生) [Coinmerce]: $0.677751 | 24h: -3.35% | 7d: -1.85% | momentum: neutral | risk: low | score: 43
+- Beldex (BDX) [Coinmerce]: $0.089901 | 24h: -7.44% | 7d: 2.37% | momentum: neutral | risk: medium | score: 38
+- 币安人生 (BinanceLife) (币安人生) [Coinmerce]: $0.67788 | 24h: -3.33% | 7d: -1.83% | momentum: neutral | risk: low | score: 43
 - Figure Heloc (FIGR_HELOC) [Coinmerce]: $1.002 | 24h: -3.05% | 7d: -3.49% | momentum: moderate downtrend | risk: low | score: 42
-- Monero (XMR) [Coinmerce]: $317.42 | 24h: -2.14% | 7d: -0.25% | momentum: neutral | risk: low | score: 46
-- Jupiter (JUP) [Coinmerce]: $0.210539 | 24h: -1.96% | 7d: -13.45% | momentum: moderate downtrend | risk: high | score: 34
-- HTX DAO (HTX) [Coinmerce]: $1.84e-06 | 24h: -0.99% | 7d: 10.87% | momentum: neutral | risk: medium | score: 59
-- Rain (RAIN) [Coinmerce]: $0.01441863 | 24h: -0.86% | 7d: -7.43% | momentum: moderate downtrend | risk: medium | score: 42
-- Gate (GT) [Coinmerce]: $6.78 | 24h: -0.74% | 7d: 1.45% | momentum: neutral | risk: low | score: 50
-- Audiera (BEAT) [Coinmerce]: $2.17 | 24h: -0.6% | 7d: -25.3% | momentum: moderate downtrend | risk: high | score: 29
-- Pi Network (PI) [Coinmerce]: $0.100147 | 24h: -0.6% | 7d: -15.27% | momentum: moderate downtrend | risk: high | score: 34
+- Jupiter (JUP) [Coinmerce]: $0.210413 | 24h: -2.02% | 7d: -13.5% | momentum: strong downtrend | risk: high | score: 33
+- Monero (XMR) [Coinmerce]: $317.42 | 24h: -1.95% | 7d: -0.25% | momentum: neutral | risk: low | score: 47
+- HTX DAO (HTX) [Coinmerce]: $1.84e-06 | 24h: -1.0% | 7d: 10.86% | momentum: neutral | risk: medium | score: 58
+- Rain (RAIN) [Coinmerce]: $0.01441281 | 24h: -0.9% | 7d: -7.47% | momentum: moderate downtrend | risk: medium | score: 42
+- Pi Network (PI) [Coinmerce]: $0.099946 | 24h: -0.8% | 7d: -15.44% | momentum: moderate downtrend | risk: high | score: 34
+- Pump.fun (PUMP) [Coinmerce]: $0.00151445 | 24h: -0.66% | 7d: -3.51% | momentum: moderate downtrend | risk: low | score: 46
+- Audiera (BEAT) [Coinmerce]: $2.17 | 24h: -0.57% | 7d: -25.27% | momentum: moderate downtrend | risk: high | score: 29
 
 Stocks - Day Gainers (HOT):
 - LASR (nLIGHT, Inc.) [Degiro.nl]: $74.71 | 1d: 27.32% | 7d: 7.31% | momentum: strong short-term bullish | risk: high | score: 77
