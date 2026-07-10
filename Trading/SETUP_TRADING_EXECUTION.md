@@ -7,7 +7,7 @@ This guide helps you set up the short-term trading research and execution plan t
 - `Trading/execution/gather_trading_research.py`
 - `Trading/execution/trading_execution_template.py`
 - `Trading/execution/trading_advisor_agent.py`
-- `Trading/execution/trading_advisor_openai.py`
+- `Trading/execution/trading_advisor_claude.py`
 - `Trading/execution/trading_advisor_local.py`
 - `Trading/execution/market_scanner.py`
 - `.tmp/trading_research_report.json`
@@ -35,19 +35,17 @@ py -3 -m pip install requests python-dotenv
 
 ### Optional AI advisor packages
 
-If you want to use the AI advisor with OpenAI:
+If you want to use the AI advisor with Claude (Anthropic):
 
 ```powershell
-python -m pip install openai
+python -m pip install anthropic
 ```
 
 If you want to use a free local LLM instead:
 
 ```powershell
-python -m pip install llama-cpp-python
+python -m pip install gpt4all
 ```
-
-You can also install GPT4All tooling if you prefer a local model binary.
 
 ## Step 2: Configure `.env`
 
@@ -61,7 +59,8 @@ TRADING_ADVISOR_USE_AIRTABLE=1
 AIRTABLE_API_KEY=your_airtable_api_key
 AIRTABLE_BASE_ID=your_airtable_base_id
 AIRTABLE_TABLE_NAME=TradingAdvice
-OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+CLAUDE_MODEL=claude-opus-4-8
 USE_LOCAL_LLM=0
 GPT4ALL_MODEL_PATH=path_to_your_gpt4all_model.bin
 TRADING_PLATFORM_NOTES=Coinmerce for bitcoin, Degiro.nl for stocks/minerals/metals
@@ -81,7 +80,8 @@ CURRENT_POSITIONS=BTC:25000:0.02,GME:100:10
 - `NEWSAPI_KEY` is optional. If you have a NewsAPI key, add it to enable news headlines.
 - `TRADING_ADVISOR_USE_AIRTABLE=1` enables Airtable sync.
 - `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID`, and `AIRTABLE_TABLE_NAME` configure the Airtable destination.
-- `OPENAI_API_KEY` is optional if you want to use OpenAI instead of a local model.
+- `ANTHROPIC_API_KEY` is optional if you want to use Claude instead of a local model. Get a key at `console.anthropic.com` (Settings > API Keys).
+- `CLAUDE_MODEL` (optional) overrides the model used by `trading_advisor_claude.py`; defaults to `claude-opus-4-8`. Cheaper options: `claude-sonnet-5` or `claude-haiku-4-5`.
 - `USE_LOCAL_LLM=1` enables the local LLM path; set `GPT4ALL_MODEL_PATH` to the model file.
 
 ## Step 3: Run the trading research script
@@ -144,17 +144,26 @@ The script will populate these fields when Airtable sync is enabled.
 
 ## AI advisor options
 
-### OpenAI option
+### Claude option
 
-1. Install `openai`:
+1. Install `anthropic`:
 
 ```powershell
-python -m pip install openai
+python -m pip install anthropic
 ```
 
-2. Add `OPENAI_API_KEY` to `.env`.
+2. Add `ANTHROPIC_API_KEY` to `.env` (get one at `console.anthropic.com` under
+   Settings > API Keys). Optionally set `CLAUDE_MODEL` to override the default
+   `claude-opus-4-8` (e.g. `claude-sonnet-5` or `claude-haiku-4-5` for lower cost).
 
-3. The advisor can use OpenAI for richer guidance once the script is extended to call the OpenAI API.
+3. Run the advisor:
+
+```powershell
+cd c:\Users\Bram-JanDuits\visual-code-work
+python Trading\execution\trading_advisor_claude.py
+```
+
+This writes `.tmp/trading_advisor_claude_output.txt`.
 
 ### Local LLM option (free, fully offline)
 

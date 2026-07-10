@@ -61,15 +61,92 @@ def load_report() -> Dict:
         return json.load(fh)
 
 
+SELL_SIGNAL_TO_ADVICE = {
+    "Recommend taking profit": "Sell",
+    "Consider partial profit taking": "Sell partial",
+    "Consider cutting losses": "Sell",
+    "Review position; possible stop-loss": "Sell",
+    "Consider selling to protect capital": "Sell",
+    "Hold and monitor": "Hold",
+}
+
+
+def compute_advice(held: bool, sell_signal: str, score: int) -> str:
+    if held:
+        return SELL_SIGNAL_TO_ADVICE.get(sell_signal, "Hold")
+    if score >= 65:
+        return "Buy"
+    if score >= 55:
+        return "Watch"
+    return "Avoid"
+
+
+# --- Dutch translations applied only to the values written to Airtable;
+# column names and internal logic keep using the English source strings. ---
+MOMENTUM_NL = {
+    "neutral": "neutraal",
+    "strong uptrend": "sterk stijgend",
+    "moderate uptrend": "gematigd stijgend",
+    "strong downtrend": "sterk dalend",
+    "moderate downtrend": "gematigd dalend",
+    "strong short-term bullish": "sterk bullish (korte termijn)",
+    "moderate bullish": "gematigd bullish",
+    "strong bearish": "sterk bearish",
+    "moderate bearish": "gematigd bearish",
+}
+LONG_TERM_NOTE_NL = {
+    "watch for trend confirmation": "wacht op trendbevestiging",
+    "positive long-term potential": "positief potentieel op lange termijn",
+    "high long-term risk": "hoog risico op lange termijn",
+    "unclear": "onduidelijk",
+}
+RISK_NL = {"low": "laag", "medium": "gemiddeld", "high": "hoog"}
+ADVICE_NL = {
+    "Buy": "Kopen",
+    "Watch": "Volgen",
+    "Avoid": "Vermijden",
+    "Sell": "Verkopen",
+    "Sell partial": "Gedeeltelijk verkopen",
+    "Hold": "Aanhouden",
+}
+SELL_SIGNAL_NL = {
+    "Not held": "Niet in bezit",
+    "Hold and monitor": "Aanhouden en volgen",
+    "Recommend taking profit": "Winst nemen aanbevolen",
+    "Consider partial profit taking": "Overweeg gedeeltelijke winstname",
+    "Consider cutting losses": "Overweeg verlies te beperken",
+    "Review position; possible stop-loss": "Positie herzien; mogelijke stop-loss",
+    "Consider selling to protect capital": "Overweeg te verkopen om kapitaal te beschermen",
+}
+
+# The investor funds trades primarily from EUR, with CHF held as a low-inflation
+# safe-haven reserve rather than routinely converted for day-to-day purchases.
+def compute_funding_advice(currency: str, fx_rates: Dict) -> str:
+    if currency == "EUR":
+        return "Rechtstreeks in EUR, geen wisselkoers nodig."
+    if currency == "USD":
+        rate = fx_rates.get("EURUSD")
+        rate_txt = f"1 EUR ≈ {rate:.3f} USD" if rate else "koers onbekend"
+        return f"Wissel EUR naar USD ({rate_txt}). Houd CHF liever aan als buffer/inflatiehedge."
+    if currency == "CHF":
+        rate = fx_rates.get("EURCHF")
+        rate_txt = f"1 EUR ≈ {rate:.3f} CHF" if rate else "koers onbekend"
+        return f"Kan direct vanuit uw CHF-buffer ({rate_txt}), of wissel EUR naar CHF."
+    return f"Wissel EUR naar {currency} (actuele koers controleren)."
+
+
 def build_advice(report: Dict) -> Dict:
     advice = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
+        "all": [],
         "short_term": [],
         "long_term": [],
         "risk_high": [],
         "risk_medium": [],
         "risk_low": [],
     }
+
+    fx_rates = report.get("fx_rates", {})
 
     for asset in report.get("crypto_analysis", []) + report.get("stock_analysis", []):
         symbol = asset.get("symbol")
@@ -81,15 +158,23 @@ def build_advice(report: Dict) -> Dict:
         est_profit = asset.get("estimated_profit_pct", 0.0)
         est_cost = asset.get("estimated_cost_pct", 0.0)
 
+        held = asset.get("held", False)
+        sell_signal = asset.get("sell_signal", "")
+        currency = asset.get("currency", "USD")
+
         entry = {
             "symbol": symbol,
             "name": name,
             "platform": asset.get("platform", "n/a"),
-            "held": asset.get("held", False),
+            "held": held,
             "quantity": asset.get("quantity"),
             "avg_price": asset.get("avg_price"),
+            "current_price": asset.get("current_price"),
+            "currency": currency,
+            "funding_advice": compute_funding_advice(currency, fx_rates),
             "unrealized_pct": asset.get("unrealized_pct"),
-            "sell_signal": asset.get("sell_signal", ""),
+            "sell_signal": sell_signal,
+            "advice": compute_advice(held, sell_signal, score),
             "short_term": short_note,
             "long_term": long_note,
             "risk": risk,
@@ -97,6 +182,8 @@ def build_advice(report: Dict) -> Dict:
             "estimated_profit_pct": est_profit,
             "estimated_cost_pct": est_cost,
         }
+
+        advice["all"].append(entry)
 
         if risk == "high":
             advice["risk_high"].append(entry)
@@ -123,7 +210,7 @@ def summarize_advice(advice: Dict) -> str:
     for item in sorted(advice["short_term"], key=lambda x: x["score"], reverse=True)[:10]:
         held_label = "Held" if item.get("held") else "Not held"
         lines.append(
-            f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
+            f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | advice={item.get('advice')} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
         )
 
     lines.append("")
@@ -131,7 +218,7 @@ def summarize_advice(advice: Dict) -> str:
     for item in sorted(advice["long_term"], key=lambda x: x["score"], reverse=True)[:10]:
         held_label = "Held" if item.get("held") else "Not held"
         lines.append(
-            f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
+            f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | advice={item.get('advice')} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
         )
 
     lines.append("")
@@ -160,7 +247,20 @@ def save_output(advice: Dict, summary_text: str) -> None:
     logger.info(f"Advisor summary saved to {SUMMARY_PATH}")
 
 
-def airtable_create_record(record: Dict) -> Optional[Dict]:
+def airtable_find_record_id(symbol: str) -> Optional[str]:
+    import requests
+
+    url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE_NAME}"
+    headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
+    escaped_symbol = symbol.replace("'", "\\'")
+    params = {"filterByFormula": f"{{Asset}} = '{escaped_symbol}'", "maxRecords": 1}
+    response = requests.get(url, headers=headers, params=params, timeout=15)
+    response.raise_for_status()
+    matches = response.json().get("records", [])
+    return matches[0]["id"] if matches else None
+
+
+def airtable_upsert_record(symbol: str, record: Dict) -> Optional[Dict]:
     if not AIRTABLE_ENABLED:
         return None
 
@@ -180,7 +280,11 @@ def airtable_create_record(record: Dict) -> Optional[Dict]:
         "Content-Type": "application/json",
     }
     payload = {"fields": record}
-    response = requests.post(url, headers=headers, json=payload, timeout=15)
+    existing_id = airtable_find_record_id(symbol)
+    if existing_id:
+        response = requests.patch(f"{url}/{existing_id}", headers=headers, json=payload, timeout=15)
+    else:
+        response = requests.post(url, headers=headers, json=payload, timeout=15)
     response.raise_for_status()
     return response.json()
 
@@ -191,30 +295,38 @@ def airtable_sync(advice: Dict) -> None:
         return
 
     logger.info("Syncing advisor data to Airtable...")
-    records = []
-    for section in ["short_term", "long_term"]:
-        for item in advice[section]:
-            records.append({
-                "Asset": item["symbol"],
-                "Name": item["name"],
-                "Platform": item.get("platform", "n/a"),
-                "Held": "Yes" if item.get("held") else "No",
-                "Quantity": item.get("quantity"),
-                "Avg Price": item.get("avg_price"),
-                "Unrealized %": item.get("unrealized_pct"),
-                "Sell Signal": item.get("sell_signal"),
-                "Short Term (week)": item["short_term"],
-                "Long Term (6 months)": item["long_term"],
-                "Risk": item["risk"],
-                "Score": item["score"],
-                "Estimated Profit %": item["estimated_profit_pct"],
-                "Estimated Cost %": item["estimated_cost_pct"],
-                "Source": "Research Report",
-            })
-
-    for record in records:
+    for item in advice["all"]:
+        symbol = item["symbol"]
+        current_price = item.get("current_price")
+        quantity = item.get("quantity")
+        current_value = (
+            current_price * quantity if current_price is not None and quantity is not None else None
+        )
+        sell_signal = item.get("sell_signal", "")
+        record = {
+            "Asset": item["symbol"],
+            "Name": item["name"],
+            "Platform": item.get("platform", "n/a"),
+            "Held": "Ja" if item.get("held") else "Nee",
+            "Quantity": item.get("quantity"),
+            "Avg Price": item.get("avg_price"),
+            "Current Price": current_price,
+            "Current Value": current_value,
+            "Currency": item.get("currency"),
+            "Funding Advice": item.get("funding_advice"),
+            "Unrealized %": item.get("unrealized_pct"),
+            "Sell Signal": SELL_SIGNAL_NL.get(sell_signal, sell_signal),
+            "Advice": ADVICE_NL.get(item.get("advice"), item.get("advice")),
+            "Short Term (week)": MOMENTUM_NL.get(item["short_term"], item["short_term"]),
+            "Long Term (6 months)": LONG_TERM_NOTE_NL.get(item["long_term"], item["long_term"]),
+            "Risk": RISK_NL.get(item["risk"], item["risk"]),
+            "Score": item["score"],
+            "Estimated Profit %": item["estimated_profit_pct"],
+            "Estimated Cost %": item["estimated_cost_pct"],
+            "Source": "Onderzoeksrapport",
+        }
         try:
-            airtable_create_record(record)
+            airtable_upsert_record(symbol, record)
         except Exception as exc:
             logger.error(f"Airtable record failed: {exc}")
 

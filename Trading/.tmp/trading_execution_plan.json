@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-07-10T09:01:39.701781+00:00",
-  "candidate_trades": [],
+  "generated_at": "2026-07-10T12:07:39.128284+00:00",
+  "candidate_trades": [
+    {
+      "symbol": "eth",
+      "name": "Ethereum",
+      "source": "CoinGecko",
+      "platform": "Coinmerce",
+      "score": 60,
+      "entry_note": "Review liquidity and confirm short-term trend before execution"
+    },
+    {
+      "symbol": "dot",
+      "name": "Polkadot",
+      "source": "CoinGecko",
+      "platform": "Coinmerce",
+      "score": 64,
+      "entry_note": "Review liquidity and confirm short-term trend before execution"
+    }
+  ],
   "notes": [
     "This file is a plan template. It does not place real orders.",
     "Add live broker/exchange API logic before using for execution.",

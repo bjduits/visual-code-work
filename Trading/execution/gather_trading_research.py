@@ -46,12 +46,15 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+CRYPTO_QUOTE_CURRENCY = os.getenv("CRYPTO_QUOTE_CURRENCY", "eur").lower()
+
+
 def fetch_crypto_data(coin_ids: List[str]) -> List[Dict]:
     import requests
 
     url = "https://api.coingecko.com/api/v3/coins/markets"
     params = {
-        "vs_currency": "usd",
+        "vs_currency": CRYPTO_QUOTE_CURRENCY,
         "ids": ",".join(coin_ids),
         "order": "market_cap_desc",
         "per_page": len(coin_ids) or 100,
@@ -64,6 +67,21 @@ def fetch_crypto_data(coin_ids: List[str]) -> List[Dict]:
     data = response.json()
     logger.info(f"Fetched crypto market data for {len(data)} assets")
     return data
+
+
+def fetch_fx_rate(pair_symbol: str) -> Optional[float]:
+    import requests
+
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{pair_symbol}"
+    params = {"range": "1d", "interval": "1d"}
+    try:
+        response = requests.get(url, params=params, headers=YAHOO_HEADERS, timeout=15)
+        response.raise_for_status()
+        meta = response.json().get("chart", {}).get("result", [{}])[0].get("meta", {})
+        return meta.get("regularMarketPrice")
+    except Exception as exc:
+        logger.warning(f"Could not fetch FX rate for {pair_symbol}: {exc}")
+        return None
 
 
 YAHOO_HEADERS = {
@@ -117,6 +135,7 @@ def fetch_stock_data(symbols: List[str]) -> List[Dict]:
             "regularMarketChangePercent": change_pct,
             "regularMarketVolume": meta.get("regularMarketVolume"),
             "marketCap": meta.get("marketCap"),
+            "currency": meta.get("currency", "USD"),
             "price_history": history,
         }
         enriched_quotes.append(quote)
@@ -283,6 +302,7 @@ def analyze_crypto(asset: Dict, positions: Dict[str, Dict]) -> Dict:
         "symbol": asset.get("symbol", ""),
         "name": asset.get("name", ""),
         "current_price": current,
+        "currency": CRYPTO_QUOTE_CURRENCY.upper(),
         "market_cap": market_cap,
         "volume": volume,
         "change_24h_pct": round(change_24h, 2),
@@ -380,6 +400,7 @@ def analyze_stock(asset: Dict, positions: Dict[str, Dict]) -> Dict:
         "symbol": asset.get("symbol", ""),
         "name": asset.get("longName") or asset.get("shortName") or asset.get("symbol"),
         "current_price": current,
+        "currency": asset.get("currency", "USD"),
         "market_cap": market_cap,
         "volume": volume,
         "change_pct": round(change_pct, 2),
@@ -496,12 +517,18 @@ def main():
         except Exception as exc:
             logger.error(f"News fetch failed: {exc}")
 
+    fx_rates = {
+        "EURUSD": fetch_fx_rate("EURUSD=X"),
+        "EURCHF": fetch_fx_rate("EURCHF=X"),
+    }
+
     summary = build_summary(crypto_results, stock_results, news_results)
     report = {
         "run_at": datetime.now(timezone.utc).isoformat(),
         "crypto_analysis": crypto_results,
         "stock_analysis": stock_results,
         "news": news_results,
+        "fx_rates": fx_rates,
     }
     save_report(report, summary)
 

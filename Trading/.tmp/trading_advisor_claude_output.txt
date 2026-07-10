@@ -1,58 +1,17 @@
-# Trading Research Advisor Summary
+Wat leuk dat je even meekijkt naar de markten, want er hangt momenteel een aangenaam optimistische sfeer. Op verschillende hoeken zien we mooie opwaartse bewegingen, vooral in de techsector, en dat geeft de bredere markt een prettige energie. Natuurlijk blijft het beeld gemengd, maar er zijn genoeg lichtpuntjes om met vertrouwen naar te kijken. Laten we samen rustig door de kansen en aandachtspunten lopen.
 
-*This is research analysis, not financial advice. All figures are model estimates, not guarantees.*
+Als we naar de sterkste koopkansen kijken, springen een paar namen er echt uit met flink kortetermijnmomentum. Reddit (RDDT) laat deze week een stevige plus zien en scoort in onze analyse het hoogst, gevolgd door Meta, Apple, Palantir, Klaviyo en Rubrik, die allemaal een krachtig kortetermijnbeeld tonen. Wat opvalt is dat de kortetermijnkracht groot is, maar dat de langetermijnnotitie bij vrijwel al deze namen "afwachten op trendbevestiging" luidt. Dat betekent concreet dat het momentum voor de komende dagen aantrekkelijk oogt, maar dat je voor de horizon van zo'n zes maanden geduldig wilt zien of de trend zich echt vastzet. Voor de eurozone-belegger is Wolters Kluwer (WKL.AS) sympathiek: een solide Nederlandse naam met een sterk kortetermijnsignaal en het praktische voordeel dat het gewoon in euro's noteert.
 
----
+In de cryptohoek is de stemming rustig positief. Bitcoin en Ethereum tonen een gematigde opwaartse trend met bescheiden winsten over de week, en ook Chainlink en Polkadot bewegen voorzichtig omhoog, waarbij Polkadot deze week het meeste momentum liet zien. Onze eigen inschatting blijft echter "afwachten" (Watch), juist omdat de langetermijnbevestiging nog ontbreekt. Solana valt daarentegen wat terug en verdient meer voorzichtigheid. Kort gezegd: de korte termijn oogt vriendelijk, maar voor de lange termijn geldt ook hier dat trendbevestiging het sleutelwoord is voordat je stevig durft te leunen.
 
-## Tier 1: Constructive Setups (Higher Conviction)
+Bij de grondstoffen zien we een interessant tweeluik. Goud en zilver liggen vrijwel vlak, alsof ze even hun adem inhouden, terwijl olie en de landbouwmand (DBA) juist een nette plus laten zien met gematigd bullish momentum. Grondstoffen hebben de eigenschap dat ze vaak eigenzinnig bewegen op nieuws dat losstaat van aandelen: geopolitieke spanningen kunnen olie plots opstuwen, extreem weer kan oogsten raken en zo voedselprijzen bewegen, en verschuivingen in vraag en aanbod werken direct door. Daarom zijn ze een handig tegenwicht in een portefeuille, ook al voelt hun grilligheid soms onvoorspelbaar.
 
-| Asset | Score | Risk | Short-Term | Net Est. Profit* | Notes |
-|-------|-------|------|-----------|------------------|-------|
-| **PLTR** | 81 | High | Strong bullish | ~10.82% | Strongest momentum, but high risk = high volatility |
-| **CLNE** | 74 | High | Moderate bullish | ~8.77% | Solid signal, thin/volatile name — size carefully |
-| **BTC** | 59 | Low | Moderate uptrend | ~3.04% | Best risk-adjusted crypto profile |
-| **SOFI** | 58 | Low | Moderate bullish | ~2.86% | Clean setup, favorable risk |
-| **ETH** | 57 | Low | Moderate uptrend | ~2.57% | Tracks BTC, slightly weaker |
+Over valuta gesproken: veel van de aandelen hierboven noteren in dollars, wat betekent dat je bij aankoop vanuit euro's wisselt tegen de huidige koers van ongeveer 1 EUR voor 1,1426 USD. De euro-genoteerde posities, zoals ASML, Ahold, Philips, Wolters Kluwer en je crypto via Coinmerce, kun je rechtstreeks in euro's aanhouden zonder wisselstap. Je Zwitserse frank (rond 1 EUR voor 0,9225 CHF) heeft historisch een reputatie als vluchthaven-valuta met doorgaans lage inflatie, wat hem geschikt maakt als rustige buffer in plaats van als je dagelijkse betaalvaluta. Eurozone-inflatie kan de koopkracht van je euro-tegoeden juist geleidelijk uithollen, dus het is verstandig een deel als reserve te laten staan en niet al je liquiditeit passief te laten wachten. Precieze inflatiecijfers wil ik hier niet verzinnen; die controleer je het beste even bij een betrouwbare bron.
 
-*Net = estimated profit − cost.
+Wat je beter kunt mijden, zijn de namen met een uitgesproken zwak beeld. BlackBerry, Virgin Galactic, CoreWeave en Astera Labs tonen sterk dalend momentum, en CAVA en Circle lieten stevige klappen zien. Ook GameStop, AMC en Solana ogen kwetsbaar. Deze aandelen combineren vaak een lage score met een hoog risico, en dat is precies de mix waar je voorzichtig mee wilt zijn. Ook een van nature solide naam als ASML staat nu net iets in de min en krijgt daarom een afwachtend signaal.
 
-## Tier 2: Neutral / Wait-and-See
+In het bredere plaatje zie ik in het nieuws vooral signalen die met AI en cloud te maken hebben. Zo lezen we dat er in 2026 voor zo'n 130 miljard aan AI-datacenters zou zijn geblokkeerd of vertraagd, wat laat zien dat zelfs een sterke sector tegen fysieke en beleidsmatige grenzen kan aanlopen. Tegelijk klinken er positieve geluiden over groeiende AI-infrastructuurinvesteringen bij bedrijven als Micron, en enthousiasme rond cloudaandelen voor het cijferseizoen. Concrete berichten over oorlog, natuurrampen of extreem weer zie ik in deze koppen niet, dus daar wil ik voorzichtig en algemeen over blijven: dat soort gebeurtenissen kan grondstoffen als olie, goud en voedsel plotseling in beweging brengen, en het loont om er alert op te blijven zonder er nu iets in te lezen dat er niet staat.
 
-| Asset | Score | Risk | Short-Term | Net Est. Profit |
-|-------|-------|------|-----------|-----------------|
-| **LINK** | 57 | Low | Neutral | ~2.15% |
-| **DOT** | 57 | Low | Neutral | ~1.49% |
-| **GME** | 50 | Low | Neutral | ~-0.73% |
-| **SOL** | 51 | Low | Neutral | ~-0.54% |
+Kijk je naar de recente geschiedenis, dan versterkt de trend van de afgelopen dag en week het beeld: de tech- en groeinamen met sterk momentum bouwden hun winst op over meerdere dagen, terwijl de zwakkere namen ook over zeven dagen bleven verzwakken. Dat geeft wat houvast, al blijft het een momentopname en verandert het beeld snel. Crypto en de grondstoffenmand olie en landbouw voegen zich met bescheiden, maar consistente plusjes in dit voorzichtig positieve verhaal.
 
-## Tier 3: Avoid / Negative Bias
-
-| Asset | Score | Risk | Short-Term | Net Est. Profit |
-|-------|-------|------|-----------|-----------------|
-| **AMC** | 39 | Medium | Neutral | ~-3.45% |
-| **BB** | 26 | High | Strong bearish | ~-9.28% |
-| **SPCE** | 22 | High | Strong bearish | ~-10.36% |
-
----
-
-## Short-Term Outlook (1 Week)
-- **Momentum leaders:** PLTR and CLNE show the strongest bullish signals but carry **high risk** — expect sharp swings and use tight position sizing/stops.
-- **Best risk-adjusted:** BTC, ETH, and SOFI combine low risk with positive momentum — more suitable for conservative research theses.
-- **Clear negatives:** SPCE, BB, and AMC show bearish/deteriorating signals — no constructive case short-term.
-
-## Long-Term Outlook (6 Months)
-- **Every asset flags "watch for trend confirmation."** No asset currently has a confirmed long-term trend, so long-term conviction should remain **low across the board**.
-- Long-term positioning is best deferred until trend confirmation appears, particularly for high-risk names where the signal can reverse quickly.
-
----
-
-## Risk Guidance
-- **High-risk names (PLTR, CLNE, BB, SPCE, AMC):** Estimated profit/loss ranges are wide. Elevated volatility means realized outcomes may diverge substantially from estimates. Treat as small, speculative allocations only.
-- **Low-risk names (BTC, ETH, SOFI, LINK, DOT, GME, SOL):** More stable but modest upside; still subject to broad market swings.
-- **Cost drag:** Equities carry 0.25% vs. crypto 0.18%. This meaningfully erodes low-margin trades (e.g., SOL, GME net negative after cost).
-- **Diversification:** Note concentration — several high-risk equities move on sentiment/meme dynamics, not fundamentals.
-
-## Bottom-Line Summary
-The most attractive *momentum* research cases are **PLTR** and **CLNE**, but only for high-risk-tolerant profiles. The best *risk-adjusted* candidates are **BTC, ETH, and SOFI**. **SPCE and BB** show the clearest downside bias and warrant avoidance. Because **all assets lack long-term trend confirmation**, this data supports short-term tactical views far more than long-term positioning.
-
-*Reminder: This is educational research only, not financial advice or trade execution guidance. Conduct your own due diligence.*
+Tot slot, en dat meen ik oprecht vriendelijk: dit is educatief onderzoek en nadrukkelijk geen financieel advies. Zie het als een prettig startpunt om zelf verder te kijken, en verifieer alle koersen, cijfers en nieuwsberichten bij betrouwbare bronnen voordat je iets doet. Neem de tijd, blijf nuchter en beslis alleen wat bij jouw eigen situatie en risicobereidheid past. Ik wens je veel succes en vooral rust bij je keuzes.

@@ -1,22 +1,31 @@
-Trading Advisor Summary - 2026-07-10 09:02 UTC
+Trading Advisor Summary - 2026-07-10 13:20 UTC
 
 Short-Term Watchlist (week):
-- PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%
-- CLNE (Clean Energy Fuels Corp.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=moderate bullish | long=watch for trend confirmation | score=74 | est profit=9.02% | est cost=0.25%
+- RDDT (Reddit, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=85 | est profit=15.13% | est cost=0.25%
+- META (Meta Platforms, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=83 | est profit=12.17% | est cost=0.25%
+- KVYO (Klaviyo, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=83 | est profit=14.29% | est cost=0.25%
+- PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%
+- AAPL (Apple Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=80 | est profit=10.76% | est cost=0.25%
+- RBRK (Rubrik, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=80 | est profit=13.27% | est cost=0.25%
+- CLNE (Clean Energy Fuels Corp.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=moderate bullish | long=watch for trend confirmation | score=74 | est profit=9.02% | est cost=0.25%
+- WKL.AS (Wolters Kluwer N.V.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=medium | short=strong short-term bullish | long=watch for trend confirmation | score=66 | est profit=5.87% | est cost=0.25%
 
 Long-Term Candidates (6 months):
-- PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%
-- CLNE (Clean Energy Fuels Corp.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=moderate bullish | long=watch for trend confirmation | score=74 | est profit=9.02% | est cost=0.25%
-- btc (Bitcoin) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=moderate uptrend | long=watch for trend confirmation | score=59 | est profit=3.22% | est cost=0.18%
-- SOFI (SoFi Technologies, Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=moderate bullish | long=watch for trend confirmation | score=58 | est profit=3.11% | est cost=0.25%
-- eth (Ethereum) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=moderate uptrend | long=watch for trend confirmation | score=57 | est profit=2.75% | est cost=0.18%
-- link (Chainlink) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=neutral | long=watch for trend confirmation | score=57 | est profit=2.33% | est cost=0.18%
-- dot (Polkadot) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=neutral | long=watch for trend confirmation | score=57 | est profit=1.67% | est cost=0.18%
+- RDDT (Reddit, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=85 | est profit=15.13% | est cost=0.25%
+- META (Meta Platforms, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=83 | est profit=12.17% | est cost=0.25%
+- KVYO (Klaviyo, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=83 | est profit=14.29% | est cost=0.25%
+- PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%
+- AAPL (Apple Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=80 | est profit=10.76% | est cost=0.25%
+- RBRK (Rubrik, Inc.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=80 | est profit=13.27% | est cost=0.25%
+- CLNE (Clean Energy Fuels Corp.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=moderate bullish | long=watch for trend confirmation | score=74 | est profit=9.02% | est cost=0.25%
+- WKL.AS (Wolters Kluwer N.V.) [Degiro.nl]: Not held | advice=Buy | qty=None | avg=None | unrealized=None% | sell=Not held | risk=medium | short=strong short-term bullish | long=watch for trend confirmation | score=66 | est profit=5.87% | est cost=0.25%
+- dot (Polkadot) [Coinmerce]: Not held | advice=Watch | qty=None | avg=None | unrealized=None% | sell=Not held | risk=medium | short=neutral | long=watch for trend confirmation | score=64 | est profit=4.04% | est cost=0.18%
+- CL=F (Crude Oil Aug 26) [Degiro.nl]: Not held | advice=Watch | qty=None | avg=None | unrealized=None% | sell=Not held | risk=medium | short=moderate bullish | long=watch for trend confirmation | score=63 | est profit=4.82% | est cost=0.25%
 
 Risk Summary:
-- High risk assets: 4
-- Medium risk assets: 1
-- Low risk assets: 7
+- High risk assets: 13
+- Medium risk assets: 8
+- Low risk assets: 13
 
 Notes:
 - Use this advisor summary as guidance only.

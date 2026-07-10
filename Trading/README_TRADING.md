@@ -11,8 +11,8 @@ python -m pip install requests python-dotenv
 
 Optional packages:
 ```powershell
-python -m pip install openai
-python -m pip install llama-cpp-python
+python -m pip install anthropic
+python -m pip install gpt4all
 ```
 
 ## `.env` fields
@@ -25,7 +25,8 @@ TRADING_ADVISOR_USE_AIRTABLE=1
 AIRTABLE_API_KEY=your_airtable_api_key
 AIRTABLE_BASE_ID=your_airtable_base_id
 AIRTABLE_TABLE_NAME=TradingAdvice
-OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+CLAUDE_MODEL=claude-opus-4-8
 USE_LOCAL_LLM=0
 GPT4ALL_MODEL_PATH=path_to_your_gpt4all_model.bin
 TRADING_PLATFORM_NOTES=Coinmerce for bitcoin, Degiro.nl for stocks/minerals/metals
@@ -48,9 +49,9 @@ python Trading\execution\trading_execution_template.py
 python Trading\execution\trading_advisor_agent.py
 ```
 
-4. Optional OpenAI summary:
+4. Optional Claude summary:
 ```powershell
-python Trading\execution\trading_advisor_openai.py
+python Trading\execution\trading_advisor_claude.py
 ```
 
 ## Airtable schema

@@ -1,23 +1,27 @@
-Trading Research Report - 2026-07-10 09:01 UTC
+Trading Research Report - 2026-07-10 13:20 UTC
 
 Top Crypto Candidates:
-- Bitcoin (BTC): $64149 | 24h: 2.17% | 7d: 4.28% | risk: low | moderate uptrend | score: 59 | est profit: 3.22% | platform: Coinmerce
-- Ethereum (ETH): $1781.87 | 24h: 1.75% | 7d: 3.76% | risk: low | moderate uptrend | score: 57 | est profit: 2.75% | platform: Coinmerce
-- Chainlink (LINK): $7.95 | 24h: 2.44% | 7d: 2.22% | risk: low | neutral | score: 57 | est profit: 2.33% | platform: Coinmerce
-- Polkadot (DOT): $0.858101 | 24h: 3.03% | 7d: 0.31% | risk: low | neutral | score: 57 | est profit: 1.67% | platform: Coinmerce
-- Solana (SOL): $79.16 | 24h: 1.45% | 7d: -2.16% | risk: low | neutral | score: 51 | est profit: -0.36% | platform: Coinmerce
+- Polkadot (DOT): $0.769424 | 24h: 6.17% | 7d: 1.92% | risk: medium | neutral | score: 64 | est profit: 4.04% | platform: Coinmerce
+- Ethereum (ETH): $1570.7 | 24h: 2.85% | 7d: 3.7% | risk: low | moderate uptrend | score: 59 | est profit: 3.27% | platform: Coinmerce
+- Bitcoin (BTC): $56173 | 24h: 2.34% | 7d: 3.89% | risk: low | moderate uptrend | score: 58 | est profit: 3.11% | platform: Coinmerce
+- Chainlink (LINK): $6.96 | 24h: 2.88% | 7d: 1.78% | risk: low | neutral | score: 57 | est profit: 2.33% | platform: Coinmerce
+- Solana (SOL): $69.01 | 24h: 1.37% | 7d: -3.02% | risk: low | neutral | score: 50 | est profit: -0.83% | platform: Coinmerce
 
 Top Stock Candidates:
+- RDDT (Reddit, Inc.): $200.31 | 1d: 14.86% | 7d: 15.4% | risk: high | strong short-term bullish | score: 85 | est profit: 15.13% | platform: Degiro.nl
+- META (Meta Platforms, Inc.): $631.48 | 1d: 12.24% | 7d: 12.11% | risk: high | strong short-term bullish | score: 83 | est profit: 12.17% | platform: Degiro.nl
+- KVYO (Klaviyo, Inc.): $17.16 | 1d: 14.94% | 7d: 13.64% | risk: high | strong short-term bullish | score: 83 | est profit: 14.29% | platform: Degiro.nl
 - PLTR (Palantir Technologies Inc.): $129.04 | 1d: 11.53% | 7d: 10.6% | risk: high | strong short-term bullish | score: 81 | est profit: 11.07% | platform: Degiro.nl
+- AAPL (Apple Inc.): $316.22 | 1d: 12.24% | 7d: 9.28% | risk: high | strong short-term bullish | score: 80 | est profit: 10.76% | platform: Degiro.nl
+- RBRK (Rubrik, Inc.): $88.75 | 1d: 15.98% | 7d: 10.55% | risk: high | strong short-term bullish | score: 80 | est profit: 13.27% | platform: Degiro.nl
 - CLNE (Clean Energy Fuels Corp.): $2.15 | 1d: 13.16% | 7d: 4.88% | risk: high | moderate bullish | score: 74 | est profit: 9.02% | platform: Degiro.nl
-- SOFI (SoFi Technologies, Inc.): $18.62 | 1d: 2.36% | 7d: 3.85% | risk: low | moderate bullish | score: 58 | est profit: 3.11% | platform: Degiro.nl
-- GME (GameStop Corp.): $21.95 | 1d: -0.36% | 7d: -0.59% | risk: low | neutral | score: 50 | est profit: -0.48% | platform: Degiro.nl
-- AMC (AMC Entertainment Holdings, Inc.): $1.9 | 1d: -6.4% | 7d: 0.0% | risk: medium | neutral | score: 39 | est profit: -3.2% | platform: Degiro.nl
-- BB (BlackBerry Limited): $11.43 | 1d: -8.41% | 7d: -9.64% | risk: high | strong bearish | score: 26 | est profit: -9.03% | platform: Degiro.nl
-- SPCE (Virgin Galactic Holdings, Inc.): $2.62 | 1d: -10.88% | 7d: -9.34% | risk: high | strong bearish | score: 22 | est profit: -10.11% | platform: Degiro.nl
 
 Key News Headlines:
-- No news fetched or NEWSAPI_KEY not configured.
+- [Yahoo Entertainment] Here’s Why Intuit (INTU) is Struggling (2026-07-09T13:12:47Z)
+- [Associated Press] $130 Billion in AI Data Centers Have Been Blocked or Delayed in 2026 (2026-07-09T13:12:34Z)
+- [Yahoo Entertainment] Does Space Exploration Technologies Corp. (SPCX) Boost the Strategy’s Risk-on Positioning? (2026-07-09T13:11:24Z)
+- [Crypto Briefing] Strategy surpasses Goldman Sachs in trading volume, returns to top 50 US stocks (2026-07-09T13:06:26Z)
+- [Yahoo Entertainment] Micron Technology (MU) Gains from growing AI infrastructure investment (2026-07-09T13:04:41Z)
 
 Notes:
 - Use this report as a short-term research guide, not a trade signal.
