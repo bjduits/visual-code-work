@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T08:41:42.773464Z",
+  "generated_at": "2026-07-10T09:02:04.012444Z",
   "short_term": [
     {
       "symbol": "PLTR",
@@ -47,8 +47,8 @@
       "short_term": "moderate uptrend",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 57,
-      "estimated_profit_pct": 2.72,
+      "score": 59,
+      "estimated_profit_pct": 3.22,
       "estimated_cost_pct": 0.18
     },
     {
@@ -63,8 +63,8 @@
       "short_term": "moderate uptrend",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 56,
-      "estimated_profit_pct": 2.25,
+      "score": 57,
+      "estimated_profit_pct": 2.75,
       "estimated_cost_pct": 0.18
     },
     {
@@ -79,8 +79,24 @@
       "short_term": "neutral",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 56,
-      "estimated_profit_pct": 1.95,
+      "score": 57,
+      "estimated_profit_pct": 2.33,
+      "estimated_cost_pct": 0.18
+    },
+    {
+      "symbol": "dot",
+      "name": "Polkadot",
+      "platform": "Coinmerce",
+      "held": false,
+      "quantity": null,
+      "avg_price": null,
+      "unrealized_pct": null,
+      "sell_signal": "Not held",
+      "short_term": "neutral",
+      "long_term": "watch for trend confirmation",
+      "risk": "low",
+      "score": 57,
+      "estimated_profit_pct": 1.67,
       "estimated_cost_pct": 0.18
     },
     {
@@ -229,8 +245,8 @@
       "short_term": "moderate uptrend",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 57,
-      "estimated_profit_pct": 2.72,
+      "score": 59,
+      "estimated_profit_pct": 3.22,
       "estimated_cost_pct": 0.18
     },
     {
@@ -245,8 +261,8 @@
       "short_term": "moderate uptrend",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 56,
-      "estimated_profit_pct": 2.25,
+      "score": 57,
+      "estimated_profit_pct": 2.75,
       "estimated_cost_pct": 0.18
     },
     {
@@ -261,8 +277,8 @@
       "short_term": "neutral",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 50,
-      "estimated_profit_pct": -0.86,
+      "score": 51,
+      "estimated_profit_pct": -0.36,
       "estimated_cost_pct": 0.18
     },
     {
@@ -277,8 +293,8 @@
       "short_term": "neutral",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 56,
-      "estimated_profit_pct": 1.95,
+      "score": 57,
+      "estimated_profit_pct": 2.33,
       "estimated_cost_pct": 0.18
     },
     {
@@ -293,8 +309,8 @@
       "short_term": "neutral",
       "long_term": "watch for trend confirmation",
       "risk": "low",
-      "score": 54,
-      "estimated_profit_pct": 0.57,
+      "score": 57,
+      "estimated_profit_pct": 1.67,
       "estimated_cost_pct": 0.18
     },
     {

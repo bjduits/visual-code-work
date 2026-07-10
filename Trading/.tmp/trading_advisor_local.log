@@ -1,1 +1,2 @@
 2026-07-10 10:51:51,865 - ERROR - Local LLM request failed: Install the local LLM package with: python -m pip install llama-cpp-python
+2026-07-10 11:02:04,199 - ERROR - USE_LOCAL_LLM is not enabled. Set USE_LOCAL_LLM=1 in .env to use this script.
