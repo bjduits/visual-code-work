@@ -1,20 +1,20 @@
-Trading Research Report - 2026-07-10 06:22 UTC
+Trading Research Report - 2026-07-10 08:08 UTC
 
 Top Crypto Candidates:
-- Bitcoin (BTC): $63917 | 24h: 2.19% | 7d: 4.11% | risk: low | moderate uptrend | score: 59 | est profit: 3.15%
-- Chainlink (LINK): $7.9 | 24h: 2.62% | 7d: 1.76% | risk: low | neutral | score: 57 | est profit: 2.19%
-- Ethereum (ETH): $1773.58 | 24h: 1.43% | 7d: 3.5% | risk: low | moderate uptrend | score: 56 | est profit: 2.46%
-- Polkadot (DOT): $0.84485 | 24h: 1.19% | 7d: -0.68% | risk: low | neutral | score: 53 | est profit: 0.26%
-- Solana (SOL): $78.97 | 24h: 1.06% | 7d: -1.87% | risk: low | neutral | score: 52 | est profit: -0.4%
+- Bitcoin (BTC): $63975 | 24h: 1.7% | 7d: 3.75% | risk: low | moderate uptrend | score: 57 | est profit: 2.72% | platform: Coinmerce
+- Ethereum (ETH): $1773.47 | 24h: 1.22% | 7d: 3.28% | risk: low | moderate uptrend | score: 56 | est profit: 2.25% | platform: Coinmerce
+- Chainlink (LINK): $7.9 | 24h: 2.29% | 7d: 1.61% | risk: low | neutral | score: 56 | est profit: 1.95% | platform: Coinmerce
+- Polkadot (DOT): $0.848438 | 24h: 1.77% | 7d: -0.63% | risk: low | neutral | score: 54 | est profit: 0.57% | platform: Coinmerce
+- Solana (SOL): $78.81 | 24h: 0.91% | 7d: -2.62% | risk: low | neutral | score: 50 | est profit: -0.86% | platform: Coinmerce
 
 Top Stock Candidates:
-- PLTR (Palantir Technologies Inc.): $129.04 | 1d: 11.53% | 7d: 10.6% | risk: high | strong short-term bullish | score: 81 | est profit: 11.07%
-- CLNE (Clean Energy Fuels Corp.): $2.15 | 1d: 13.16% | 7d: 4.88% | risk: high | moderate bullish | score: 74 | est profit: 9.02%
-- SOFI (SoFi Technologies, Inc.): $18.62 | 1d: 2.36% | 7d: 3.85% | risk: low | moderate bullish | score: 58 | est profit: 3.11%
-- GME (GameStop Corp.): $21.95 | 1d: -0.36% | 7d: -0.59% | risk: low | neutral | score: 50 | est profit: -0.48%
-- AMC (AMC Entertainment Holdings, Inc.): $1.9 | 1d: -6.4% | 7d: 0.0% | risk: medium | neutral | score: 39 | est profit: -3.2%
-- BB (BlackBerry Limited): $11.43 | 1d: -8.41% | 7d: -9.64% | risk: high | strong bearish | score: 26 | est profit: -9.03%
-- SPCE (Virgin Galactic Holdings, Inc.): $2.62 | 1d: -10.88% | 7d: -9.34% | risk: high | strong bearish | score: 22 | est profit: -10.11%
+- PLTR (Palantir Technologies Inc.): $129.04 | 1d: 11.53% | 7d: 10.6% | risk: high | strong short-term bullish | score: 81 | est profit: 11.07% | platform: Degiro.nl
+- CLNE (Clean Energy Fuels Corp.): $2.15 | 1d: 13.16% | 7d: 4.88% | risk: high | moderate bullish | score: 74 | est profit: 9.02% | platform: Degiro.nl
+- SOFI (SoFi Technologies, Inc.): $18.62 | 1d: 2.36% | 7d: 3.85% | risk: low | moderate bullish | score: 58 | est profit: 3.11% | platform: Degiro.nl
+- GME (GameStop Corp.): $21.95 | 1d: -0.36% | 7d: -0.59% | risk: low | neutral | score: 50 | est profit: -0.48% | platform: Degiro.nl
+- AMC (AMC Entertainment Holdings, Inc.): $1.9 | 1d: -6.4% | 7d: 0.0% | risk: medium | neutral | score: 39 | est profit: -3.2% | platform: Degiro.nl
+- BB (BlackBerry Limited): $11.43 | 1d: -8.41% | 7d: -9.64% | risk: high | strong bearish | score: 26 | est profit: -9.03% | platform: Degiro.nl
+- SPCE (Virgin Galactic Holdings, Inc.): $2.62 | 1d: -10.88% | 7d: -9.34% | risk: high | strong bearish | score: 22 | est profit: -10.11% | platform: Degiro.nl
 
 Key News Headlines:
 - No news fetched or NEWSAPI_KEY not configured.

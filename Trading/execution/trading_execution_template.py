@@ -37,6 +37,7 @@ def build_trade_plan(report: dict) -> dict:
                 "symbol": asset.get("symbol"),
                 "name": asset.get("name"),
                 "source": asset.get("source"),
+                "platform": asset.get("platform", "n/a"),
                 "score": score,
                 "entry_note": "Review liquidity and confirm short-term trend before execution",
             })

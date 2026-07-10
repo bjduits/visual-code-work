@@ -8,11 +8,14 @@ This guide helps you set up the short-term trading research and execution plan t
 - `Trading/execution/trading_execution_template.py`
 - `Trading/execution/trading_advisor_agent.py`
 - `Trading/execution/trading_advisor_openai.py`
+- `Trading/execution/market_scanner.py`
 - `.tmp/trading_research_report.json`
 - `.tmp/trading_research_summary.txt`
 - `.tmp/trading_execution_plan.json`
 - `.tmp/trading_advisor_summary.txt`
 - `.tmp/trading_advisor_output.json`
+- `.tmp/market_scanner_report.json`
+- `.tmp/market_scanner_summary.txt`
 
 ## Step 1: Install required Python packages
 
@@ -71,6 +74,9 @@ CURRENT_POSITIONS=BTC:25000:0.02,GME:100:10
 
 - `CRYPTO_FOCUS` should contain CoinGecko IDs separated by commas.
 - `STOCK_FOCUS` should contain stock tickers separated by commas.
+- `CRYPTO_PLATFORM` (optional) labels which platform crypto picks are meant for; defaults to `Coinmerce`.
+- `STOCK_PLATFORM` (optional) labels which platform stock picks are meant for; defaults to `Degiro.nl`.
+- These labels are informational only — the scripts do not verify that a given asset is actually tradeable on that platform. Only include assets in `CRYPTO_FOCUS`/`STOCK_FOCUS` that you've confirmed are available there.
 - `NEWSAPI_KEY` is optional. If you have a NewsAPI key, add it to enable news headlines.
 - `TRADING_ADVISOR_USE_AIRTABLE=1` enables Airtable sync.
 - `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID`, and `AIRTABLE_TABLE_NAME` configure the Airtable destination.
@@ -124,6 +130,7 @@ In Airtable, create a table with these columns:
 
 - `Asset`
 - `Name`
+- `Platform`
 - `Short Term (week)`
 - `Long Term (6 months)`
 - `Risk`
@@ -172,6 +179,32 @@ python -m pip install llama-cpp-python
   - Loads the research report
   - Builds a safe candidate trade plan
   - Does not place live orders
+
+## Step 6: Discover "hot or not" crypto and stocks beyond your watchlist
+
+`CRYPTO_FOCUS`/`STOCK_FOCUS` only cover a fixed list of assets. To scan the
+broader market for movers (trending coins, top gainers/losers, most active
+stocks), run:
+
+```powershell
+cd c:\Users\Bram-JanDuits\visual-code-work
+python Trading\execution\market_scanner.py
+```
+
+This writes:
+- `.tmp/market_scanner_report.json`
+- `.tmp/market_scanner_summary.txt`
+
+It uses CoinGecko's trending/market-cap data for crypto and Yahoo Finance's
+day-gainers/day-losers/most-active screeners for stocks, then scores them
+with the same momentum/risk logic as the main research script.
+
+**Important:** this scan is intentionally unfiltered and NOT limited to
+assets available on Coinmerce or Degiro.nl. Verify actual platform
+availability, liquidity, and fees before acting on anything it surfaces.
+Illiquid/low-cap crypto (especially "trending" coins) can also show extreme
+or glitchy percentage changes from the underlying data source -- sanity
+check anything that looks too good to be true.
 
 ## Notes
 

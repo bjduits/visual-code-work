@@ -10,3 +10,25 @@
 2026-07-10 08:22:14,204 - INFO - Fetched stock quote data for 7 assets
 2026-07-10 08:22:14,209 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_report.json
 2026-07-10 08:22:14,209 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_summary.txt
+2026-07-10 09:43:09,762 - INFO - Fetched crypto market data for 5 assets
+2026-07-10 09:43:12,954 - INFO - Fetched stock quote data for 7 assets
+2026-07-10 09:43:12,963 - INFO - Report saved to c:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_report.json
+2026-07-10 09:43:12,963 - INFO - Summary saved to c:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_summary.txt
+2026-07-10 10:08:45,884 - INFO - Fetched crypto market data for 5 assets
+2026-07-10 10:08:49,084 - INFO - Fetched stock quote data for 7 assets
+2026-07-10 10:08:49,088 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_report.json
+2026-07-10 10:08:49,088 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_summary.txt
+2026-07-10 10:35:40,819 - INFO - Fetched crypto universe of 100 assets
+2026-07-10 10:35:41,239 - INFO - Fetched 15 trending crypto ids
+2026-07-10 10:35:42,281 - INFO - Fetched 10 quotes for screener 'day_gainers'
+2026-07-10 10:35:47,719 - INFO - Fetched 10 quotes for screener 'day_losers'
+2026-07-10 10:35:53,168 - INFO - Fetched 10 quotes for screener 'most_actives'
+2026-07-10 10:35:58,691 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_report.json
+2026-07-10 10:35:58,691 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_summary.txt
+2026-07-10 10:36:20,919 - INFO - Fetched crypto universe of 100 assets
+2026-07-10 10:36:21,311 - INFO - Fetched 15 trending crypto ids
+2026-07-10 10:36:22,195 - INFO - Fetched 10 quotes for screener 'day_gainers'
+2026-07-10 10:36:27,227 - INFO - Fetched 10 quotes for screener 'day_losers'
+2026-07-10 10:36:32,227 - INFO - Fetched 10 quotes for screener 'most_actives'
+2026-07-10 10:36:37,006 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_report.json
+2026-07-10 10:36:37,007 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\market_scanner_summary.txt

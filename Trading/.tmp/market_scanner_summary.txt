@@ -1,0 +1,77 @@
+Market Scanner Report - 2026-07-10 08:36 UTC
+
+This is an unfiltered market discovery scan, NOT limited to CRYPTO_FOCUS/STOCK_FOCUS.
+Verify liquidity, fees, and actual platform availability before acting on anything here.
+This is not financial advice.
+
+Crypto - Trending (search interest):
+- Cash Cat (CASHCAT) [Coinmerce]: $0.154192 | 24h: 51.76% | 7d: 129612459.13% | momentum: strong uptrend | risk: high | score: 91
+- The Black Bull (ANSEM) [Coinmerce]: $0.214545 | 24h: -27.59% | 7d: 24.96% | momentum: neutral | risk: high | score: 51
+- SKALE (SKL) [Coinmerce]: $0.00582361 | 24h: 65.74% | 7d: 60.68% | momentum: strong uptrend | risk: high | score: 91
+- LAB (LAB) [Coinmerce]: $1.12 | 24h: -3.9% | 7d: -87.77% | momentum: strong downtrend | risk: high | score: 24
+- Arbitrum (ARB) [Coinmerce]: $0.093779 | 24h: 8.87% | 7d: 20.04% | momentum: strong uptrend | risk: high | score: 88
+- Solana (SOL) [Coinmerce]: $79.3 | 24h: 1.38% | 7d: -2.02% | momentum: neutral | risk: low | score: 51
+- Bitcoin (BTC) [Coinmerce]: $64265 | 24h: 2.02% | 7d: 4.22% | momentum: moderate uptrend | risk: low | score: 59
+- Ethereum (ETH) [Coinmerce]: $1785.68 | 24h: 1.71% | 7d: 3.99% | momentum: moderate uptrend | risk: low | score: 57
+- DeXe (DEXE) [Coinmerce]: $35.2 | 24h: 22.9% | 7d: 55.61% | momentum: strong uptrend | risk: high | score: 91
+- EVAA Protocol (EVAA) [Coinmerce]: $2.67 | 24h: 7.25% | 7d: 181.24% | momentum: strong uptrend | risk: high | score: 84
+
+Crypto - Top Gainers (24h, HOT):
+- DeXe (DEXE) [Coinmerce]: $35.2 | 24h: 22.9% | 7d: 55.61% | momentum: strong uptrend | risk: high | score: 91
+- Morpho (MORPHO) [Coinmerce]: $2.29 | 24h: 11.11% | 7d: 13.8% | momentum: strong uptrend | risk: high | score: 83
+- Arbitrum (ARB) [Coinmerce]: $0.093779 | 24h: 8.87% | 7d: 20.04% | momentum: strong uptrend | risk: high | score: 88
+- Aave (AAVE) [Coinmerce]: $94.81 | 24h: 6.99% | 7d: 10.32% | momentum: strong uptrend | risk: medium | score: 74
+- Zcash (ZEC) [Coinmerce]: $499.91 | 24h: 6.6% | 7d: 13.73% | momentum: strong uptrend | risk: medium | score: 77
+- Stellar (XLM) [Coinmerce]: $0.192437 | 24h: 6.15% | 7d: -3.5% | momentum: neutral | risk: medium | score: 60
+- Uniswap (UNI) [Coinmerce]: $3.56 | 24h: 6.13% | 7d: 11.05% | momentum: strong uptrend | risk: medium | score: 74
+- Gram (prev. Toncoin) (GRAM) [Coinmerce]: $1.67 | 24h: 5.08% | 7d: 0.17% | momentum: neutral | risk: medium | score: 61
+- ADI (ADI) [Coinmerce]: $6.28 | 24h: 4.8% | 7d: 8.98% | momentum: moderate uptrend | risk: medium | score: 67
+- JUST (JST) [Coinmerce]: $0.099694 | 24h: 3.71% | 7d: 12.28% | momentum: strong uptrend | risk: medium | score: 69
+
+Crypto - Top Losers (24h, NOT):
+- Beldex (BDX) [Coinmerce]: $0.09008 | 24h: -7.26% | 7d: 2.57% | momentum: neutral | risk: medium | score: 38
+- 币安人生 (BinanceLife) (币安人生) [Coinmerce]: $0.677751 | 24h: -3.35% | 7d: -1.85% | momentum: neutral | risk: low | score: 43
+- Figure Heloc (FIGR_HELOC) [Coinmerce]: $1.002 | 24h: -3.05% | 7d: -3.49% | momentum: moderate downtrend | risk: low | score: 42
+- Monero (XMR) [Coinmerce]: $317.42 | 24h: -2.14% | 7d: -0.25% | momentum: neutral | risk: low | score: 46
+- Jupiter (JUP) [Coinmerce]: $0.210539 | 24h: -1.96% | 7d: -13.45% | momentum: moderate downtrend | risk: high | score: 34
+- HTX DAO (HTX) [Coinmerce]: $1.84e-06 | 24h: -0.99% | 7d: 10.87% | momentum: neutral | risk: medium | score: 59
+- Rain (RAIN) [Coinmerce]: $0.01441863 | 24h: -0.86% | 7d: -7.43% | momentum: moderate downtrend | risk: medium | score: 42
+- Gate (GT) [Coinmerce]: $6.78 | 24h: -0.74% | 7d: 1.45% | momentum: neutral | risk: low | score: 50
+- Audiera (BEAT) [Coinmerce]: $2.17 | 24h: -0.6% | 7d: -25.3% | momentum: moderate downtrend | risk: high | score: 29
+- Pi Network (PI) [Coinmerce]: $0.100147 | 24h: -0.6% | 7d: -15.27% | momentum: moderate downtrend | risk: high | score: 34
+
+Stocks - Day Gainers (HOT):
+- LASR (nLIGHT, Inc.) [Degiro.nl]: $74.71 | 1d: 27.32% | 7d: 7.31% | momentum: strong short-term bullish | risk: high | score: 77
+- FRVO (Fervo Energy Company) [Degiro.nl]: $27.35 | 1d: 16.04% | 7d: -6.43% | momentum: neutral | risk: high | score: 64
+- BBIO (BridgeBio Pharma, Inc.) [Degiro.nl]: $90.17 | 1d: 15.12% | 7d: 21.07% | momentum: strong short-term bullish | risk: high | score: 91
+- TXG (10x Genomics, Inc.) [Degiro.nl]: $43.1 | 1d: 15.03% | 7d: 12.42% | momentum: strong short-term bullish | risk: high | score: 82
+- BTDR (Bitdeer Technologies Group) [Degiro.nl]: $14.33 | 1d: 14.09% | 7d: -9.7% | momentum: neutral | risk: high | score: 62
+- MAAS (Maase Inc.) [Degiro.nl]: $16.0 | 1d: 14.04% | 7d: 23.08% | momentum: strong short-term bullish | risk: high | score: 90
+- CHRN (ChronoScale Holdings Corporation) [Degiro.nl]: $20.34 | 1d: 12.87% | 7d: -8.46% | momentum: neutral | risk: high | score: 62
+- AEHR (Aehr Test Systems, Inc.) [Degiro.nl]: $76.21 | 1d: 12.26% | 7d: -20.66% | momentum: neutral | risk: high | score: 50
+- ALGM (Allegro MicroSystems, Inc.) [Degiro.nl]: $57.38 | 1d: 11.49% | 7d: -17.58% | momentum: neutral | risk: high | score: 53
+- MXL (MaxLinear, Inc.) [Degiro.nl]: $95.8 | 1d: 11.33% | 7d: -25.17% | momentum: neutral | risk: high | score: 50
+
+Stocks - Day Losers (NOT):
+- IONS (Ionis Pharmaceuticals, Inc.) [Degiro.nl]: $64.27 | 1d: -23.9% | 7d: -18.94% | momentum: strong bearish | risk: high | score: 13
+- PLBL (Polibeli Group Ltd) [Degiro.nl]: $6.42 | 1d: -14.06% | 7d: -23.57% | momentum: strong bearish | risk: high | score: 10
+- GVA (Granite Construction Incorporated) [Degiro.nl]: $125.58 | 1d: -12.5% | 7d: -20.56% | momentum: strong bearish | risk: high | score: 10
+- STUB (StubHub Holdings, Inc.) [Degiro.nl]: $11.52 | 1d: -9.29% | 7d: -10.49% | momentum: strong bearish | risk: high | score: 23
+- MDA (MDA Space Ltd.) [Degiro.nl]: $35.39 | 1d: -8.48% | 7d: -14.27% | momentum: strong bearish | risk: high | score: 21
+- NTLA (Intellia Therapeutics, Inc.) [Degiro.nl]: $15.44 | 1d: -8.31% | 7d: -8.75% | momentum: strong bearish | risk: high | score: 27
+- RGC (Regencell Bioscience Holdings Limited) [Degiro.nl]: $6.07 | 1d: -6.47% | 7d: -0.33% | momentum: moderate bearish | risk: medium | score: 38
+- ROAD (Construction Partners, Inc.) [Degiro.nl]: $95.5 | 1d: -6.28% | 7d: -19.59% | momentum: strong bearish | risk: high | score: 19
+- AVAV (AeroVironment, Inc.) [Degiro.nl]: $148.4 | 1d: -5.94% | 7d: -10.1% | momentum: strong bearish | risk: high | score: 29
+- IRTC (iRhythm Holdings, Inc.) [Degiro.nl]: $117.915 | 1d: -5.92% | 7d: -0.87% | momentum: moderate bearish | risk: medium | score: 39
+
+Stocks - Most Active (high interest, direction unclear):
+- AAL (American Airlines Group Inc.) [Degiro.nl]: $17.06 | 1d: 3.27% | 7d: -5.59% | momentum: neutral | risk: low | score: 52
+- NVDA (NVIDIA Corporation) [Degiro.nl]: $202.78 | 1d: -0.66% | 7d: 1.34% | momentum: neutral | risk: low | score: 51
+- OPEN (Opendoor Technologies Inc.) [Degiro.nl]: $5.3 | 1d: 10.65% | 7d: 14.72% | momentum: strong short-term bullish | risk: high | score: 85
+- PATH (UiPath, Inc.) [Degiro.nl]: $11.8 | 1d: 3.33% | 7d: 8.56% | momentum: moderate bullish | risk: medium | score: 65
+- NOK (Nokia Oyj) [Degiro.nl]: $12.9 | 1d: 7.95% | 7d: -2.86% | momentum: neutral | risk: medium | score: 64
+- NU (Nu Holdings Ltd.) [Degiro.nl]: $13.67 | 1d: 2.24% | 7d: 2.32% | momentum: moderate bullish | risk: low | score: 57
+- INTC (Intel Corporation) [Degiro.nl]: $112.54 | 1d: 2.09% | 7d: -19.4% | momentum: neutral | risk: high | score: 36
+- ONDS (Ondas Inc.) [Degiro.nl]: $7.65 | 1d: 1.73% | 7d: -7.16% | momentum: neutral | risk: medium | score: 47
+- MARA (MARA Holdings, Inc.) [Degiro.nl]: $13.22 | 1d: 9.98% | 7d: -4.82% | momentum: neutral | risk: high | score: 66
+- RIVN (Rivian Automotive, Inc.) [Degiro.nl]: $18.12 | 1d: 8.76% | 7d: 4.44% | momentum: moderate bullish | risk: high | score: 72

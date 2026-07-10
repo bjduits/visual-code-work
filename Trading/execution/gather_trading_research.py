@@ -295,6 +295,7 @@ def analyze_crypto(asset: Dict, positions: Dict[str, Dict]) -> Dict:
         "estimated_profit_pct": round(estimated_profit_pct, 2),
         "score": score,
         "source": "CoinGecko",
+        "platform": os.getenv("CRYPTO_PLATFORM", "Coinmerce"),
         **hold_info
     }
 
@@ -391,6 +392,7 @@ def analyze_stock(asset: Dict, positions: Dict[str, Dict]) -> Dict:
         "estimated_profit_pct": round(estimated_profit_pct, 2),
         "score": score,
         "source": "Yahoo Finance",
+        "platform": os.getenv("STOCK_PLATFORM", "Degiro.nl"),
         **hold_info
     }
 
@@ -404,14 +406,14 @@ def build_summary(crypto_analysis: List[Dict], stock_analysis: List[Dict], news:
 
     for asset in sorted(crypto_analysis, key=lambda x: x.get("score", 0), reverse=True)[:7]:
         lines.append(
-            f"- {asset['name']} ({asset['symbol'].upper()}): ${asset['current_price']} | 24h: {asset['change_24h_pct']}% | 7d: {asset['change_7d_pct']}% | risk: {asset.get('risk_level', 'n/a')} | {asset['momentum']} | score: {asset['score']} | est profit: {asset.get('estimated_profit_pct', 0)}%"
+            f"- {asset['name']} ({asset['symbol'].upper()}): ${asset['current_price']} | 24h: {asset['change_24h_pct']}% | 7d: {asset['change_7d_pct']}% | risk: {asset.get('risk_level', 'n/a')} | {asset['momentum']} | score: {asset['score']} | est profit: {asset.get('estimated_profit_pct', 0)}% | platform: {asset.get('platform', 'n/a')}"
         )
 
     lines.append("")
     lines.append("Top Stock Candidates:")
     for asset in sorted(stock_analysis, key=lambda x: x.get("score", 0), reverse=True)[:7]:
         lines.append(
-            f"- {asset['symbol'].upper()} ({asset['name']}): ${asset['current_price']} | 1d: {asset['change_pct']}% | 7d: {asset['change_7d_pct']}% | risk: {asset.get('risk_level', 'n/a')} | {asset['momentum']} | score: {asset['score']} | est profit: {asset.get('estimated_profit_pct', 0)}%"
+            f"- {asset['symbol'].upper()} ({asset['name']}): ${asset['current_price']} | 1d: {asset['change_pct']}% | 7d: {asset['change_7d_pct']}% | risk: {asset.get('risk_level', 'n/a')} | {asset['momentum']} | score: {asset['score']} | est profit: {asset.get('estimated_profit_pct', 0)}% | platform: {asset.get('platform', 'n/a')}"
         )
 
     lines.append("")

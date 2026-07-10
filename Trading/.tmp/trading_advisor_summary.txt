@@ -1,0 +1,23 @@
+Trading Advisor Summary - 2026-07-10 08:08 UTC
+
+Short-Term Watchlist (week):
+- PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%
+- CLNE (Clean Energy Fuels Corp.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=moderate bullish | long=watch for trend confirmation | score=74 | est profit=9.02% | est cost=0.25%
+
+Long-Term Candidates (6 months):
+- PLTR (Palantir Technologies Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=strong short-term bullish | long=watch for trend confirmation | score=81 | est profit=11.07% | est cost=0.25%
+- CLNE (Clean Energy Fuels Corp.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=high | short=moderate bullish | long=watch for trend confirmation | score=74 | est profit=9.02% | est cost=0.25%
+- SOFI (SoFi Technologies, Inc.) [Degiro.nl]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=moderate bullish | long=watch for trend confirmation | score=58 | est profit=3.11% | est cost=0.25%
+- btc (Bitcoin) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=moderate uptrend | long=watch for trend confirmation | score=57 | est profit=2.72% | est cost=0.18%
+- eth (Ethereum) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=moderate uptrend | long=watch for trend confirmation | score=56 | est profit=2.25% | est cost=0.18%
+- link (Chainlink) [Coinmerce]: Not held | qty=None | avg=None | unrealized=None% | sell=Not held | risk=low | short=neutral | long=watch for trend confirmation | score=56 | est profit=1.95% | est cost=0.18%
+
+Risk Summary:
+- High risk assets: 4
+- Medium risk assets: 1
+- Low risk assets: 7
+
+Notes:
+- Use this advisor summary as guidance only.
+- Verify liquidity, fees, platform availability, and personal risk tolerance before trading.
+- This agent does not execute trades.

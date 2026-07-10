@@ -84,6 +84,7 @@ def build_advice(report: Dict) -> Dict:
         entry = {
             "symbol": symbol,
             "name": name,
+            "platform": asset.get("platform", "n/a"),
             "held": asset.get("held", False),
             "quantity": asset.get("quantity"),
             "avg_price": asset.get("avg_price"),
@@ -122,7 +123,7 @@ def summarize_advice(advice: Dict) -> str:
     for item in sorted(advice["short_term"], key=lambda x: x["score"], reverse=True)[:10]:
         held_label = "Held" if item.get("held") else "Not held"
         lines.append(
-            f"- {item['symbol']} ({item['name']}): {held_label} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
+            f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
         )
 
     lines.append("")
@@ -130,7 +131,7 @@ def summarize_advice(advice: Dict) -> str:
     for item in sorted(advice["long_term"], key=lambda x: x["score"], reverse=True)[:10]:
         held_label = "Held" if item.get("held") else "Not held"
         lines.append(
-            f"- {item['symbol']} ({item['name']}): {held_label} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
+            f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
         )
 
     lines.append("")
@@ -196,6 +197,7 @@ def airtable_sync(advice: Dict) -> None:
             records.append({
                 "Asset": item["symbol"],
                 "Name": item["name"],
+                "Platform": item.get("platform", "n/a"),
                 "Held": "Yes" if item.get("held") else "No",
                 "Quantity": item.get("quantity"),
                 "Avg Price": item.get("avg_price"),
