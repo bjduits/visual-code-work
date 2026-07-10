@@ -1,0 +1,12 @@
+2026-07-10 08:19:38,919 - INFO - Fetched crypto market data for 5 assets
+2026-07-10 08:19:39,461 - ERROR - Stock data fetch failed: 401 Client Error: Unauthorized for url: https://query1.finance.yahoo.com/v7/finance/quote?symbols=GME%2CAMC%2CPLTR%2CSOFI%2CBB%2CCLNE%2CSPCE
+2026-07-10 08:19:39,472 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_report.json
+2026-07-10 08:19:39,472 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_summary.txt
+2026-07-10 08:20:47,835 - INFO - Fetched crypto market data for 5 assets
+2026-07-10 08:20:51,541 - INFO - Fetched stock quote data for 7 assets
+2026-07-10 08:20:51,546 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_report.json
+2026-07-10 08:20:51,546 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_summary.txt
+2026-07-10 08:22:10,222 - INFO - Fetched crypto market data for 5 assets
+2026-07-10 08:22:14,204 - INFO - Fetched stock quote data for 7 assets
+2026-07-10 08:22:14,209 - INFO - Report saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_report.json
+2026-07-10 08:22:14,209 - INFO - Summary saved to C:\Users\Bram-JanDuits\visual-code-work\Trading\.tmp\trading_research_summary.txt

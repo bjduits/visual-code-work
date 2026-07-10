@@ -18,7 +18,7 @@ import sys
 import json
 import logging
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List, Dict, Optional
 
 from dotenv import load_dotenv
@@ -66,6 +66,12 @@ def fetch_crypto_data(coin_ids: List[str]) -> List[Dict]:
     return data
 
 
+YAHOO_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
+
+
 def fetch_stock_history(symbol: str) -> Dict:
     import requests
 
@@ -76,38 +82,43 @@ def fetch_stock_history(symbol: str) -> Dict:
         "includePrePost": "false",
     }
 
-    response = requests.get(url, params=params, timeout=15)
+    response = requests.get(url, params=params, headers=YAHOO_HEADERS, timeout=15)
     response.raise_for_status()
     return response.json()
 
 
 def fetch_stock_data(symbols: List[str]) -> List[Dict]:
-    import requests
-
     if not symbols:
         return []
 
-    url = "https://query1.finance.yahoo.com/v7/finance/quote"
-    params = {"symbols": ",".join(symbols)}
-
-    response = requests.get(url, params=params, timeout=15)
-    response.raise_for_status()
-    data = response.json()
-    quotes = data.get("quoteResponse", {}).get("result", [])
-
+    # Yahoo's v7/finance/quote endpoint now requires an auth crumb and returns
+    # 401 for unauthenticated requests, so quote data is derived from the
+    # v8/finance/chart endpoint's `meta` block instead, which still works.
     enriched_quotes = []
-    for quote in quotes:
-        symbol = quote.get("symbol")
-        if not symbol:
-            continue
-
+    for symbol in symbols:
         try:
             history = fetch_stock_history(symbol)
-            quote["price_history"] = history
         except Exception as exc:
-            logger.warning(f"Could not fetch 7-day history for {symbol}: {exc}")
-            quote["price_history"] = {}
+            logger.warning(f"Could not fetch data for {symbol}: {exc}")
+            continue
 
+        meta = history.get("chart", {}).get("result", [{}])[0].get("meta", {})
+        current_price = meta.get("regularMarketPrice")
+        previous_close = meta.get("chartPreviousClose") or meta.get("previousClose")
+        change_pct = None
+        if current_price is not None and previous_close:
+            change_pct = (current_price - previous_close) / previous_close * 100.0
+
+        quote = {
+            "symbol": meta.get("symbol", symbol),
+            "longName": meta.get("longName"),
+            "shortName": meta.get("shortName"),
+            "regularMarketPrice": current_price,
+            "regularMarketChangePercent": change_pct,
+            "regularMarketVolume": meta.get("regularMarketVolume"),
+            "marketCap": meta.get("marketCap"),
+            "price_history": history,
+        }
         enriched_quotes.append(quote)
 
     logger.info(f"Fetched stock quote data for {len(enriched_quotes)} assets")
@@ -217,6 +228,15 @@ def fetch_market_news(query: str, api_key: Optional[str]) -> List[Dict]:
     articles = data.get("articles", [])
     logger.info(f"Fetched {len(articles)} news articles for query: {query}")
     return articles
+
+
+def score_crypto(change_24h: float, change_7d: float, volume: float) -> int:
+    score = 50
+    score += int(min(max(change_24h, -10.0), 10.0) * 2)
+    score += int(min(max(change_7d, -20.0), 20.0))
+    score += 1 if volume > 50_000_000 else 0
+    score = max(0, min(100, score))
+    return score
 
 
 def analyze_crypto(asset: Dict, positions: Dict[str, Dict]) -> Dict:
@@ -377,7 +397,7 @@ def analyze_stock(asset: Dict, positions: Dict[str, Dict]) -> Dict:
 
 def build_summary(crypto_analysis: List[Dict], stock_analysis: List[Dict], news: List[Dict]) -> str:
     lines = [
-        f"Trading Research Report - {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}",
+        f"Trading Research Report - {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
         "Top Crypto Candidates:",
     ]
@@ -476,7 +496,7 @@ def main():
 
     summary = build_summary(crypto_results, stock_results, news_results)
     report = {
-        "run_at": datetime.utcnow().isoformat() + "Z",
+        "run_at": datetime.now(timezone.utc).isoformat(),
         "crypto_analysis": crypto_results,
         "stock_analysis": stock_results,
         "news": news_results,
