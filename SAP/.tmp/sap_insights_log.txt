@@ -1,0 +1,5 @@
+2026-07-10 15:52:10,698 - INFO - Starting insight gathering...
+2026-07-10 15:52:11,591 - INFO - Fetched 15 articles from NewsAPI
+2026-07-10 15:52:11,593 - INFO - Added curated built-in sources
+2026-07-10 15:52:11,593 - INFO - Gathered 18 insights from 2/2 sources
+2026-07-10 15:52:11,611 - INFO - PDF-rapport opgeslagen op C:\Users\Bram-JanDuits\visual-code-work\SAP\.tmp\sap_insights_report_2026-07-10.pdf
