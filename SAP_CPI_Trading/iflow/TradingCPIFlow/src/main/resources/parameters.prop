@@ -1,0 +1,6 @@
+CryptoFocus=bitcoin,ethereum,chainlink,polkadot,solana
+StockFocus=GME,AMC,PLTR,SOFI,BB,CLNE,SPCE
+ClaudeModel=claude-opus-4-8
+MailFrom=your.gmail.address@gmail.com
+MailTo=bjduits@gmail.com
+ScheduleCronExpression=0 0 7 ? * MON-FRI *

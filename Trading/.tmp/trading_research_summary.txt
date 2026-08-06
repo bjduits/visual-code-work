@@ -1,27 +1,27 @@
-Trading Research Report - 2026-07-10 13:20 UTC
+Trading Research Report - 2026-08-06 08:12 UTC
 
 Top Crypto Candidates:
-- Polkadot (DOT): $0.769424 | 24h: 6.17% | 7d: 1.92% | risk: medium | neutral | score: 64 | est profit: 4.04% | platform: Coinmerce
-- Ethereum (ETH): $1570.7 | 24h: 2.85% | 7d: 3.7% | risk: low | moderate uptrend | score: 59 | est profit: 3.27% | platform: Coinmerce
-- Bitcoin (BTC): $56173 | 24h: 2.34% | 7d: 3.89% | risk: low | moderate uptrend | score: 58 | est profit: 3.11% | platform: Coinmerce
-- Chainlink (LINK): $6.96 | 24h: 2.88% | 7d: 1.78% | risk: low | neutral | score: 57 | est profit: 2.33% | platform: Coinmerce
-- Solana (SOL): $69.01 | 24h: 1.37% | 7d: -3.02% | risk: low | neutral | score: 50 | est profit: -0.83% | platform: Coinmerce
+- Ethereum (ETH): $1652.19 | 24h: 2.0% | 7d: -0.61% | risk: low | neutral | score: 54 | est profit: 0.7% | platform: Coinmerce
+- Polkadot (DOT): $0.721327 | 24h: -2.61% | 7d: 7.72% | risk: medium | neutral | score: 53 | est profit: 2.56% | platform: Coinmerce
+- Bitcoin (BTC): $56062 | 24h: 0.81% | 7d: 0.3% | risk: low | neutral | score: 52 | est profit: 0.56% | platform: Coinmerce
+- Solana (SOL): $63.88 | 24h: -0.38% | 7d: -0.45% | risk: low | neutral | score: 51 | est profit: -0.41% | platform: Coinmerce
+- Chainlink (LINK): $7.08 | 24h: -0.14% | 7d: -2.21% | risk: low | neutral | score: 49 | est profit: -1.18% | platform: Coinmerce
 
 Top Stock Candidates:
-- RDDT (Reddit, Inc.): $200.31 | 1d: 14.86% | 7d: 15.4% | risk: high | strong short-term bullish | score: 85 | est profit: 15.13% | platform: Degiro.nl
-- META (Meta Platforms, Inc.): $631.48 | 1d: 12.24% | 7d: 12.11% | risk: high | strong short-term bullish | score: 83 | est profit: 12.17% | platform: Degiro.nl
-- KVYO (Klaviyo, Inc.): $17.16 | 1d: 14.94% | 7d: 13.64% | risk: high | strong short-term bullish | score: 83 | est profit: 14.29% | platform: Degiro.nl
-- PLTR (Palantir Technologies Inc.): $129.04 | 1d: 11.53% | 7d: 10.6% | risk: high | strong short-term bullish | score: 81 | est profit: 11.07% | platform: Degiro.nl
-- AAPL (Apple Inc.): $316.22 | 1d: 12.24% | 7d: 9.28% | risk: high | strong short-term bullish | score: 80 | est profit: 10.76% | platform: Degiro.nl
-- RBRK (Rubrik, Inc.): $88.75 | 1d: 15.98% | 7d: 10.55% | risk: high | strong short-term bullish | score: 80 | est profit: 13.27% | platform: Degiro.nl
-- CLNE (Clean Energy Fuels Corp.): $2.15 | 1d: 13.16% | 7d: 4.88% | risk: high | moderate bullish | score: 74 | est profit: 9.02% | platform: Degiro.nl
+- PLTR (Palantir Technologies Inc.): $158.43 | 1d: 20.45% | 7d: 28.25% | risk: high | strong short-term bullish | score: 91 | est profit: 20.0% | platform: Degiro.nl
+- MSFT (Microsoft Corporation): $487.46 | 1d: 25.28% | 7d: 23.93% | risk: high | strong short-term bullish | score: 91 | est profit: 20.0% | platform: Degiro.nl
+- CRWV (CoreWeave, Inc.): $89.89 | 1d: 26.98% | 7d: 33.57% | risk: high | strong short-term bullish | score: 91 | est profit: 20.0% | platform: Degiro.nl
+- ALAB (Astera Labs, Inc.): $318.43 | 1d: 12.71% | 7d: 22.36% | risk: high | strong short-term bullish | score: 91 | est profit: 17.54% | platform: Degiro.nl
+- AMZN (Amazon.com, Inc.): $272.65 | 1d: 17.83% | 7d: 18.1% | risk: high | strong short-term bullish | score: 89 | est profit: 17.97% | platform: Degiro.nl
+- RBRK (Rubrik, Inc.): $84.81 | 1d: 13.35% | 7d: 18.7% | risk: high | strong short-term bullish | score: 88 | est profit: 16.03% | platform: Degiro.nl
+- SPCE (Virgin Galactic Holdings, Inc.): $2.89 | 1d: 14.23% | 7d: 16.06% | risk: high | strong short-term bullish | score: 87 | est profit: 15.15% | platform: Degiro.nl
 
 Key News Headlines:
-- [Yahoo Entertainment] Here’s Why Intuit (INTU) is Struggling (2026-07-09T13:12:47Z)
-- [Associated Press] $130 Billion in AI Data Centers Have Been Blocked or Delayed in 2026 (2026-07-09T13:12:34Z)
-- [Yahoo Entertainment] Does Space Exploration Technologies Corp. (SPCX) Boost the Strategy’s Risk-on Positioning? (2026-07-09T13:11:24Z)
-- [Crypto Briefing] Strategy surpasses Goldman Sachs in trading volume, returns to top 50 US stocks (2026-07-09T13:06:26Z)
-- [Yahoo Entertainment] Micron Technology (MU) Gains from growing AI infrastructure investment (2026-07-09T13:04:41Z)
+- [The Times of India] HSBC picks ICICI Bank, Titan, 8 other stocks to ride a potential $25 billion FII inflow as AI trade volatility looms (2026-08-05T07:30:02Z)
+- [RTE] A new state investment scheme is coming. Will it work for you? (2026-08-05T06:09:59Z)
+- [The-independent.com] Seven £1 recipes from Miguel Barclay that make healthy eating affordable (2026-08-05T05:00:00Z)
+- [The Times of India] Inside LIC’s Rs 16 lakh crore portfolio: Its biggest stock buys and sells in June quarter (2026-08-05T03:02:53Z)
+- [The Times of India] ETMarkets Smart Talk| Large caps offer stability, but alpha lies in selective mid- and small-caps: Rakesh Vyas (2026-08-05T02:33:53Z)
 
 Notes:
 - Use this report as a short-term research guide, not a trade signal.

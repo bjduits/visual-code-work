@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" name="Definitions 1" targetNamespace="http://com.sap.it.ifl.tooling/default/flow">
+    <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+        <bpmn2:documentation id="Documentation_1440568604517" textFormat="text/plain" />
+        <bpmn2:extensionElements>
+            <ifl:property>
+                <key>cmdVariantUri</key>
+                <value>ctype::IFlowVariant/cname::IFlowConfiguration/version::1.2.4</value>
+            </ifl:property>
+            <ifl:property>
+                <key>privateKeyAlias</key>
+                <value></value>
+            </ifl:property>
+            <ifl:property>
+                <key>returnExceptionToSender</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>traceLevel</key>
+                <value></value>
+            </ifl:property>
+            <ifl:property>
+                <key>ServerTrace</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>namespaceMapping</key>
+                <value></value>
+            </ifl:property>
+            <ifl:property>
+                <key>errorStrategy</key>
+                <value></value>
+            </ifl:property>
+            <ifl:property>
+                <key>allowedHeaderList</key>
+                <value></value>
+            </ifl:property>
+            <ifl:property>
+                <key>httpSessionHandling</key>
+                <value>None</value>
+            </ifl:property>
+            <ifl:property>
+                <key>corsEnabled</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>accessControlAllowCredentials</key>
+                <value>false</value>
+            </ifl:property>
+            <ifl:property>
+                <key>componentVersion</key>
+                <value>1.2</value>
+            </ifl:property>
+        </bpmn2:extensionElements>
+        <bpmn2:participant id="Participant_1" ifl:type="EndpointSender" name="Sender">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>enableBasicAuthentication</key>
+                    <value>false</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ifl:type</key>
+                    <value>EndpointSender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Sender/version::1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:participant>
+        <bpmn2:participant id="Participant_Mail" ifl:type="EndpointRecevier" name="Mail Receiver">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>ifl:type</key>
+                    <value>EndpointRecevier</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Receiver/version::1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:participant>
+        <bpmn2:participant id="Participant_Process_1" ifl:type="IntegrationProcess" name="Integration Process" processRef="Process_1">
+            <bpmn2:extensionElements />
+        </bpmn2:participant>
+        <bpmn2:messageFlow id="MessageFlow_Mail" name="Send Report Mail" sourceRef="EndEvent_SendMail" targetRef="Participant_Mail">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>ComponentType</key>
+                    <value>Mail</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>direction</key>
+                    <value>Receiver</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::AdapterVariant/cname::mail-smtp/tp::HCIMail/mp::Mail/direction::Receiver/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>smtpProtocol</key>
+                    <value>SMTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>host</key>
+                    <value>smtp.gmail.com</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>port</key>
+                    <value>465</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>authentication</key>
+                    <value>UserCredentials</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>credentialName</key>
+                    <value>Gmail_SMTP_Credential</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>from</key>
+                    <value>{{MailFrom}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>to</key>
+                    <value>{{MailTo}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subject</key>
+                    <value>Trading Advisor Report (SAP CPI)</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>contentType</key>
+                    <value>text/plain</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>bodyText</key>
+                    <value>Bijgevoegd het trading advies rapport, gegenereerd door de SAP CPI Trading iFlow. Educatief onderzoek, geen financieel advies.</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>createAttachment</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>attachmentFileName</key>
+                    <value>trading_cpi_report.pdf</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>attachmentContentType</key>
+                    <value>application/pdf</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:messageFlow>
+    </bpmn2:collaboration>
+
+    <bpmn2:process id="Process_1" name="Integration Process">
+        <bpmn2:extensionElements>
+            <ifl:property>
+                <key>cmdVariantUri</key>
+                <value>ctype::FlowElementVariant/cname::IntegrationProcess/version::1.2.1</value>
+            </ifl:property>
+            <ifl:property>
+                <key>transactionTimeout</key>
+                <value>30</value>
+            </ifl:property>
+            <ifl:property>
+                <key>componentVersion</key>
+                <value>1.2</value>
+            </ifl:property>
+            <ifl:property>
+                <key>transactionalHandling</key>
+                <value>Not Required</value>
+            </ifl:property>
+        </bpmn2:extensionElements>
+
+        <bpmn2:startEvent id="StartEvent_Timer" name="Weekday Schedule">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::TimerStartEvent/cname::CronTimer/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cycleType</key>
+                    <value>Custom</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>scheduleCronExpression</key>
+                    <value>{{ScheduleCronExpression}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ScheduleTimeZone</key>
+                    <value>Europe/Amsterdam</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>scheduleKeepRunning</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>throwException</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_1" />
+        </bpmn2:startEvent>
+
+        <bpmn2:callActivity id="CallActivity_SetParams" name="Set Parameters">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Enricher</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageContentModifier/version::1.1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>bodyType</key>
+                    <value>expression</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>propertyTable</key>
+                    <value>[["CryptoFocus","","constant","{{CryptoFocus}}",""],["StockFocus","","constant","{{StockFocus}}",""],["ClaudeModel","","constant","{{ClaudeModel}}",""],["MailFrom","","constant","{{MailFrom}}",""],["MailTo","","constant","{{MailTo}}",""]]</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
+        </bpmn2:callActivity>
+
+        <bpmn2:callActivity id="CallActivity_FetchData" name="Fetch Market Data">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>1_FetchMarketData.groovy</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value></value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+        </bpmn2:callActivity>
+
+        <bpmn2:callActivity id="CallActivity_Claude" name="Ask Claude for Narrative">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>2_ClaudeNarrative.groovy</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value></value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
+        </bpmn2:callActivity>
+
+        <bpmn2:callActivity id="CallActivity_BuildPdf" name="Build PDF Report">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>3_BuildPdfReport.groovy</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value></value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
+        </bpmn2:callActivity>
+
+        <bpmn2:endEvent id="EndEvent_SendMail" name="Send Email">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
+            <bpmn2:messageEventDefinition />
+        </bpmn2:endEvent>
+
+        <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="StartEvent_Timer" targetRef="CallActivity_SetParams" />
+        <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="CallActivity_SetParams" targetRef="CallActivity_FetchData" />
+        <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="CallActivity_FetchData" targetRef="CallActivity_Claude" />
+        <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="CallActivity_Claude" targetRef="CallActivity_BuildPdf" />
+        <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="CallActivity_BuildPdf" targetRef="EndEvent_SendMail" />
+    </bpmn2:process>
+
+    <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
+        <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
+            <bpmndi:BPMNShape bpmnElement="Participant_1" id="BPMNShape_Participant_1">
+                <dc:Bounds height="140.0" width="100.0" x="40.0" y="60.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
+                <dc:Bounds height="220.0" width="900.0" x="180.0" y="60.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Participant_Mail" id="BPMNShape_Participant_Mail">
+                <dc:Bounds height="140.0" width="100.0" x="1120.0" y="60.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="StartEvent_Timer" id="BPMNShape_StartEvent_Timer">
+                <dc:Bounds height="32.0" width="32.0" x="220.0" y="150.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_SetParams" id="BPMNShape_CallActivity_SetParams">
+                <dc:Bounds height="60.0" width="100.0" x="300.0" y="136.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_FetchData" id="BPMNShape_CallActivity_FetchData">
+                <dc:Bounds height="60.0" width="100.0" x="450.0" y="136.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_Claude" id="BPMNShape_CallActivity_Claude">
+                <dc:Bounds height="60.0" width="100.0" x="600.0" y="136.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_BuildPdf" id="BPMNShape_CallActivity_BuildPdf">
+                <dc:Bounds height="60.0" width="100.0" x="750.0" y="136.0" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="EndEvent_SendMail" id="BPMNShape_EndEvent_SendMail">
+                <dc:Bounds height="32.0" width="32.0" x="920.0" y="150.0" />
+            </bpmndi:BPMNShape>
+
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1" id="BPMNEdge_SequenceFlow_1" sourceElement="BPMNShape_StartEvent_Timer" targetElement="BPMNShape_CallActivity_SetParams">
+                <di:waypoint x="252.0" xsi:type="dc:Point" y="166.0" />
+                <di:waypoint x="300.0" xsi:type="dc:Point" y="166.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_2" id="BPMNEdge_SequenceFlow_2" sourceElement="BPMNShape_CallActivity_SetParams" targetElement="BPMNShape_CallActivity_FetchData">
+                <di:waypoint x="400.0" xsi:type="dc:Point" y="166.0" />
+                <di:waypoint x="450.0" xsi:type="dc:Point" y="166.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_3" id="BPMNEdge_SequenceFlow_3" sourceElement="BPMNShape_CallActivity_FetchData" targetElement="BPMNShape_CallActivity_Claude">
+                <di:waypoint x="550.0" xsi:type="dc:Point" y="166.0" />
+                <di:waypoint x="600.0" xsi:type="dc:Point" y="166.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_4" id="BPMNEdge_SequenceFlow_4" sourceElement="BPMNShape_CallActivity_Claude" targetElement="BPMNShape_CallActivity_BuildPdf">
+                <di:waypoint x="700.0" xsi:type="dc:Point" y="166.0" />
+                <di:waypoint x="750.0" xsi:type="dc:Point" y="166.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_5" id="BPMNEdge_SequenceFlow_5" sourceElement="BPMNShape_CallActivity_BuildPdf" targetElement="BPMNShape_EndEvent_SendMail">
+                <di:waypoint x="850.0" xsi:type="dc:Point" y="166.0" />
+                <di:waypoint x="920.0" xsi:type="dc:Point" y="166.0" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_Mail" id="BPMNEdge_MessageFlow_Mail" sourceElement="BPMNShape_EndEvent_SendMail" targetElement="BPMNShape_Participant_Mail">
+                <di:waypoint x="952.0" xsi:type="dc:Point" y="166.0" />
+                <di:waypoint x="1170.0" xsi:type="dc:Point" y="130.0" />
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</bpmn2:definitions>

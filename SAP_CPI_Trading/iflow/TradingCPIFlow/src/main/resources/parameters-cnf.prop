@@ -1,0 +1,29 @@
+CryptoFocus.displayName=Crypto Focus List
+CryptoFocus.dataType=custom:string
+CryptoFocus.type=custom:string
+CryptoFocus.description=Comma-separated CoinGecko IDs to track (e.g. bitcoin,ethereum)
+
+StockFocus.displayName=Stock Focus List
+StockFocus.dataType=custom:string
+StockFocus.type=custom:string
+StockFocus.description=Comma-separated stock tickers to track (e.g. GME,AMC,PLTR)
+
+ClaudeModel.displayName=Claude Model
+ClaudeModel.dataType=custom:string
+ClaudeModel.type=custom:string
+ClaudeModel.description=Anthropic model id used for the narrative (e.g. claude-opus-4-8, claude-sonnet-5)
+
+MailFrom.displayName=Mail From Address
+MailFrom.dataType=custom:string
+MailFrom.type=custom:string
+MailFrom.description=Gmail address the report is sent from; must match the Gmail_SMTP_Credential user
+
+MailTo.displayName=Mail To Address
+MailTo.dataType=custom:string
+MailTo.type=custom:string
+MailTo.description=Recipient address for the trading report PDF
+
+ScheduleCronExpression.displayName=Schedule Cron Expression
+ScheduleCronExpression.dataType=custom:string
+ScheduleCronExpression.type=custom:string
+ScheduleCronExpression.description=Quartz cron expression (seconds minutes hours day-of-month month day-of-week year) for the Timer start event, e.g. 0 0 7 ? * MON-FRI * for weekdays at 07:00
