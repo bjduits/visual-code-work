@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <model xmlns="http://www.opengroup.org/xsd/archimate/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd" identifier="sap-iam-repository-d">
   <name xml:lang="en">SAP Centralized IAM Repository - Phase D - Technology Architecture</name>
   <documentation xml:lang="en">Phase-scoped extract of the SAP Centralized Identity and Access Management Project Repository for TOGAF ADM Phase D - Technology Architecture. Generated: 2026-08-13. Element identifiers are unchanged from the master IAM project repository, so this file can be cross-referenced against it.</documentation>
@@ -88,7 +88,6 @@ Last Modified: 2026-08-13</name>
 Phase: Phase D - Technology Architecture
 
 Existing:
-✓ TOGAF_Catalog_IAM_CD_Architecture_Deliverables_Phases_C_and_D.docx
 ✓ IAM_05_Technology_Architecture.docx
 
 Outstanding:
@@ -220,65 +219,65 @@ Outstanding:
         <name xml:lang="en">Template - Legend and View Information</name>
         <node identifier="pnode1" xsi:type="Element" elementRef="legend_title" x="40" y="50" w="326" h="30">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode2" xsi:type="Element" elementRef="legend_motivation" x="40" y="86" w="160" h="32">
           <style>
-            <fillColor r="204" g="204" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="204" g="204" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode3" xsi:type="Element" elementRef="legend_strategy" x="206" y="86" w="160" h="32">
           <style>
-            <fillColor r="245" g="222" b="170"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="245" g="222" b="170" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode4" xsi:type="Element" elementRef="legend_business" x="40" y="124" w="160" h="32">
           <style>
-            <fillColor r="255" g="255" b="181"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="255" b="181" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode5" xsi:type="Element" elementRef="legend_application" x="206" y="124" w="160" h="32">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode6" xsi:type="Element" elementRef="legend_technology" x="40" y="162" w="160" h="32">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode7" xsi:type="Element" elementRef="legend_implementation" x="206" y="162" w="160" h="32">
           <style>
-            <fillColor r="255" g="224" b="224"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="224" b="224" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode8" xsi:type="Element" elementRef="viewinfo_D_pv1" x="420" y="50" w="340" h="150">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="120" g="120" b="120"/>
-            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="120" g="120" b="120" />
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40" /></font>
           </style>
         </node>
         <node identifier="pnode9" xsi:type="Element" elementRef="docstatus_D" x="780" y="50" w="420" h="150">
           <style>
-            <fillColor r="255" g="248" b="220"/>
-            <lineColor r="150" g="130" b="60"/>
-            <font name="Segoe UI" size="8"><color r="60" g="50" b="20"/></font>
+            <fillColor r="255" g="248" b="220" />
+            <lineColor r="150" g="130" b="60" />
+            <font name="Segoe UI" size="8"><color r="60" g="50" b="20" /></font>
           </style>
         </node>
       </view>
@@ -286,114 +285,114 @@ Outstanding:
         <name xml:lang="en">Technology Architecture</name>
         <node identifier="pnode10" xsi:type="Element" elementRef="tech1" x="320" y="315" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode11" xsi:type="Element" elementRef="tech2" x="320" y="205" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode12" xsi:type="Element" elementRef="tsvc1" x="600" y="260" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode13" xsi:type="Element" elementRef="app1" x="40" y="480" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode14" xsi:type="Element" elementRef="app2" x="40" y="40" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode15" xsi:type="Element" elementRef="app3" x="40" y="150" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode16" xsi:type="Element" elementRef="app4" x="40" y="260" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode17" xsi:type="Element" elementRef="app5" x="40" y="370" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode18" xsi:type="Element" elementRef="legend_title" x="40" y="590" w="326" h="30">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode19" xsi:type="Element" elementRef="legend_motivation" x="40" y="626" w="160" h="32">
           <style>
-            <fillColor r="204" g="204" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="204" g="204" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode20" xsi:type="Element" elementRef="legend_strategy" x="206" y="626" w="160" h="32">
           <style>
-            <fillColor r="245" g="222" b="170"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="245" g="222" b="170" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode21" xsi:type="Element" elementRef="legend_business" x="40" y="664" w="160" h="32">
           <style>
-            <fillColor r="255" g="255" b="181"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="255" b="181" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode22" xsi:type="Element" elementRef="legend_application" x="206" y="664" w="160" h="32">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode23" xsi:type="Element" elementRef="legend_technology" x="40" y="702" w="160" h="32">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode24" xsi:type="Element" elementRef="legend_implementation" x="206" y="702" w="160" h="32">
           <style>
-            <fillColor r="255" g="224" b="224"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="224" b="224" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode25" xsi:type="Element" elementRef="viewinfo_D_pv2" x="420" y="590" w="340" h="150">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="120" g="120" b="120"/>
-            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="120" g="120" b="120" />
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40" /></font>
           </style>
         </node>
         <connection identifier="pconn1" xsi:type="Relationship" relationshipRef="r35" source="pnode10" target="pnode13">
@@ -473,79 +472,79 @@ Outstanding:
         <name xml:lang="en">Capability Underpinning</name>
         <node identifier="pnode26" xsi:type="Element" elementRef="tech1" x="320" y="150" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode27" xsi:type="Element" elementRef="tech2" x="320" y="40" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode28" xsi:type="Element" elementRef="cap1" x="40" y="95" w="190" h="60">
           <style>
-            <fillColor r="245" g="222" b="170"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="245" g="222" b="170" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode29" xsi:type="Element" elementRef="legend_title" x="40" y="260" w="326" h="30">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode30" xsi:type="Element" elementRef="legend_motivation" x="40" y="296" w="160" h="32">
           <style>
-            <fillColor r="204" g="204" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="204" g="204" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode31" xsi:type="Element" elementRef="legend_strategy" x="206" y="296" w="160" h="32">
           <style>
-            <fillColor r="245" g="222" b="170"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="245" g="222" b="170" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode32" xsi:type="Element" elementRef="legend_business" x="40" y="334" w="160" h="32">
           <style>
-            <fillColor r="255" g="255" b="181"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="255" b="181" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode33" xsi:type="Element" elementRef="legend_application" x="206" y="334" w="160" h="32">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode34" xsi:type="Element" elementRef="legend_technology" x="40" y="372" w="160" h="32">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode35" xsi:type="Element" elementRef="legend_implementation" x="206" y="372" w="160" h="32">
           <style>
-            <fillColor r="255" g="224" b="224"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="224" b="224" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode36" xsi:type="Element" elementRef="viewinfo_D_pv3" x="420" y="260" w="340" h="150">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="120" g="120" b="120"/>
-            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="120" g="120" b="120" />
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40" /></font>
           </style>
         </node>
         <connection identifier="pconn13" xsi:type="Relationship" relationshipRef="r181" source="pnode27" target="pnode28">
@@ -559,121 +558,121 @@ Outstanding:
         <name xml:lang="en">Complete Phase Cross-Reference (All Elements)</name>
         <node identifier="pnode37" xsi:type="Element" elementRef="tech1" x="600" y="315" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode38" xsi:type="Element" elementRef="tech2" x="600" y="205" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode39" xsi:type="Element" elementRef="tsvc1" x="880" y="260" w="190" h="60">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode40" xsi:type="Element" elementRef="app1" x="320" y="480" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode41" xsi:type="Element" elementRef="app2" x="320" y="40" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode42" xsi:type="Element" elementRef="app3" x="320" y="150" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode43" xsi:type="Element" elementRef="app4" x="320" y="260" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode44" xsi:type="Element" elementRef="app5" x="320" y="370" w="190" h="60">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode45" xsi:type="Element" elementRef="cap1" x="40" y="260" w="190" h="60">
           <style>
-            <fillColor r="245" g="222" b="170"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="245" g="222" b="170" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode46" xsi:type="Element" elementRef="legend_title" x="40" y="590" w="326" h="30">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode47" xsi:type="Element" elementRef="legend_motivation" x="40" y="626" w="160" h="32">
           <style>
-            <fillColor r="204" g="204" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="204" g="204" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode48" xsi:type="Element" elementRef="legend_strategy" x="206" y="626" w="160" h="32">
           <style>
-            <fillColor r="245" g="222" b="170"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="245" g="222" b="170" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode49" xsi:type="Element" elementRef="legend_business" x="40" y="664" w="160" h="32">
           <style>
-            <fillColor r="255" g="255" b="181"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="255" b="181" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode50" xsi:type="Element" elementRef="legend_application" x="206" y="664" w="160" h="32">
           <style>
-            <fillColor r="181" g="255" b="255"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="181" g="255" b="255" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode51" xsi:type="Element" elementRef="legend_technology" x="40" y="702" w="160" h="32">
           <style>
-            <fillColor r="201" g="231" b="183"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="201" g="231" b="183" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode52" xsi:type="Element" elementRef="legend_implementation" x="206" y="702" w="160" h="32">
           <style>
-            <fillColor r="255" g="224" b="224"/>
-            <lineColor r="90" g="90" b="90"/>
-            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+            <fillColor r="255" g="224" b="224" />
+            <lineColor r="90" g="90" b="90" />
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20" /></font>
           </style>
         </node>
         <node identifier="pnode53" xsi:type="Element" elementRef="viewinfo_D_pv4" x="420" y="590" w="340" h="150">
           <style>
-            <fillColor r="232" g="232" b="232"/>
-            <lineColor r="120" g="120" b="120"/>
-            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+            <fillColor r="232" g="232" b="232" />
+            <lineColor r="120" g="120" b="120" />
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40" /></font>
           </style>
         </node>
         <connection identifier="pconn14" xsi:type="Relationship" relationshipRef="r35" source="pnode37" target="pnode40">
