@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.opengroup.org/xsd/archimate/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd" identifier="flower-company-e">
+  <name xml:lang="en">flower company - Phase E - Opportunities and Solutions</name>
+  <documentation xml:lang="en">Author: Bram-JanDuits; Generated: 2026-08-14. flower company for flower power, structured per the TOGAF ADM. Phase-scoped extract for Phase E - Opportunities and Solutions.</documentation>
+  <elements>
+    <element identifier="req1" xsi:type="Requirement">
+      <name xml:lang="en">Resolve: High total cost of ownership / maintenance</name>
+    </element>
+    <element identifier="plat1" xsi:type="Plateau">
+      <name xml:lang="en">Baseline Architecture</name>
+    </element>
+    <element identifier="plat2" xsi:type="Plateau">
+      <name xml:lang="en">Target Architecture</name>
+    </element>
+    <element identifier="gap1" xsi:type="Gap">
+      <name xml:lang="en">Gap Analysis</name>
+    </element>
+    <element identifier="legend_title" xsi:type="Grouping">
+      <name xml:lang="en">LEGEND</name>
+      <documentation xml:lang="en">Legend title.</documentation>
+    </element>
+    <element identifier="legend_motivation" xsi:type="Grouping">
+      <name xml:lang="en">Motivation</name>
+      <documentation xml:lang="en">Legend swatch: elements colored like this box belong to the Motivation layer/section.</documentation>
+    </element>
+    <element identifier="legend_strategy" xsi:type="Grouping">
+      <name xml:lang="en">Strategy</name>
+      <documentation xml:lang="en">Legend swatch: elements colored like this box belong to the Strategy layer/section.</documentation>
+    </element>
+    <element identifier="legend_business" xsi:type="Grouping">
+      <name xml:lang="en">Business</name>
+      <documentation xml:lang="en">Legend swatch: elements colored like this box belong to the Business layer/section.</documentation>
+    </element>
+    <element identifier="legend_application" xsi:type="Grouping">
+      <name xml:lang="en">Application</name>
+      <documentation xml:lang="en">Legend swatch: elements colored like this box belong to the Application layer/section.</documentation>
+    </element>
+    <element identifier="legend_technology" xsi:type="Grouping">
+      <name xml:lang="en">Technology</name>
+      <documentation xml:lang="en">Legend swatch: elements colored like this box belong to the Technology layer/section.</documentation>
+    </element>
+    <element identifier="legend_implementation" xsi:type="Grouping">
+      <name xml:lang="en">Implementation &amp; Migration</name>
+      <documentation xml:lang="en">Legend swatch: elements colored like this box belong to the Implementation &amp; Migration layer/section.</documentation>
+    </element>
+    <element identifier="viewinfo_template" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Template - Legend and View Information
+Phase: Phase E - Opportunities and Solutions
+Created: 2026-08-14
+Last Modified: 2026-08-14</name>
+      <documentation xml:lang="en">View metadata block for 'Template - Legend and View Information'.</documentation>
+    </element>
+    <element identifier="viewinfo_motivation_requirements" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Motivation &amp; Requirements
+Phase: Phase E - Opportunities and Solutions
+Created: 2026-08-14
+Last Modified: 2026-08-14</name>
+      <documentation xml:lang="en">View metadata block for 'Motivation &amp; Requirements'.</documentation>
+    </element>
+    <element identifier="viewinfo_gap_analysis" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Gap Analysis
+Phase: Phase E - Opportunities and Solutions
+Created: 2026-08-14
+Last Modified: 2026-08-14</name>
+      <documentation xml:lang="en">View metadata block for 'Gap Analysis'.</documentation>
+    </element>
+    <element identifier="viewinfo_migration_plateaus" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Migration Plateaus
+Phase: Phase E - Opportunities and Solutions
+Created: 2026-08-14
+Last Modified: 2026-08-14</name>
+      <documentation xml:lang="en">View metadata block for 'Migration Plateaus'.</documentation>
+    </element>
+    <element identifier="viewinfo_work_package_overview" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Work Package Overview
+Phase: Phase E - Opportunities and Solutions
+Created: 2026-08-14
+Last Modified: 2026-08-14</name>
+      <documentation xml:lang="en">View metadata block for 'Work Package Overview'.</documentation>
+    </element>
+    <element identifier="viewinfo_complete" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Complete Phase Cross-Reference (All Elements)
+Phase: Phase E - Opportunities and Solutions
+Created: 2026-08-14
+Last Modified: 2026-08-14</name>
+      <documentation xml:lang="en">View metadata block for 'Complete Phase Cross-Reference (All Elements)'.</documentation>
+    </element>
+  </elements>
+  <relationships>
+    <relationship identifier="rel50" source="gap1" target="plat1" xsi:type="Association">
+      <name xml:lang="en">identified from</name>
+    </relationship>
+    <relationship identifier="rel51" source="gap1" target="plat2" xsi:type="Association">
+      <name xml:lang="en">identified from</name>
+    </relationship>
+  </relationships>
+  <views>
+    <diagrams>
+      <view identifier="v-template" xsi:type="Diagram">
+        <name xml:lang="en">Template - Legend and View Information</name>
+      <node identifier="vnode1" xsi:type="Element" elementRef="legend_title" x="40" y="80" w="326" h="30">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode2" xsi:type="Element" elementRef="legend_motivation" x="40" y="116" w="160" h="32">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode3" xsi:type="Element" elementRef="legend_strategy" x="206" y="116" w="160" h="32">
+        <style>
+          <fillColor r="245" g="222" b="170"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode4" xsi:type="Element" elementRef="legend_business" x="40" y="154" w="160" h="32">
+        <style>
+          <fillColor r="255" g="255" b="181"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode5" xsi:type="Element" elementRef="legend_application" x="206" y="154" w="160" h="32">
+        <style>
+          <fillColor r="181" g="255" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode6" xsi:type="Element" elementRef="legend_technology" x="40" y="192" w="160" h="32">
+        <style>
+          <fillColor r="201" g="231" b="183"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode7" xsi:type="Element" elementRef="legend_implementation" x="206" y="192" w="160" h="32">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode8" xsi:type="Element" elementRef="viewinfo_template" x="420" y="80" w="340" h="150">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      </view>
+      <view identifier="v-motivation_requirements" xsi:type="Diagram">
+        <name xml:lang="en">Motivation &amp; Requirements</name>
+      <node identifier="vnode9" xsi:type="Element" elementRef="req1" x="40" y="40" w="180" h="60">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode10" xsi:type="Element" elementRef="legend_title" x="40" y="140" w="326" h="30">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode11" xsi:type="Element" elementRef="legend_motivation" x="40" y="176" w="160" h="32">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode12" xsi:type="Element" elementRef="legend_strategy" x="206" y="176" w="160" h="32">
+        <style>
+          <fillColor r="245" g="222" b="170"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode13" xsi:type="Element" elementRef="legend_business" x="40" y="214" w="160" h="32">
+        <style>
+          <fillColor r="255" g="255" b="181"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode14" xsi:type="Element" elementRef="legend_application" x="206" y="214" w="160" h="32">
+        <style>
+          <fillColor r="181" g="255" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode15" xsi:type="Element" elementRef="legend_technology" x="40" y="252" w="160" h="32">
+        <style>
+          <fillColor r="201" g="231" b="183"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode16" xsi:type="Element" elementRef="legend_implementation" x="206" y="252" w="160" h="32">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode17" xsi:type="Element" elementRef="viewinfo_motivation_requirements" x="420" y="140" w="340" h="150">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      </view>
+      <view identifier="v-gap_analysis" xsi:type="Diagram">
+        <name xml:lang="en">Gap Analysis</name>
+      <node identifier="vnode18" xsi:type="Element" elementRef="req1" x="40" y="40" w="180" h="60">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode19" xsi:type="Element" elementRef="gap1" x="310" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode20" xsi:type="Element" elementRef="plat1" x="580" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode21" xsi:type="Element" elementRef="plat2" x="580" y="120" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode22" xsi:type="Element" elementRef="legend_title" x="40" y="220" w="326" h="30">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode23" xsi:type="Element" elementRef="legend_motivation" x="40" y="256" w="160" h="32">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode24" xsi:type="Element" elementRef="legend_strategy" x="206" y="256" w="160" h="32">
+        <style>
+          <fillColor r="245" g="222" b="170"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode25" xsi:type="Element" elementRef="legend_business" x="40" y="294" w="160" h="32">
+        <style>
+          <fillColor r="255" g="255" b="181"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode26" xsi:type="Element" elementRef="legend_application" x="206" y="294" w="160" h="32">
+        <style>
+          <fillColor r="181" g="255" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode27" xsi:type="Element" elementRef="legend_technology" x="40" y="332" w="160" h="32">
+        <style>
+          <fillColor r="201" g="231" b="183"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode28" xsi:type="Element" elementRef="legend_implementation" x="206" y="332" w="160" h="32">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode29" xsi:type="Element" elementRef="viewinfo_gap_analysis" x="420" y="220" w="340" h="150">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <connection identifier="vconn1" xsi:type="Relationship" relationshipRef="rel50" source="vnode19" target="vnode20"/>
+      <connection identifier="vconn2" xsi:type="Relationship" relationshipRef="rel51" source="vnode19" target="vnode21"/>
+      </view>
+      <view identifier="v-migration_plateaus" xsi:type="Diagram">
+        <name xml:lang="en">Migration Plateaus</name>
+      <node identifier="vnode30" xsi:type="Element" elementRef="gap1" x="40" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode31" xsi:type="Element" elementRef="plat1" x="310" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode32" xsi:type="Element" elementRef="plat2" x="310" y="120" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode33" xsi:type="Element" elementRef="legend_title" x="40" y="220" w="326" h="30">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode34" xsi:type="Element" elementRef="legend_motivation" x="40" y="256" w="160" h="32">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode35" xsi:type="Element" elementRef="legend_strategy" x="206" y="256" w="160" h="32">
+        <style>
+          <fillColor r="245" g="222" b="170"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode36" xsi:type="Element" elementRef="legend_business" x="40" y="294" w="160" h="32">
+        <style>
+          <fillColor r="255" g="255" b="181"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode37" xsi:type="Element" elementRef="legend_application" x="206" y="294" w="160" h="32">
+        <style>
+          <fillColor r="181" g="255" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode38" xsi:type="Element" elementRef="legend_technology" x="40" y="332" w="160" h="32">
+        <style>
+          <fillColor r="201" g="231" b="183"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode39" xsi:type="Element" elementRef="legend_implementation" x="206" y="332" w="160" h="32">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode40" xsi:type="Element" elementRef="viewinfo_migration_plateaus" x="420" y="220" w="340" h="150">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <connection identifier="vconn3" xsi:type="Relationship" relationshipRef="rel50" source="vnode30" target="vnode31"/>
+      <connection identifier="vconn4" xsi:type="Relationship" relationshipRef="rel51" source="vnode30" target="vnode32"/>
+      </view>
+      <view identifier="v-work_package_overview" xsi:type="Diagram">
+        <name xml:lang="en">Work Package Overview</name>
+      <node identifier="vnode41" xsi:type="Element" elementRef="plat2" x="40" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode42" xsi:type="Element" elementRef="legend_title" x="40" y="140" w="326" h="30">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode43" xsi:type="Element" elementRef="legend_motivation" x="40" y="176" w="160" h="32">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode44" xsi:type="Element" elementRef="legend_strategy" x="206" y="176" w="160" h="32">
+        <style>
+          <fillColor r="245" g="222" b="170"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode45" xsi:type="Element" elementRef="legend_business" x="40" y="214" w="160" h="32">
+        <style>
+          <fillColor r="255" g="255" b="181"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode46" xsi:type="Element" elementRef="legend_application" x="206" y="214" w="160" h="32">
+        <style>
+          <fillColor r="181" g="255" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode47" xsi:type="Element" elementRef="legend_technology" x="40" y="252" w="160" h="32">
+        <style>
+          <fillColor r="201" g="231" b="183"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode48" xsi:type="Element" elementRef="legend_implementation" x="206" y="252" w="160" h="32">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode49" xsi:type="Element" elementRef="viewinfo_work_package_overview" x="420" y="140" w="340" h="150">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      </view>
+      <view identifier="v-complete" xsi:type="Diagram">
+        <name xml:lang="en">Complete Phase Cross-Reference (All Elements)</name>
+      <node identifier="vnode50" xsi:type="Element" elementRef="req1" x="40" y="40" w="180" h="60">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode51" xsi:type="Element" elementRef="gap1" x="310" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode52" xsi:type="Element" elementRef="plat1" x="580" y="40" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode53" xsi:type="Element" elementRef="plat2" x="580" y="120" w="180" h="60">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode54" xsi:type="Element" elementRef="legend_title" x="40" y="220" w="326" h="30">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode55" xsi:type="Element" elementRef="legend_motivation" x="40" y="256" w="160" h="32">
+        <style>
+          <fillColor r="204" g="204" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode56" xsi:type="Element" elementRef="legend_strategy" x="206" y="256" w="160" h="32">
+        <style>
+          <fillColor r="245" g="222" b="170"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode57" xsi:type="Element" elementRef="legend_business" x="40" y="294" w="160" h="32">
+        <style>
+          <fillColor r="255" g="255" b="181"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode58" xsi:type="Element" elementRef="legend_application" x="206" y="294" w="160" h="32">
+        <style>
+          <fillColor r="181" g="255" b="255"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode59" xsi:type="Element" elementRef="legend_technology" x="40" y="332" w="160" h="32">
+        <style>
+          <fillColor r="201" g="231" b="183"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode60" xsi:type="Element" elementRef="legend_implementation" x="206" y="332" w="160" h="32">
+        <style>
+          <fillColor r="255" g="224" b="224"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <node identifier="vnode61" xsi:type="Element" elementRef="viewinfo_complete" x="420" y="220" w="340" h="150">
+        <style>
+          <fillColor r="232" g="232" b="232"/>
+          <lineColor r="90" g="90" b="90"/>
+          <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+        </style>
+      </node>
+      <connection identifier="vconn5" xsi:type="Relationship" relationshipRef="rel50" source="vnode51" target="vnode52"/>
+      <connection identifier="vconn6" xsi:type="Relationship" relationshipRef="rel51" source="vnode51" target="vnode53"/>
+      </view>
+    </diagrams>
+  </views>
+</model>

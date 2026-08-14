@@ -3,8 +3,12 @@
 Validates every ArchiMate Model Exchange File (.xml) under ../projects/*/Models/
 and reports errors and warnings: malformed XML, duplicate identifiers,
 elements missing a name, unrecognized xsi:type values, relationships with
-dangling source/target references, and properties that reference an
-undeclared propertyDefinitionRef.
+dangling source/target references, properties that reference an
+undeclared propertyDefinitionRef, model children out of the schema's
+required order (e.g. a <propertyDefinitions> block placed before <elements>,
+which parses fine but Archi's importer rejects at import time), and view
+node x/y/w/h values that aren't valid xsd:integer (e.g. "200.0" from
+unrounded layout math).
 
 Usage:
     python validate_models.py                  # validate every project
@@ -73,6 +77,20 @@ def validate_file(path: Path) -> tuple[list[str], list[str]]:
     if root.tag != qn("model"):
         warnings.append(f"root element is <{root.tag}>, expected <model> in the ArchiMate 3.0 namespace")
 
+    # The Model Exchange File schema requires model children in exactly this
+    # order; anything out of sequence (e.g. propertyDefinitions before
+    # elements) parses fine with ElementTree but Archi's schema-validating
+    # importer rejects it with a cvc-complex-type.2.4.a error.
+    schema_order = ["name", "documentation", "properties", "elements", "relationships",
+                     "organizations", "propertyDefinitions", "views"]
+    seen_tags = [c.tag.split("}")[-1] for c in root if c.tag.split("}")[-1] in schema_order]
+    expected = [tag for tag in schema_order if tag in seen_tags]
+    if seen_tags != expected:
+        errors.append(
+            f"model children out of schema order: found {seen_tags}, expected {expected} "
+            "(will fail Archi's import validation)"
+        )
+
     elements_root = root.find(qn("elements"))
     relationships_root = root.find(qn("relationships"))
     propdefs_root = root.find(qn("propertyDefinitions"))
@@ -125,13 +143,33 @@ def validate_file(path: Path) -> tuple[list[str], list[str]]:
             if tgt and tgt not in element_ids:
                 warnings.append(f"relationship '{ident}' target '{tgt}' not defined as an element in this file")
 
+    # <node>/<connection> x/y/w/h are xsd:integer per the schema - a float
+    # like "200.0" parses fine with ElementTree but Archi's schema-validating
+    # importer rejects it (cvc-datatype-valid.1.2.1). Easy to introduce via
+    # any layout math that isn't explicitly rounded/int-cast (e.g. an
+    # average), so check every view node/connection's coordinates directly.
+    views_root = root.find(qn("views"))
+    if views_root is not None:
+        diagrams_root = views_root.find(qn("diagrams"))
+        if diagrams_root is not None:
+            for view in diagrams_root.findall(qn("view")):
+                for node in view.iter(qn("node")):
+                    node_id = node.get("identifier")
+                    for attr in ("x", "y", "w", "h"):
+                        val = node.get(attr)
+                        if val is not None and not val.lstrip("-").isdigit():
+                            errors.append(f"view node '{node_id}' has non-integer {attr}='{val}' (will fail Archi's import validation)")
+
     return errors, warnings
 
 
 def fix_file(path: Path) -> bool:
-    """Auto-fixes the one safely-mechanical issue: a property referencing an
-    undeclared propertyDefinitionRef. Adds a minimal <propertyDefinitions>
-    entry (friendly name derived from the id) rather than removing data.
+    """Auto-fixes two safely-mechanical issues:
+    1. A property referencing an undeclared propertyDefinitionRef - adds a
+       minimal <propertyDefinitions> entry (friendly name derived from the id)
+       rather than removing data.
+    2. model children out of the schema's required order (e.g. a misplaced
+       <propertyDefinitions> block) - reorders them in place.
     Returns True if the file was changed."""
     tree = ET.parse(path)
     root = tree.getroot()
@@ -155,20 +193,30 @@ def fix_file(path: Path) -> bool:
                         used_refs.add(ref)
 
     missing = sorted(used_refs - declared)
-    if not missing:
+
+    # The Model Exchange File schema requires model children in this order:
+    # name, documentation, properties, elements, relationships, organizations,
+    # propertyDefinitions, views. Rebuild root children in that sequence
+    # unconditionally - cheap, idempotent, and a misplaced (rather than
+    # missing) propertyDefinitions block is exactly what breaks import into
+    # Archi even when no propertyDefinitionRef is actually missing.
+    order = ["name", "documentation", "properties", "elements", "relationships",
+             "organizations", "propertyDefinitions", "views"]
+    current = [c.tag.split("}")[-1] for c in root if c.tag.split("}")[-1] in order]
+    needs_reorder = current != [tag for tag in order if tag in current]
+
+    if not missing and not needs_reorder:
         return False
 
-    if propdefs_root is None:
+    if propdefs_root is None and missing:
         propdefs_root = ET.SubElement(root, qn("propertyDefinitions"))
-        # propertyDefinitions must come before elements per the schema's element order;
-        # rebuild root children in the correct sequence.
-        order = ["name", "documentation", "propertyDefinitions", "elements", "relationships", "organizations", "views"]
-        children = {c.tag.split("}")[-1]: c for c in list(root)}
-        for c in list(root):
-            root.remove(c)
-        for tag in order:
-            if tag in children:
-                root.append(children[tag])
+
+    children = {c.tag.split("}")[-1]: c for c in list(root)}
+    for c in list(root):
+        root.remove(c)
+    for tag in order:
+        if tag in children:
+            root.append(children[tag])
 
     for ref in missing:
         friendly = ref.replace("propdef-", "").replace("-", " ").replace("_", " ").title()
@@ -220,7 +268,7 @@ def main():
 
     print(f"\n{total_errors} error(s), {total_warnings} warning(s) across {sum(1 for _ in PROJECTS_DIR.glob('*/Models/*.xml')) if not args else len(list((PROJECTS_DIR / args[0] / 'Models').glob('*.xml')))} file(s).")
     if do_fix:
-        print(f"Auto-fixed {total_fixed} file(s) (undeclared propertyDefinitionRef -> added propertyDefinitions entry).")
+        print(f"Auto-fixed {total_fixed} file(s) (undeclared propertyDefinitionRef and/or out-of-order model children).")
     if total_errors and not do_fix:
         print("Re-run with --fix to auto-fix what's safely fixable.")
 

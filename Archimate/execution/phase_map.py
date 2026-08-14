@@ -24,6 +24,7 @@ TOGAF_PHASES = [
             ("catalog", "Prelim_Tailored_Architecture_Framework", "Tailored Architecture Framework"),
             ("catalog", "Prelim_Architecture_Repository", "Architecture Repository"),
             ("catalog", "Prelim_Business_Principles_Goals_and_Drivers", "Business Principles, Goals and Drivers"),
+            ("catalog", "Prelim_Architecture_Principles", "Architecture Principles"),
         ],
     },
     {
@@ -73,6 +74,8 @@ TOGAF_PHASES = [
             ("core", "06_Architecture_Requirements_Specification", "Architecture Requirements Specification"),
             ("catalog", "E_Architecture_Building_Blocks", "Architecture Building Blocks"),
             ("catalog", "E_Solution_Building_Blocks", "Solution Building Blocks"),
+            ("catalog", "E_Opportunities_and_Solutions_Assessment", "Opportunities & Solutions Assessment"),
+            ("catalog", "E_Architecture_Definition_Document", "Architecture Definition Document (formal)"),
         ],
     },
     {
@@ -91,7 +94,7 @@ TOGAF_PHASES = [
         "docs": [
             ("core", "08_Architecture_Roadmap", "Architecture Roadmap"),
             ("catalog", "G_Implementation_Governance_Model", "Implementation Governance Model"),
-            ("catalog", "G_Compliance_Assessment", "Compliance Assessment"),
+            ("catalog", "G_Compliance_Assessment", "Compliance Assessment Report"),
         ],
     },
     {

@@ -56,6 +56,7 @@ def main():
 
     reg = xb.Registry()
     cats = xb.build_elements(reg, answers)
+    all_rels = xb.build_relationships(reg, cats)
 
     created_docs = []
     created_models = []
@@ -71,23 +72,28 @@ def main():
             for suffix, phase_xid in zip(phase["model_suffixes"], ["C-data", "C-app"]):
                 fname = model_filename(slug, suffix)
                 els = xb.elements_for_phase(phase_xid, cats)
+                rels = xb.relationships_for_phase(phase_xid, cats, all_rels)
+                view_specs = xb.view_specs_for_scope(els, cats, rels, "Complete Phase Cross-Reference (All Elements)")
                 doc_text = xb.documentation_header(answers, phase["title"])
-                xml = xb.build_model_xml(f"{id_slug}-{suffix.lower()}", f"{repository_name} - {phase['title']}", doc_text, els)
+                xml = xb.build_model_xml(f"{id_slug}-{suffix.lower()}", f"{repository_name} - {phase['title']}", doc_text, els, relationships=rels, view_specs=view_specs, phase_label=phase["title"])
                 (models_dir / fname).write_text(xml, encoding="utf-8")
                 created_models.append(fname)
         else:
             fname = model_filename(slug, phase["model_suffix"])
             els = xb.elements_for_phase(phase["id"], cats)
+            rels = xb.relationships_for_phase(phase["id"], cats, all_rels)
+            view_specs = xb.view_specs_for_scope(els, cats, rels, "Complete Phase Cross-Reference (All Elements)")
             doc_text = xb.documentation_header(answers, phase["title"])
-            xml = xb.build_model_xml(f"{id_slug}-{phase['id'].lower()}", f"{repository_name} - {phase['title']}", doc_text, els)
+            xml = xb.build_model_xml(f"{id_slug}-{phase['id'].lower()}", f"{repository_name} - {phase['title']}", doc_text, els, relationships=rels, view_specs=view_specs, phase_label=phase["title"])
             (models_dir / fname).write_text(xml, encoding="utf-8")
             created_models.append(fname)
 
-    # Master model = union of every element used across phases
+    # Master model = union of every element (and relationship) used across phases
     master_fname = model_filename(slug, None)
     master_els = xb.master_elements(cats)
+    master_view_specs = xb.view_specs_for_scope(master_els, cats, all_rels, "Complete Model Cross-Reference (All Elements)")
     master_doc = xb.documentation_header(answers)
-    master_xml = xb.build_model_xml(id_slug, repository_name, master_doc, master_els)
+    master_xml = xb.build_model_xml(id_slug, repository_name, master_doc, master_els, relationships=all_rels, view_specs=master_view_specs, phase_label="Master Model (all phases)")
     (models_dir / master_fname).write_text(master_xml, encoding="utf-8")
     created_models.append(master_fname)
 

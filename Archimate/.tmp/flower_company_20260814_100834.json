@@ -1,0 +1,48 @@
+{
+  "repository_name": "flower company",
+  "short_code": "FLOWER",
+  "author": "Bram-JanDuits",
+  "company_name": "flower power",
+  "engagement_type": "Existing enterprise transformation",
+  "industry": "Manufacturing (Discrete)",
+  "company_size": "Small (< 250 employees)",
+  "geo_scope": "Single country / single site",
+  "current_erp": [
+    "Non-SAP ERP (e.g. Oracle, Microsoft Dynamics, Infor)"
+  ],
+  "pain_points": [
+    "High total cost of ownership / maintenance"
+  ],
+  "drivers": [
+    "Cost reduction & operational efficiency"
+  ],
+  "principles": [
+    "Cloud-first"
+  ],
+  "business_processes": [
+    "Lead-to-Cash",
+    "Order-to-Cash",
+    "Procure-to-Pay",
+    "Record-to-Report",
+    "Hire-to-Retire",
+    "Plan-to-Produce",
+    "Design-to-Operate",
+    "Acquire-to-Decommission (Asset Management)",
+    "Idea-to-Market",
+    "Forecast-to-Deliver (Supply Chain)"
+  ],
+  "applications": [
+    "SAP Concur (Travel & Expense)"
+  ],
+  "platform_primary": "GROW with SAP (S/4HANA Cloud, public edition)",
+  "btp_services": [
+    "SAP Integration Suite",
+    "SAP Extension Suite (ABAP Cloud / CAP)",
+    "SAP Build Apps / Process Automation",
+    "AI Foundation / Generative AI Hub",
+    "Identity Authentication & Provisioning Services",
+    "SAP Datasphere",
+    "SAP Analytics Cloud"
+  ],
+  "hyperscaler": "Google Cloud Platform (GCP)"
+}
