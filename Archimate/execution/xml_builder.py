@@ -55,13 +55,36 @@ def _element_xml(el: dict) -> str:
     return f'    <element identifier="{identifier}" xsi:type="{etype}">\n{body}\n    </element>'
 
 
+def _property_defs_xml(elements: list) -> str:
+    """Every element that carries a propertyDefinitionRef must have a matching
+    declaration in propertyDefinitions, or the file fails validation (see
+    validate_models.py). Auto-derive the declarations from what's actually
+    used, so this can't drift out of sync with the elements below."""
+    used_refs = []
+    for el in elements:
+        for label in (el.get("props") or {}):
+            ref = f"propdef-{label}"
+            if ref not in used_refs:
+                used_refs.append(ref)
+    if not used_refs:
+        return ""
+    entries = "\n".join(
+        f'    <propertyDefinition identifier="{ref}" type="string">'
+        f'<name xml:lang="en">{escape(ref.replace("propdef-", "").replace("-", " ").replace("_", " ").title())}</name>'
+        f"</propertyDefinition>"
+        for ref in used_refs
+    )
+    return f"  <propertyDefinitions>\n{entries}\n  </propertyDefinitions>\n"
+
+
 def build_model_xml(identifier: str, name: str, documentation: str, elements: list) -> str:
     els_xml = "\n".join(_element_xml(e) for e in elements)
+    propdefs_xml = _property_defs_xml(elements)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <model {NS} identifier="{identifier}">
   <name xml:lang="en">{escape(name)}</name>
   <documentation xml:lang="en">{escape(documentation)}</documentation>
-  <elements>
+{propdefs_xml}  <elements>
 {els_xml}
   </elements>
 </model>
