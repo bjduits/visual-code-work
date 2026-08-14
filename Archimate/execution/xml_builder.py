@@ -653,13 +653,30 @@ VIEW_SELECTORS = [
 ]
 
 
-def view_specs_for_scope(scope_elements: list, cats: dict, relationships: list, complete_view_name: str) -> list:
+def build_docindex_element(index_text: str) -> dict:
+    """A Grouping element listing every generated Documentation deliverable
+    relevant to one model file (phase-scoped or the full set for master),
+    checkmarked, one section per phase - matches the "DOCUMENTATION INDEX"
+    element already present by hand in the SAP Enterprise Repository. The
+    caller (generate_project.py, which is what actually knows the generated
+    .docx filenames) builds `index_text` and appends this element to that
+    file's element list; it then flows through the normal machinery like any
+    other element (appears in the Complete Cross-Reference view) plus gets a
+    second, prominent placement on the Template view via view_specs_for_scope."""
+    return {"id": "docindex", "type": "Grouping", "name": index_text,
+            "doc": "Documentation index for this file."}
+
+
+def view_specs_for_scope(scope_elements: list, cats: dict, relationships: list, complete_view_name: str,
+                          docindex_element: dict | None = None) -> list:
     """Builds the multi-view catalog for one model file: a Template (legend
-    only, no real elements), one themed view per VIEW_SELECTORS entry that
-    yields at least one element actually present in `scope_elements`, and a
-    final Complete Cross-Reference of everything in `scope_elements`."""
+    only plus the documentation index, if provided - no other real elements),
+    one themed view per VIEW_SELECTORS entry that yields at least one element
+    actually present in `scope_elements`, and a final Complete Cross-Reference
+    of everything in `scope_elements`."""
     scope_ids = {el["id"] for el in scope_elements}
-    specs = [("template", "Template - Legend and View Information", [], [])]
+    template_elements = [docindex_element] if docindex_element else []
+    specs = [("template", "Template - Legend and View Information", template_elements, [])]
 
     for key, view_name, selector in VIEW_SELECTORS:
         subset = [el for el in selector(cats) if el["id"] in scope_ids]
