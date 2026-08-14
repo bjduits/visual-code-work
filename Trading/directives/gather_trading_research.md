@@ -50,3 +50,25 @@ NEWSAPI_KEY=your_newsapi_key (optional)
 - This is a research tool, not trading advice.
 - For live trading execution, add brokerage API integration separately and validate thoroughly.
 - Review `.tmp/trading_research_summary.txt` before making any position decisions.
+
+## Walkthrough
+
+A plain-language run-through of what happens when you run this.
+
+**Before you start:** set `CRYPTO_FOCUS` and `STOCK_FOCUS` in `.env` to the assets you actually care about - the defaults are just examples. `NEWSAPI_KEY` is optional; without it you still get price data, just no headlines.
+
+1. **Run `python Trading/execution/gather_trading_research.py`.**
+   It fetches crypto data from CoinGecko and stock quotes + 7-day history from Yahoo Finance for whatever's in your focus lists, plus news if you've configured `NEWSAPI_KEY`.
+
+2. **It scores each asset.**
+   Momentum, volatility, and an overall score get calculated per asset, tuned for a 1-7 day horizon rather than long-term investing.
+
+3. **Check `.tmp/`.**
+   You'll see `trading_research_report.json` (full data), `trading_research_summary.txt` (readable candidate summary), and the terminal itself prints the top candidates with notes.
+
+4. **The script also generates a trade plan via `trading_execution_template.py`.**
+   This produces `.tmp/trading_execution_plan.json` - a candidate plan built from the research, but it's a safe placeholder: nothing gets executed, no live orders are placed.
+
+**If something's off:** an asset symbol that doesn't resolve gets skipped and reported rather than breaking the run; if an API is down entirely, the script logs it and carries on with whatever sources did respond.
+
+**You're done when:** you've read `.tmp/trading_research_summary.txt` and have a short list of candidates with momentum/volatility notes to think about - treat it as a research starting point, not a signal to act on automatically.

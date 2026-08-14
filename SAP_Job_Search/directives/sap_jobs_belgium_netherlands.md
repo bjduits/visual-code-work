@@ -87,3 +87,26 @@ Categories to search each time this directive is run:
 - This is a research aid for a personal job search, not a scraper/automation pipeline —
   each run is a manual pass through the sources above, refreshed and re-saved as a new
   dated findings file.
+
+## Walkthrough
+
+A plain-language run-through of what a search pass actually looks like.
+
+**Before you start:** no accounts or API keys needed - this is a manual, browser-driven pass. Having a CV ready helps if you find a role worth applying to on the spot.
+
+1. **Search the general boards first: LinkedIn, Indeed, StepStone.**
+   Filter each by "SAP" + country, sorted or filtered by most-recent posting date. LinkedIn gives you the clearest signal here - every listing shows an exact "posted X days ago".
+
+2. **Check the SAP-specialist boards: Eursap and SAP Careers.**
+   These often surface roles that never make it onto the general boards - especially true for Eursap's live vacancy feed.
+
+3. **Re-verify recruitment partner contact details before calling anyone.**
+   Open each agency's own "Contact us" page rather than trusting `SAP_Job_Search/findings/` from a previous run - phone numbers and staff turn over.
+
+4. **Call or email 2-3 relevant partners**, naming the specific SAP module or role you're after (e.g. SAP FI/CO, S/4HANA, BTP, CPI). Specialist recruiters frequently have roles that were never publicly posted.
+
+5. **Write everything down in a new dated file**: `SAP_Job_Search/findings/sap_jobs_be_nl_<YYYY-MM-DD>.md`, capturing site, role, location, posted date, and which contact you used.
+
+**Watch out for:** sites that show a job's *start date* or *Job ID* instead of when it was actually posted (easy to misread as freshness) - and JS-heavy boards like StepStone that don't respond well to anything but a real browser, so just check those manually rather than trying to automate them.
+
+**You're done when:** you have a fresh dated file in `SAP_Job_Search/findings/` listing the roles you found with real posting dates, plus a note on which recruiters you actually spoke to and what they said.

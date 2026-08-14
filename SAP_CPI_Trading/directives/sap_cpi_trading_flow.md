@@ -72,3 +72,25 @@ folder-naming coincidence with "CPI").
   for a nicer-looking report (tables, styled fonts) instead of the current monospace,
   single-font layout.
 - This is a research/education tool, not financial advice, same as the Python workflow.
+
+## Walkthrough
+
+A plain-language run-through of getting this flow live in SAP Integration Suite and seeing it work.
+
+**Before you start:** you'll need access to an SAP Integration Suite tenant, and two credentials ready to hand: an Anthropic API key and a Gmail app password.
+
+1. **Import `SAP_CPI_Trading/iflow/TradingCPIFlow.zip`** into Integration Suite via the Web UI (Design > Import). Follow `SETUP_SAP_CPI_TRADING.md` for the exact clicks. You'll see the iFlow appear in your package with all five steps visible on the canvas: timer start, Set Parameters, the three Script steps, and the Mail Receiver.
+
+2. **Set the externalized parameters** at Configure time: `CryptoFocus`, `StockFocus`, `ClaudeModel`, `MailFrom`, `MailTo`, and `ScheduleCronExpression` (defaults to weekdays 07:00 Europe/Amsterdam). You'll see a configuration form with each parameter and its default pre-filled.
+
+3. **Add the two Security Material entries** under Monitor > Security Material: `Anthropic_API_Key` (User Credentials, password = your Claude API key) and `Gmail_SMTP_Credential` (User Credentials, username = Gmail address, password = the Gmail app password). Both need to show as "Deployed" before the flow can use them.
+
+4. **Deploy the iFlow.** You'll see it move to "Started" status in Monitor > Integrations > Manage Integration Content.
+
+5. **Wait for the schedule to fire (or trigger it manually for a first test).** Each run walks through: fetch crypto/stock/FX data and score it → build a Dutch-language Claude narrative → hand-render a PDF → email it via the Mail Receiver.
+
+6. **Check your inbox and the Monitor logs.** `MailTo` receives `trading_cpi_report.pdf`. Monitor > Integrations > Manage Integration Content shows a processing log entry for the run, green if it succeeded.
+
+**If something's off:** a missing Security Material entry throws a clear `IllegalStateException` naming exactly which credential is missing, visible right in the Monitor error trace - so a failed run tells you precisely what to fix. If your tenant blocks direct outbound HTTP from Script steps, the fetch/Claude calls will fail there specifically - swap in Request-Reply steps with an HTTP Receiver adapter as a workaround (see Edge Cases above).
+
+**You're done when:** the iFlow shows "Started", a test run completes green in Monitor, and the PDF lands in your inbox with a real Dutch-language market narrative in it.

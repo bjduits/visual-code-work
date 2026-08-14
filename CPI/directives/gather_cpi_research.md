@@ -53,3 +53,28 @@ CPI_EMAIL_TO=recipient@example.com
 ## Notes
 - This is a research and education tool, not financial advice.
 - Review the official sources (Eurostat, BLS) directly before making any decisions based on this report.
+
+## Walkthrough
+
+A plain-language run-through of what happens when you run this, end to end.
+
+**Before you start:** Eurostat and BLS need no API key. For the AI narrative, PDF, and email you'll want `ANTHROPIC_API_KEY` set, and for the email step specifically, `GMAIL_ADDRESS` / `GMAIL_APP_PASSWORD` / `CPI_EMAIL_TO`. Missing the email settings is fine - the PDF still gets made, it just won't be sent anywhere.
+
+1. **Run `python CPI/execution/gather_cpi_research.py`.**
+   It fetches the latest Eurozone HICP rate from Eurostat, the US CPI-U figures from the BLS, and EUR/USD + EUR/CHF rates from Yahoo Finance - one request each, well within the BLS's free-tier limit.
+
+2. **It crunches the numbers.**
+   For each region you'll get the latest value, the previous value, a trend (up/down/flat), and a 13-month history table.
+
+3. **Check `.tmp/`.**
+   You'll find `cpi_research_report.json` (the full detailed data) and `cpi_research_summary.txt` (a quick, readable version) waiting there.
+
+4. **Run `python CPI/execution/cpi_advisor_claude.py`.**
+   This picks up the report you just generated, asks Claude to turn it into a Dutch-language narrative, and renders that into a PDF.
+
+5. **Watch for the PDF and, if configured, the email.**
+   `.tmp/cpi_advisor_claude_report_<date>.pdf` appears, and if Gmail is set up, it's emailed straight to `CPI_EMAIL_TO`. Either way, the narrative also prints to the terminal so you can read it immediately.
+
+**If something's missing:** no email settings configured? You'll see a warning in the log, not an error - the PDF is still saved locally. One data source down (say, a delayed BLS release)? That source is skipped for the affected months rather than failing the whole run.
+
+**You're done when:** you've got a readable Dutch-language PDF in `.tmp/` (and in your inbox, if email is set up) summarizing where Eurozone and US inflation stand this month, with trend and recent history to back it up.

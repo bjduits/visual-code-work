@@ -61,3 +61,34 @@ Core numbered docs (`01`-`08`) are unprefixed, matching the SAP Enterprise Repos
 - Capability maturity is generated as `"To be assessed"` rather than a fabricated value - fill in real ratings after a current-state workshop.
 - No `<relationships>` are generated between elements yet, only elements - keeps the skeleton valid and simple to review; add relationships in Archi once elements are confirmed.
 - Deliverables land in `C:\Archimate Repository\`, outside this repo - that folder is the actual architecture repository the team works from, not something to commit here.
+
+## Walkthrough
+
+A plain-language run-through of what happens when you actually do this, start to finish.
+
+**Before you start:** have `python-docx` installed (`pip install python-docx`) and know roughly what the engagement is about - company, industry, current pain points. You don't need exact answers, just a first pass; everything here is a refinable draft.
+
+1. **Open a terminal in `Archimate/execution/` and run `python questionnaire.py`.**
+   You'll see a friendly numbered questionnaire, one section at a time - repository basics, then business plan, current situation, motivation, business processes, applications, and platform. Multiple-choice questions show a numbered list; type one number, or several separated by commas (or `all`). Free-text questions (repository name, company name, author) just take what you type.
+
+2. **Answer through to the end.**
+   The last question is your hyperscaler preference. Right after that, you'll see a summary line: `Answers saved to: ...\.tmp\<slug>_<timestamp>.json` followed by the exact next command to run.
+
+3. **Run `python generate_project.py`.**
+   No arguments needed - it automatically picks up the answers file you just created. Within a couple of seconds you'll see:
+   ```
+   Created project: C:\Archimate Repository\<your repository name>
+     Documentation/ : 25 files
+     Models/        : 11 files
+   ```
+
+4. **Open the new folder at `C:\Archimate Repository\<your repository name>\`.**
+   You'll find it structured exactly like the two existing repositories: a `Documentation\` folder with 25 `.docx` files (8 core numbered deliverables plus TOGAF catalog artifacts) and a `Models\` folder with 11 `.xml` files (one master plus one per ADM phase).
+
+5. **Open a `Documentation\*.docx` file, e.g. `01_Architecture_Vision.docx`, in Word.**
+   You'll see a title page with your repository/company/author, a Purpose section explaining what this deliverable is for, a Scope section already filled in with the relevant answers you gave (e.g. industry, drivers, business processes - whichever apply to that document), a Content placeholder to replace during the real workshop, and a "DRAFT" status line.
+
+6. **Open a `Models\*.xml` file, e.g. `..._Phase_A_-_Architecture_Vision.xml`, in Archi.**
+   You'll see it import cleanly and show real elements: your chosen stakeholders, drivers, goals, and capabilities (one Capability per business process you picked), not empty placeholders.
+
+**You're done when:** every phase folder has content pulled straight from your answers, the master model in `Models\` (no phase suffix) shows the union of everything across every phase, and you've got a working starting point to walk into the first ADM workshop with instead of a blank page.
