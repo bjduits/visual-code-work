@@ -1,0 +1,2708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.opengroup.org/xsd/archimate/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd" identifier="sap-enterprise-repository-a">
+  <name xml:lang="en">SAP Enterprise Repository - Phase A - Architecture Vision</name>
+  <documentation xml:lang="en">Phase-scoped extract of the SAP Enterprise Repository for TOGAF ADM Phase A - Architecture Vision. Generated: 2026-08-13. This is a self-contained subset model: element identifiers are unchanged from the master SAP Enterprise Repository, so this file can be cross-referenced against it, but relationships are limited to those whose source and target both fall within this phase's scope.</documentation>
+  <elements>
+    <element identifier="stake1" xsi:type="Stakeholder">
+      <name xml:lang="en">CIO</name>
+    </element>
+    <element identifier="stake2" xsi:type="Stakeholder">
+      <name xml:lang="en">CFO</name>
+    </element>
+    <element identifier="stake3" xsi:type="Stakeholder">
+      <name xml:lang="en">COO</name>
+    </element>
+    <element identifier="stake4" xsi:type="Stakeholder">
+      <name xml:lang="en">Chief Enterprise Architect</name>
+    </element>
+    <element identifier="stake5" xsi:type="Stakeholder">
+      <name xml:lang="en">Program Sponsor</name>
+    </element>
+    <element identifier="stake6" xsi:type="Stakeholder">
+      <name xml:lang="en">Business Process Owner - Finance</name>
+    </element>
+    <element identifier="stake7" xsi:type="Stakeholder">
+      <name xml:lang="en">Business Process Owner - Procurement</name>
+    </element>
+    <element identifier="stake8" xsi:type="Stakeholder">
+      <name xml:lang="en">Business Process Owner - HR</name>
+    </element>
+    <element identifier="stake9" xsi:type="Stakeholder">
+      <name xml:lang="en">Business Process Owner - Supply Chain</name>
+    </element>
+    <element identifier="stake10" xsi:type="Stakeholder">
+      <name xml:lang="en">IT Security Officer</name>
+    </element>
+    <element identifier="stake11" xsi:type="Stakeholder">
+      <name xml:lang="en">Data Protection Officer</name>
+    </element>
+    <element identifier="stake12" xsi:type="Stakeholder">
+      <name xml:lang="en">SAP Basis Team Lead</name>
+    </element>
+    <element identifier="stake13" xsi:type="Stakeholder">
+      <name xml:lang="en">Integration Architect</name>
+    </element>
+    <element identifier="stake14" xsi:type="Stakeholder">
+      <name xml:lang="en">Change Management Lead</name>
+    </element>
+    <element identifier="stake15" xsi:type="Stakeholder">
+      <name xml:lang="en">Solution Architect - S/4HANA</name>
+    </element>
+    <element identifier="stake16" xsi:type="Stakeholder">
+      <name xml:lang="en">Solution Architect - BTP</name>
+    </element>
+    <element identifier="stake17" xsi:type="Stakeholder">
+      <name xml:lang="en">External SI Partner</name>
+    </element>
+    <element identifier="stake18" xsi:type="Stakeholder">
+      <name xml:lang="en">SAP Account Executive</name>
+    </element>
+    <element identifier="stake19" xsi:type="Stakeholder">
+      <name xml:lang="en">Internal Audit</name>
+    </element>
+    <element identifier="stake20" xsi:type="Stakeholder">
+      <name xml:lang="en">Works Council Representative</name>
+    </element>
+    <element identifier="drv1" xsi:type="Driver">
+      <name xml:lang="en">Reduce Total Cost of Ownership</name>
+    </element>
+    <element identifier="drv2" xsi:type="Driver">
+      <name xml:lang="en">Increase Business Agility</name>
+    </element>
+    <element identifier="drv3" xsi:type="Driver">
+      <name xml:lang="en">Ensure Regulatory Compliance</name>
+    </element>
+    <element identifier="drv4" xsi:type="Driver">
+      <name xml:lang="en">Improve Data Quality</name>
+    </element>
+    <element identifier="drv5" xsi:type="Driver">
+      <name xml:lang="en">Enable Continuous Innovation</name>
+    </element>
+    <element identifier="drv6" xsi:type="Driver">
+      <name xml:lang="en">Support Sustainability Reporting</name>
+    </element>
+    <element identifier="goal1" xsi:type="Goal">
+      <name xml:lang="en">Migrate to SAP S/4HANA Cloud by Target Date</name>
+    </element>
+    <element identifier="goal2" xsi:type="Goal">
+      <name xml:lang="en">Decommission Legacy ERP Landscape</name>
+    </element>
+    <element identifier="goal3" xsi:type="Goal">
+      <name xml:lang="en">Achieve Clean Core Compliance</name>
+    </element>
+    <element identifier="goal4" xsi:type="Goal">
+      <name xml:lang="en">Reduce Custom Code Footprint by 50%</name>
+    </element>
+    <element identifier="goal5" xsi:type="Goal">
+      <name xml:lang="en">Standardize Global Business Processes</name>
+    </element>
+    <element identifier="goal6" xsi:type="Goal">
+      <name xml:lang="en">Improve System Availability to 99.9%</name>
+    </element>
+    <element identifier="goal7" xsi:type="Goal">
+      <name xml:lang="en">Reduce Integration Lead Time</name>
+    </element>
+    <element identifier="goal8" xsi:type="Goal">
+      <name xml:lang="en">Enable Self-Service Analytics</name>
+    </element>
+    <element identifier="goal9" xsi:type="Goal">
+      <name xml:lang="en">Achieve Single Source of Master Data</name>
+    </element>
+    <element identifier="goal10" xsi:type="Goal">
+      <name xml:lang="en">Reduce Carbon Footprint of IT Estate</name>
+    </element>
+    <element identifier="out1" xsi:type="Outcome">
+      <name xml:lang="en">Lower Run Cost per Transaction</name>
+    </element>
+    <element identifier="out2" xsi:type="Outcome">
+      <name xml:lang="en">Faster Financial Close Cycle</name>
+    </element>
+    <element identifier="out3" xsi:type="Outcome">
+      <name xml:lang="en">Higher Employee Self-Service Adoption</name>
+    </element>
+    <element identifier="out4" xsi:type="Outcome">
+      <name xml:lang="en">Reduced Number of Critical Incidents</name>
+    </element>
+    <element identifier="out5" xsi:type="Outcome">
+      <name xml:lang="en">Improved Forecast Accuracy</name>
+    </element>
+    <element identifier="out6" xsi:type="Outcome">
+      <name xml:lang="en">Reduced Audit Findings</name>
+    </element>
+    <element identifier="vs1" xsi:type="ValueStream">
+      <name xml:lang="en">Lead-to-Cash Value Stream</name>
+    </element>
+    <element identifier="vs2" xsi:type="ValueStream">
+      <name xml:lang="en">Source-to-Pay Value Stream</name>
+    </element>
+    <element identifier="vs3" xsi:type="ValueStream">
+      <name xml:lang="en">Hire-to-Retire Value Stream</name>
+    </element>
+    <element identifier="vs4" xsi:type="ValueStream">
+      <name xml:lang="en">Plan-to-Fulfil Value Stream</name>
+    </element>
+    <element identifier="vs5" xsi:type="ValueStream">
+      <name xml:lang="en">Idea-to-Market Value Stream</name>
+    </element>
+    <element identifier="vs6" xsi:type="ValueStream">
+      <name xml:lang="en">Record-to-Report Value Stream</name>
+    </element>
+    <element identifier="coa1" xsi:type="CourseOfAction">
+      <name xml:lang="en">Adopt Clean Core Principles</name>
+    </element>
+    <element identifier="coa2" xsi:type="CourseOfAction">
+      <name xml:lang="en">Consolidate Regional ERP Instances</name>
+    </element>
+    <element identifier="coa3" xsi:type="CourseOfAction">
+      <name xml:lang="en">Move to RISE with SAP Public Cloud</name>
+    </element>
+    <element identifier="coa4" xsi:type="CourseOfAction">
+      <name xml:lang="en">Rationalize Custom Code (Z-objects)</name>
+    </element>
+    <element identifier="coa5" xsi:type="CourseOfAction">
+      <name xml:lang="en">Standardize on SAP BTP for Extensions</name>
+    </element>
+    <element identifier="coa6" xsi:type="CourseOfAction">
+      <name xml:lang="en">Establish API-First Integration Strategy</name>
+    </element>
+    <element identifier="coa7" xsi:type="CourseOfAction">
+      <name xml:lang="en">Centralize Master Data Governance</name>
+    </element>
+    <element identifier="coa8" xsi:type="CourseOfAction">
+      <name xml:lang="en">Adopt Continuous Release Management</name>
+    </element>
+    <element identifier="cap1" xsi:type="Capability">
+      <name xml:lang="en">Order-to-Cash</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap2" xsi:type="Capability">
+      <name xml:lang="en">Procure-to-Pay</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap3" xsi:type="Capability">
+      <name xml:lang="en">Record-to-Report</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap4" xsi:type="Capability">
+      <name xml:lang="en">Hire-to-Retire</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap5" xsi:type="Capability">
+      <name xml:lang="en">Plan-to-Produce</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap6" xsi:type="Capability">
+      <name xml:lang="en">Forecast-to-Plan</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap7" xsi:type="Capability">
+      <name xml:lang="en">Source-to-Contract</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap8" xsi:type="Capability">
+      <name xml:lang="en">Inventory Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap9" xsi:type="Capability">
+      <name xml:lang="en">Warehouse Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap10" xsi:type="Capability">
+      <name xml:lang="en">Transportation Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap11" xsi:type="Capability">
+      <name xml:lang="en">Customer Master Data Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap12" xsi:type="Capability">
+      <name xml:lang="en">Vendor Master Data Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap13" xsi:type="Capability">
+      <name xml:lang="en">Financial Planning &amp; Analysis</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap14" xsi:type="Capability">
+      <name xml:lang="en">Treasury Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap15" xsi:type="Capability">
+      <name xml:lang="en">Credit &amp; Collections Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap16" xsi:type="Capability">
+      <name xml:lang="en">Product Lifecycle Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap17" xsi:type="Capability">
+      <name xml:lang="en">Quality Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap18" xsi:type="Capability">
+      <name xml:lang="en">Asset Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap19" xsi:type="Capability">
+      <name xml:lang="en">Project Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap20" xsi:type="Capability">
+      <name xml:lang="en">Contract Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap21" xsi:type="Capability">
+      <name xml:lang="en">Talent Acquisition</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap22" xsi:type="Capability">
+      <name xml:lang="en">Payroll Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap23" xsi:type="Capability">
+      <name xml:lang="en">Travel &amp; Expense Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap24" xsi:type="Capability">
+      <name xml:lang="en">Business Intelligence &amp; Reporting</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap25" xsi:type="Capability">
+      <name xml:lang="en">Master Data Governance</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap26" xsi:type="Capability">
+      <name xml:lang="en">Integration Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap27" xsi:type="Capability">
+      <name xml:lang="en">Identity &amp; Access Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap28" xsi:type="Capability">
+      <name xml:lang="en">Application Lifecycle Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Low maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap29" xsi:type="Capability">
+      <name xml:lang="en">IT Service Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">Medium maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="cap30" xsi:type="Capability">
+      <name xml:lang="en">Sustainability Management</name>
+      <properties>
+        <property propertyDefinitionRef="propdef-maturity"><value xml:lang="en">High maturity</value></property>
+      </properties>
+    </element>
+    <element identifier="con1" xsi:type="Constraint">
+      <name xml:lang="en">Fixed Go-Live Date</name>
+    </element>
+    <element identifier="con2" xsi:type="Constraint">
+      <name xml:lang="en">Limited Availability of Skilled BTP Resources</name>
+    </element>
+    <element identifier="con3" xsi:type="Constraint">
+      <name xml:lang="en">Fixed Program Budget</name>
+    </element>
+    <element identifier="con4" xsi:type="Constraint">
+      <name xml:lang="en">Mandatory Works Council Approval</name>
+    </element>
+    <element identifier="con5" xsi:type="Constraint">
+      <name xml:lang="en">Regulatory Data Residency Constraint</name>
+    </element>
+    <element identifier="assess1" xsi:type="Assessment">
+      <name xml:lang="en">Legacy ERP End-of-Maintenance Assessment</name>
+    </element>
+    <element identifier="assess2" xsi:type="Assessment">
+      <name xml:lang="en">Custom Code Usage Assessment</name>
+    </element>
+    <element identifier="assess3" xsi:type="Assessment">
+      <name xml:lang="en">Cloud Readiness Assessment</name>
+    </element>
+    <element identifier="assess4" xsi:type="Assessment">
+      <name xml:lang="en">Integration Complexity Assessment</name>
+    </element>
+    <element identifier="assess5" xsi:type="Assessment">
+      <name xml:lang="en">Data Quality Assessment</name>
+    </element>
+    <element identifier="legend_title" xsi:type="Grouping">
+      <name xml:lang="en">LEGEND</name>
+    </element>
+    <element identifier="legend_motivation" xsi:type="Grouping">
+      <name xml:lang="en">Motivation</name>
+    </element>
+    <element identifier="legend_strategy" xsi:type="Grouping">
+      <name xml:lang="en">Strategy</name>
+    </element>
+    <element identifier="legend_business" xsi:type="Grouping">
+      <name xml:lang="en">Business</name>
+    </element>
+    <element identifier="legend_application" xsi:type="Grouping">
+      <name xml:lang="en">Application</name>
+    </element>
+    <element identifier="legend_technology" xsi:type="Grouping">
+      <name xml:lang="en">Technology</name>
+    </element>
+    <element identifier="legend_implementation" xsi:type="Grouping">
+      <name xml:lang="en">Implementation &amp; Migration</name>
+    </element>
+    <element identifier="viewinfo_A_pv1" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Template - Legend and View Information
+Phase: Phase A - Architecture Vision
+Created: 2026-08-13
+Audience: Enterprise Architecture Team
+Last Modified: 2026-08-13</name>
+    </element>
+    <element identifier="viewinfo_A_pv2" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Architecture Vision
+Phase: Phase A - Architecture Vision
+Created: 2026-08-13
+Audience: Program Sponsor
+Last Modified: 2026-08-13</name>
+    </element>
+    <element identifier="viewinfo_A_pv3" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Capability Map
+Phase: Phase A - Architecture Vision
+Created: 2026-08-13
+Audience: Chief Enterprise Architect / CFO
+Last Modified: 2026-08-13</name>
+    </element>
+    <element identifier="viewinfo_A_pv4" xsi:type="Grouping">
+      <name xml:lang="en">VIEW INFORMATION
+View: Complete Phase Cross-Reference (All Elements)
+Phase: Phase A - Architecture Vision
+Created: 2026-08-13
+Audience: Enterprise Architecture Team
+Last Modified: 2026-08-13</name>
+    </element>
+    <element identifier="docstatus_A" xsi:type="Grouping">
+      <name xml:lang="en">DOCUMENTATION STATUS
+Phase: Phase A - Architecture Vision
+
+Existing:
+✓ TOGAF_Catalog_ENT_A_Capability_Assessment.docx
+✓ TOGAF_Catalog_ENT_A_Architecture_Vision.docx
+✓ TOGAF_Catalog_ENT_A_Statement_of_Architecture_Work.docx
+✓ TOGAF_Catalog_ENT_A_Communications_Plan.docx
+✓ TOGAF_Catalog_ENT_A_Architecture_Definition_Document.docx
+✓ 01_Architecture_Vision.docx
+
+Outstanding:
+(none – phase fully documented)</name>
+    </element>
+  </elements>
+  <relationships>
+    <relationship identifier="r42" source="coa1" target="cap1" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r43" source="coa2" target="cap2" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r44" source="coa3" target="cap3" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r45" source="coa4" target="cap4" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r46" source="coa5" target="cap5" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r47" source="coa6" target="cap6" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r48" source="coa7" target="cap7" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r49" source="coa8" target="cap8" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r50" source="vs1" target="cap1" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r51" source="vs2" target="cap2" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r52" source="vs3" target="cap3" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r53" source="vs4" target="cap4" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r54" source="vs5" target="cap5" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r55" source="vs6" target="cap6" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r56" source="vs1" target="cap7" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r57" source="vs2" target="cap8" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r58" source="vs3" target="cap9" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r59" source="vs4" target="cap10" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r60" source="vs5" target="cap11" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r61" source="vs6" target="cap12" xsi:type="Aggregation">
+      <name xml:lang="en">aggregates</name>
+    </relationship>
+    <relationship identifier="r62" source="cap1" target="goal1" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r63" source="cap2" target="goal2" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r64" source="cap3" target="goal3" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r65" source="cap4" target="goal4" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r66" source="cap5" target="goal5" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r67" source="cap6" target="goal6" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r68" source="cap7" target="goal7" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r69" source="cap8" target="goal8" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r70" source="cap9" target="goal9" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r71" source="cap10" target="goal10" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r338" source="stake1" target="drv1" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r339" source="stake2" target="drv2" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r340" source="stake3" target="drv3" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r341" source="stake4" target="drv4" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r342" source="stake5" target="drv5" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r343" source="stake6" target="drv6" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r344" source="stake7" target="drv1" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r345" source="stake8" target="drv2" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r346" source="stake9" target="drv3" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r347" source="stake10" target="drv4" xsi:type="Association">
+      <name xml:lang="en">is concerned with</name>
+    </relationship>
+    <relationship identifier="r348" source="drv1" target="goal1" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r349" source="drv2" target="goal2" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r350" source="drv3" target="goal3" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r351" source="drv4" target="goal4" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r352" source="drv5" target="goal5" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r353" source="drv6" target="goal6" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r354" source="drv1" target="goal7" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r355" source="drv2" target="goal8" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r356" source="out1" target="goal1" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r357" source="out2" target="goal2" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r358" source="out3" target="goal3" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r359" source="out4" target="goal4" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r360" source="out5" target="goal5" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r361" source="out6" target="goal6" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r362" source="out1" target="goal7" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r363" source="out2" target="goal8" xsi:type="Realization">
+      <name xml:lang="en">realizes</name>
+    </relationship>
+    <relationship identifier="r390" source="assess1" target="drv1" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r391" source="assess2" target="drv2" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r392" source="assess3" target="drv3" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r393" source="assess4" target="drv4" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r394" source="assess5" target="drv5" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r395" source="assess1" target="drv6" xsi:type="Influence">
+      <name xml:lang="en">+</name>
+    </relationship>
+    <relationship identifier="r406" source="stake1" target="cap1" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r407" source="stake2" target="cap2" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r408" source="stake3" target="cap3" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r409" source="stake4" target="cap4" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r410" source="stake5" target="cap5" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r411" source="stake6" target="cap6" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r412" source="stake7" target="cap7" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+    <relationship identifier="r413" source="stake8" target="cap8" xsi:type="Association">
+      <name xml:lang="en">has interest in</name>
+    </relationship>
+  </relationships>
+  <organizations>
+    <item>
+      <label xml:lang="en">Motivation</label>
+      <item identifierRef="stake1" />
+      <item identifierRef="stake2" />
+      <item identifierRef="stake3" />
+      <item identifierRef="stake4" />
+      <item identifierRef="stake5" />
+      <item identifierRef="stake6" />
+      <item identifierRef="stake7" />
+      <item identifierRef="stake8" />
+      <item identifierRef="stake9" />
+      <item identifierRef="stake10" />
+      <item identifierRef="stake11" />
+      <item identifierRef="stake12" />
+      <item identifierRef="stake13" />
+      <item identifierRef="stake14" />
+      <item identifierRef="stake15" />
+      <item identifierRef="stake16" />
+      <item identifierRef="stake17" />
+      <item identifierRef="stake18" />
+      <item identifierRef="stake19" />
+      <item identifierRef="stake20" />
+      <item identifierRef="drv1" />
+      <item identifierRef="drv2" />
+      <item identifierRef="drv3" />
+      <item identifierRef="drv4" />
+      <item identifierRef="drv5" />
+      <item identifierRef="drv6" />
+      <item identifierRef="goal1" />
+      <item identifierRef="goal2" />
+      <item identifierRef="goal3" />
+      <item identifierRef="goal4" />
+      <item identifierRef="goal5" />
+      <item identifierRef="goal6" />
+      <item identifierRef="goal7" />
+      <item identifierRef="goal8" />
+      <item identifierRef="goal9" />
+      <item identifierRef="goal10" />
+      <item identifierRef="out1" />
+      <item identifierRef="out2" />
+      <item identifierRef="out3" />
+      <item identifierRef="out4" />
+      <item identifierRef="out5" />
+      <item identifierRef="out6" />
+      <item identifierRef="con1" />
+      <item identifierRef="con2" />
+      <item identifierRef="con3" />
+      <item identifierRef="con4" />
+      <item identifierRef="con5" />
+      <item identifierRef="assess1" />
+      <item identifierRef="assess2" />
+      <item identifierRef="assess3" />
+      <item identifierRef="assess4" />
+      <item identifierRef="assess5" />
+    </item>
+    <item>
+      <label xml:lang="en">Strategy</label>
+      <item identifierRef="vs1" />
+      <item identifierRef="vs2" />
+      <item identifierRef="vs3" />
+      <item identifierRef="vs4" />
+      <item identifierRef="vs5" />
+      <item identifierRef="vs6" />
+      <item identifierRef="coa1" />
+      <item identifierRef="coa2" />
+      <item identifierRef="coa3" />
+      <item identifierRef="coa4" />
+      <item identifierRef="coa5" />
+      <item identifierRef="coa6" />
+      <item identifierRef="coa7" />
+      <item identifierRef="coa8" />
+      <item identifierRef="cap1" />
+      <item identifierRef="cap2" />
+      <item identifierRef="cap3" />
+      <item identifierRef="cap4" />
+      <item identifierRef="cap5" />
+      <item identifierRef="cap6" />
+      <item identifierRef="cap7" />
+      <item identifierRef="cap8" />
+      <item identifierRef="cap9" />
+      <item identifierRef="cap10" />
+      <item identifierRef="cap11" />
+      <item identifierRef="cap12" />
+      <item identifierRef="cap13" />
+      <item identifierRef="cap14" />
+      <item identifierRef="cap15" />
+      <item identifierRef="cap16" />
+      <item identifierRef="cap17" />
+      <item identifierRef="cap18" />
+      <item identifierRef="cap19" />
+      <item identifierRef="cap20" />
+      <item identifierRef="cap21" />
+      <item identifierRef="cap22" />
+      <item identifierRef="cap23" />
+      <item identifierRef="cap24" />
+      <item identifierRef="cap25" />
+      <item identifierRef="cap26" />
+      <item identifierRef="cap27" />
+      <item identifierRef="cap28" />
+      <item identifierRef="cap29" />
+      <item identifierRef="cap30" />
+    </item>
+    <item>
+      <label xml:lang="en">Documentation</label>
+      <item identifierRef="legend_title" />
+      <item identifierRef="legend_motivation" />
+      <item identifierRef="legend_strategy" />
+      <item identifierRef="legend_business" />
+      <item identifierRef="legend_application" />
+      <item identifierRef="legend_technology" />
+      <item identifierRef="legend_implementation" />
+      <item identifierRef="viewinfo_A_pv1" />
+      <item identifierRef="viewinfo_A_pv2" />
+      <item identifierRef="viewinfo_A_pv3" />
+      <item identifierRef="viewinfo_A_pv4" />
+      <item identifierRef="docstatus_A" />
+    </item>
+    <item>
+      <label xml:lang="en">Relations</label>
+      <item identifierRef="r42" />
+      <item identifierRef="r43" />
+      <item identifierRef="r44" />
+      <item identifierRef="r45" />
+      <item identifierRef="r46" />
+      <item identifierRef="r47" />
+      <item identifierRef="r48" />
+      <item identifierRef="r49" />
+      <item identifierRef="r50" />
+      <item identifierRef="r51" />
+      <item identifierRef="r52" />
+      <item identifierRef="r53" />
+      <item identifierRef="r54" />
+      <item identifierRef="r55" />
+      <item identifierRef="r56" />
+      <item identifierRef="r57" />
+      <item identifierRef="r58" />
+      <item identifierRef="r59" />
+      <item identifierRef="r60" />
+      <item identifierRef="r61" />
+      <item identifierRef="r62" />
+      <item identifierRef="r63" />
+      <item identifierRef="r64" />
+      <item identifierRef="r65" />
+      <item identifierRef="r66" />
+      <item identifierRef="r67" />
+      <item identifierRef="r68" />
+      <item identifierRef="r69" />
+      <item identifierRef="r70" />
+      <item identifierRef="r71" />
+      <item identifierRef="r338" />
+      <item identifierRef="r339" />
+      <item identifierRef="r340" />
+      <item identifierRef="r341" />
+      <item identifierRef="r342" />
+      <item identifierRef="r343" />
+      <item identifierRef="r344" />
+      <item identifierRef="r345" />
+      <item identifierRef="r346" />
+      <item identifierRef="r347" />
+      <item identifierRef="r348" />
+      <item identifierRef="r349" />
+      <item identifierRef="r350" />
+      <item identifierRef="r351" />
+      <item identifierRef="r352" />
+      <item identifierRef="r353" />
+      <item identifierRef="r354" />
+      <item identifierRef="r355" />
+      <item identifierRef="r356" />
+      <item identifierRef="r357" />
+      <item identifierRef="r358" />
+      <item identifierRef="r359" />
+      <item identifierRef="r360" />
+      <item identifierRef="r361" />
+      <item identifierRef="r362" />
+      <item identifierRef="r363" />
+      <item identifierRef="r390" />
+      <item identifierRef="r391" />
+      <item identifierRef="r392" />
+      <item identifierRef="r393" />
+      <item identifierRef="r394" />
+      <item identifierRef="r395" />
+      <item identifierRef="r406" />
+      <item identifierRef="r407" />
+      <item identifierRef="r408" />
+      <item identifierRef="r409" />
+      <item identifierRef="r410" />
+      <item identifierRef="r411" />
+      <item identifierRef="r412" />
+      <item identifierRef="r413" />
+    </item>
+    <item>
+      <label xml:lang="en">Views</label>
+      <item identifierRef="pv1" />
+      <item identifierRef="pv2" />
+      <item identifierRef="pv3" />
+      <item identifierRef="pv4" />
+    </item>
+  </organizations>
+  <propertyDefinitions>
+    <propertyDefinition identifier="propdef-maturity" type="string">
+      <name xml:lang="en">Maturity</name>
+    </propertyDefinition>
+  </propertyDefinitions>
+  <views>
+    <diagrams>
+      <view identifier="pv1" xsi:type="Diagram">
+        <name xml:lang="en">Template - Legend and View Information</name>
+        <node identifier="pnode1" xsi:type="Element" elementRef="legend_title" x="40" y="50" w="326" h="30">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode2" xsi:type="Element" elementRef="legend_motivation" x="40" y="86" w="160" h="32">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode3" xsi:type="Element" elementRef="legend_strategy" x="206" y="86" w="160" h="32">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode4" xsi:type="Element" elementRef="legend_business" x="40" y="124" w="160" h="32">
+          <style>
+            <fillColor r="255" g="255" b="181"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode5" xsi:type="Element" elementRef="legend_application" x="206" y="124" w="160" h="32">
+          <style>
+            <fillColor r="181" g="255" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode6" xsi:type="Element" elementRef="legend_technology" x="40" y="162" w="160" h="32">
+          <style>
+            <fillColor r="201" g="231" b="183"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode7" xsi:type="Element" elementRef="legend_implementation" x="206" y="162" w="160" h="32">
+          <style>
+            <fillColor r="255" g="224" b="224"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode8" xsi:type="Element" elementRef="viewinfo_A_pv1" x="420" y="50" w="340" h="150">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="120" g="120" b="120"/>
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+          </style>
+        </node>
+        <node identifier="pnode9" xsi:type="Element" elementRef="docstatus_A" x="780" y="50" w="420" h="192">
+          <style>
+            <fillColor r="255" g="248" b="220"/>
+            <lineColor r="150" g="130" b="60"/>
+            <font name="Segoe UI" size="8"><color r="60" g="50" b="20"/></font>
+          </style>
+        </node>
+      </view>
+      <view identifier="pv2" xsi:type="Diagram">
+        <name xml:lang="en">Architecture Vision</name>
+        <node identifier="pnode10" xsi:type="Element" elementRef="stake1" x="40" y="40" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode11" xsi:type="Element" elementRef="stake2" x="40" y="260" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode12" xsi:type="Element" elementRef="stake3" x="40" y="590" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode13" xsi:type="Element" elementRef="stake4" x="40" y="920" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode14" xsi:type="Element" elementRef="stake5" x="40" y="480" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode15" xsi:type="Element" elementRef="stake6" x="40" y="810" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode16" xsi:type="Element" elementRef="stake7" x="40" y="150" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode17" xsi:type="Element" elementRef="stake8" x="40" y="370" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode18" xsi:type="Element" elementRef="stake9" x="40" y="700" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode19" xsi:type="Element" elementRef="stake10" x="40" y="1030" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode20" xsi:type="Element" elementRef="drv1" x="320" y="260" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode21" xsi:type="Element" elementRef="drv2" x="320" y="370" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode22" xsi:type="Element" elementRef="drv3" x="320" y="590" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode23" xsi:type="Element" elementRef="drv4" x="320" y="810" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode24" xsi:type="Element" elementRef="drv5" x="320" y="480" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode25" xsi:type="Element" elementRef="drv6" x="320" y="700" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode26" xsi:type="Element" elementRef="goal1" x="600" y="40" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode27" xsi:type="Element" elementRef="goal2" x="600" y="260" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode28" xsi:type="Element" elementRef="goal3" x="600" y="590" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode29" xsi:type="Element" elementRef="goal4" x="600" y="1030" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode30" xsi:type="Element" elementRef="goal5" x="600" y="480" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode31" xsi:type="Element" elementRef="goal6" x="600" y="920" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode32" xsi:type="Element" elementRef="goal7" x="600" y="150" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode33" xsi:type="Element" elementRef="goal8" x="600" y="370" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode34" xsi:type="Element" elementRef="goal9" x="600" y="700" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode35" xsi:type="Element" elementRef="goal10" x="600" y="810" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode36" xsi:type="Element" elementRef="legend_title" x="40" y="1140" w="326" h="30">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode37" xsi:type="Element" elementRef="legend_motivation" x="40" y="1176" w="160" h="32">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode38" xsi:type="Element" elementRef="legend_strategy" x="206" y="1176" w="160" h="32">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode39" xsi:type="Element" elementRef="legend_business" x="40" y="1214" w="160" h="32">
+          <style>
+            <fillColor r="255" g="255" b="181"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode40" xsi:type="Element" elementRef="legend_application" x="206" y="1214" w="160" h="32">
+          <style>
+            <fillColor r="181" g="255" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode41" xsi:type="Element" elementRef="legend_technology" x="40" y="1252" w="160" h="32">
+          <style>
+            <fillColor r="201" g="231" b="183"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode42" xsi:type="Element" elementRef="legend_implementation" x="206" y="1252" w="160" h="32">
+          <style>
+            <fillColor r="255" g="224" b="224"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode43" xsi:type="Element" elementRef="viewinfo_A_pv2" x="420" y="1140" w="340" h="150">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="120" g="120" b="120"/>
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+          </style>
+        </node>
+        <connection identifier="pconn1" xsi:type="Relationship" relationshipRef="r338" source="pnode10" target="pnode20">
+          <bendpoint x="275" y="70" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="290" />
+        </connection>
+        <connection identifier="pconn2" xsi:type="Relationship" relationshipRef="r339" source="pnode11" target="pnode21">
+          <bendpoint x="275" y="290" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="400" />
+        </connection>
+        <connection identifier="pconn3" xsi:type="Relationship" relationshipRef="r340" source="pnode12" target="pnode22">
+          <bendpoint x="275" y="620" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="620" />
+        </connection>
+        <connection identifier="pconn4" xsi:type="Relationship" relationshipRef="r341" source="pnode13" target="pnode23">
+          <bendpoint x="275" y="950" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="840" />
+        </connection>
+        <connection identifier="pconn5" xsi:type="Relationship" relationshipRef="r342" source="pnode14" target="pnode24">
+          <bendpoint x="275" y="510" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="510" />
+        </connection>
+        <connection identifier="pconn6" xsi:type="Relationship" relationshipRef="r343" source="pnode15" target="pnode25">
+          <bendpoint x="275" y="840" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="730" />
+        </connection>
+        <connection identifier="pconn7" xsi:type="Relationship" relationshipRef="r344" source="pnode16" target="pnode20">
+          <bendpoint x="275" y="180" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="290" />
+        </connection>
+        <connection identifier="pconn8" xsi:type="Relationship" relationshipRef="r345" source="pnode17" target="pnode21">
+          <bendpoint x="275" y="400" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="400" />
+        </connection>
+        <connection identifier="pconn9" xsi:type="Relationship" relationshipRef="r346" source="pnode18" target="pnode22">
+          <bendpoint x="275" y="730" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="620" />
+        </connection>
+        <connection identifier="pconn10" xsi:type="Relationship" relationshipRef="r347" source="pnode19" target="pnode23">
+          <bendpoint x="275" y="1060" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="1115" />
+          <bendpoint x="275" y="840" />
+        </connection>
+        <connection identifier="pconn11" xsi:type="Relationship" relationshipRef="r348" source="pnode20" target="pnode26">
+          <bendpoint x="555" y="290" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="70" />
+        </connection>
+        <connection identifier="pconn12" xsi:type="Relationship" relationshipRef="r354" source="pnode20" target="pnode32">
+          <bendpoint x="555" y="290" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="180" />
+        </connection>
+        <connection identifier="pconn13" xsi:type="Relationship" relationshipRef="r349" source="pnode21" target="pnode27">
+          <bendpoint x="555" y="400" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="290" />
+        </connection>
+        <connection identifier="pconn14" xsi:type="Relationship" relationshipRef="r355" source="pnode21" target="pnode33">
+          <bendpoint x="555" y="400" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="400" />
+        </connection>
+        <connection identifier="pconn15" xsi:type="Relationship" relationshipRef="r350" source="pnode22" target="pnode28">
+          <bendpoint x="555" y="620" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="620" />
+        </connection>
+        <connection identifier="pconn16" xsi:type="Relationship" relationshipRef="r351" source="pnode23" target="pnode29">
+          <bendpoint x="555" y="840" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1060" />
+        </connection>
+        <connection identifier="pconn17" xsi:type="Relationship" relationshipRef="r352" source="pnode24" target="pnode30">
+          <bendpoint x="555" y="510" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="510" />
+        </connection>
+        <connection identifier="pconn18" xsi:type="Relationship" relationshipRef="r353" source="pnode25" target="pnode31">
+          <bendpoint x="555" y="730" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="1115" />
+          <bendpoint x="555" y="950" />
+        </connection>
+      </view>
+      <view identifier="pv3" xsi:type="Diagram">
+        <name xml:lang="en">Capability Map</name>
+        <node identifier="pnode44" xsi:type="Element" elementRef="cap1" x="30" y="30" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode45" xsi:type="Element" elementRef="cap2" x="200" y="30" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode46" xsi:type="Element" elementRef="cap3" x="370" y="30" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode47" xsi:type="Element" elementRef="cap4" x="540" y="30" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode48" xsi:type="Element" elementRef="cap5" x="710" y="30" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode49" xsi:type="Element" elementRef="cap6" x="880" y="30" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode50" xsi:type="Element" elementRef="cap7" x="30" y="110" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode51" xsi:type="Element" elementRef="cap8" x="200" y="110" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode52" xsi:type="Element" elementRef="cap9" x="370" y="110" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode53" xsi:type="Element" elementRef="cap10" x="540" y="110" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode54" xsi:type="Element" elementRef="cap11" x="710" y="110" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode55" xsi:type="Element" elementRef="cap12" x="880" y="110" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode56" xsi:type="Element" elementRef="cap13" x="30" y="190" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode57" xsi:type="Element" elementRef="cap14" x="200" y="190" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode58" xsi:type="Element" elementRef="cap15" x="370" y="190" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode59" xsi:type="Element" elementRef="cap16" x="540" y="190" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode60" xsi:type="Element" elementRef="cap17" x="710" y="190" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode61" xsi:type="Element" elementRef="cap18" x="880" y="190" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode62" xsi:type="Element" elementRef="cap19" x="30" y="270" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode63" xsi:type="Element" elementRef="cap20" x="200" y="270" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode64" xsi:type="Element" elementRef="cap21" x="370" y="270" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode65" xsi:type="Element" elementRef="cap22" x="540" y="270" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode66" xsi:type="Element" elementRef="cap23" x="710" y="270" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode67" xsi:type="Element" elementRef="cap24" x="880" y="270" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode68" xsi:type="Element" elementRef="cap25" x="30" y="350" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode69" xsi:type="Element" elementRef="cap26" x="200" y="350" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode70" xsi:type="Element" elementRef="cap27" x="370" y="350" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode71" xsi:type="Element" elementRef="cap28" x="540" y="350" w="140" h="55">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode72" xsi:type="Element" elementRef="cap29" x="710" y="350" w="140" h="55">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode73" xsi:type="Element" elementRef="cap30" x="880" y="350" w="140" h="55">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode74" xsi:type="Element" elementRef="legend_title" x="40" y="455" w="326" h="30">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode75" xsi:type="Element" elementRef="legend_motivation" x="40" y="491" w="160" h="32">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode76" xsi:type="Element" elementRef="legend_strategy" x="206" y="491" w="160" h="32">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode77" xsi:type="Element" elementRef="legend_business" x="40" y="529" w="160" h="32">
+          <style>
+            <fillColor r="255" g="255" b="181"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode78" xsi:type="Element" elementRef="legend_application" x="206" y="529" w="160" h="32">
+          <style>
+            <fillColor r="181" g="255" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode79" xsi:type="Element" elementRef="legend_technology" x="40" y="567" w="160" h="32">
+          <style>
+            <fillColor r="201" g="231" b="183"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode80" xsi:type="Element" elementRef="legend_implementation" x="206" y="567" w="160" h="32">
+          <style>
+            <fillColor r="255" g="224" b="224"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode81" xsi:type="Element" elementRef="viewinfo_A_pv3" x="420" y="455" w="340" h="150">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="120" g="120" b="120"/>
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+          </style>
+        </node>
+      </view>
+      <view identifier="pv4" xsi:type="Diagram">
+        <name xml:lang="en">Complete Phase Cross-Reference (All Elements)</name>
+        <node identifier="pnode82" xsi:type="Element" elementRef="stake1" x="40" y="810" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode83" xsi:type="Element" elementRef="stake2" x="40" y="590" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode84" xsi:type="Element" elementRef="stake3" x="40" y="2350" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode85" xsi:type="Element" elementRef="stake4" x="40" y="2570" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode86" xsi:type="Element" elementRef="stake5" x="40" y="1140" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode87" xsi:type="Element" elementRef="stake6" x="40" y="1030" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode88" xsi:type="Element" elementRef="stake7" x="40" y="920" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode89" xsi:type="Element" elementRef="stake8" x="40" y="700" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode90" xsi:type="Element" elementRef="stake9" x="40" y="2460" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode91" xsi:type="Element" elementRef="stake10" x="40" y="2680" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode92" xsi:type="Element" elementRef="stake11" x="40" y="1250" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode93" xsi:type="Element" elementRef="stake12" x="40" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode94" xsi:type="Element" elementRef="stake13" x="40" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode95" xsi:type="Element" elementRef="stake14" x="40" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode96" xsi:type="Element" elementRef="stake15" x="40" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode97" xsi:type="Element" elementRef="stake16" x="40" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode98" xsi:type="Element" elementRef="stake17" x="40" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode99" xsi:type="Element" elementRef="stake18" x="40" y="2020" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode100" xsi:type="Element" elementRef="stake19" x="40" y="2130" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode101" xsi:type="Element" elementRef="stake20" x="40" y="2240" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode102" xsi:type="Element" elementRef="drv1" x="320" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode103" xsi:type="Element" elementRef="drv2" x="320" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode104" xsi:type="Element" elementRef="drv3" x="320" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode105" xsi:type="Element" elementRef="drv4" x="320" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode106" xsi:type="Element" elementRef="drv5" x="320" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode107" xsi:type="Element" elementRef="drv6" x="320" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode108" xsi:type="Element" elementRef="goal1" x="880" y="1250" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode109" xsi:type="Element" elementRef="goal2" x="880" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode110" xsi:type="Element" elementRef="goal3" x="880" y="1140" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode111" xsi:type="Element" elementRef="goal4" x="880" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode112" xsi:type="Element" elementRef="goal5" x="880" y="2020" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode113" xsi:type="Element" elementRef="goal6" x="880" y="2130" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode114" xsi:type="Element" elementRef="goal7" x="880" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode115" xsi:type="Element" elementRef="goal8" x="880" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode116" xsi:type="Element" elementRef="goal9" x="880" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode117" xsi:type="Element" elementRef="goal10" x="880" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode118" xsi:type="Element" elementRef="out1" x="1160" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode119" xsi:type="Element" elementRef="out2" x="1160" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode120" xsi:type="Element" elementRef="out3" x="1160" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode121" xsi:type="Element" elementRef="out4" x="1160" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode122" xsi:type="Element" elementRef="out5" x="1160" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode123" xsi:type="Element" elementRef="out6" x="1160" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode124" xsi:type="Element" elementRef="vs1" x="2000" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode125" xsi:type="Element" elementRef="vs2" x="2000" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode126" xsi:type="Element" elementRef="vs3" x="2000" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode127" xsi:type="Element" elementRef="vs4" x="2000" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode128" xsi:type="Element" elementRef="vs5" x="2000" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode129" xsi:type="Element" elementRef="vs6" x="2000" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode130" xsi:type="Element" elementRef="coa1" x="1720" y="1250" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode131" xsi:type="Element" elementRef="coa2" x="1720" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode132" xsi:type="Element" elementRef="coa3" x="1720" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode133" xsi:type="Element" elementRef="coa4" x="1720" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode134" xsi:type="Element" elementRef="coa5" x="1720" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode135" xsi:type="Element" elementRef="coa6" x="1720" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode136" xsi:type="Element" elementRef="coa7" x="1720" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode137" xsi:type="Element" elementRef="coa8" x="1720" y="2020" w="180" h="60">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode138" xsi:type="Element" elementRef="cap1" x="2280" y="40" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode139" xsi:type="Element" elementRef="cap2" x="2280" y="260" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode140" xsi:type="Element" elementRef="cap3" x="2280" y="480" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode141" xsi:type="Element" elementRef="cap4" x="2280" y="700" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode142" xsi:type="Element" elementRef="cap5" x="2280" y="2900" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode143" xsi:type="Element" elementRef="cap6" x="2280" y="3120" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode144" xsi:type="Element" elementRef="cap7" x="2280" y="150" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode145" xsi:type="Element" elementRef="cap8" x="2280" y="370" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode146" xsi:type="Element" elementRef="cap9" x="2280" y="590" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode147" xsi:type="Element" elementRef="cap10" x="2280" y="810" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode148" xsi:type="Element" elementRef="cap11" x="2280" y="3010" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode149" xsi:type="Element" elementRef="cap12" x="2280" y="3230" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode150" xsi:type="Element" elementRef="cap13" x="2280" y="920" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode151" xsi:type="Element" elementRef="cap14" x="2280" y="1030" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode152" xsi:type="Element" elementRef="cap15" x="2280" y="1140" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode153" xsi:type="Element" elementRef="cap16" x="2280" y="1250" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode154" xsi:type="Element" elementRef="cap17" x="2280" y="1360" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode155" xsi:type="Element" elementRef="cap18" x="2280" y="1470" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode156" xsi:type="Element" elementRef="cap19" x="2280" y="1580" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode157" xsi:type="Element" elementRef="cap20" x="2280" y="1690" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode158" xsi:type="Element" elementRef="cap21" x="2280" y="1800" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode159" xsi:type="Element" elementRef="cap22" x="2280" y="1910" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode160" xsi:type="Element" elementRef="cap23" x="2280" y="2020" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode161" xsi:type="Element" elementRef="cap24" x="2280" y="2130" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode162" xsi:type="Element" elementRef="cap25" x="2280" y="2240" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode163" xsi:type="Element" elementRef="cap26" x="2280" y="2350" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode164" xsi:type="Element" elementRef="cap27" x="2280" y="2460" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode165" xsi:type="Element" elementRef="cap28" x="2280" y="2570" w="180" h="60">
+          <style>
+            <fillColor r="248" g="203" b="173"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode166" xsi:type="Element" elementRef="cap29" x="2280" y="2680" w="180" h="60">
+          <style>
+            <fillColor r="255" g="230" b="153"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode167" xsi:type="Element" elementRef="cap30" x="2280" y="2790" w="180" h="60">
+          <style>
+            <fillColor r="198" g="224" b="180"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode168" xsi:type="Element" elementRef="con1" x="1440" y="1415" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode169" xsi:type="Element" elementRef="con2" x="1440" y="1525" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode170" xsi:type="Element" elementRef="con3" x="1440" y="1635" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode171" xsi:type="Element" elementRef="con4" x="1440" y="1745" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode172" xsi:type="Element" elementRef="con5" x="1440" y="1855" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode173" xsi:type="Element" elementRef="assess1" x="600" y="1525" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode174" xsi:type="Element" elementRef="assess2" x="600" y="1415" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode175" xsi:type="Element" elementRef="assess3" x="600" y="1745" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode176" xsi:type="Element" elementRef="assess4" x="600" y="1855" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode177" xsi:type="Element" elementRef="assess5" x="600" y="1635" w="180" h="60">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode178" xsi:type="Element" elementRef="legend_title" x="40" y="3340" w="326" h="30">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode179" xsi:type="Element" elementRef="legend_motivation" x="40" y="3376" w="160" h="32">
+          <style>
+            <fillColor r="204" g="204" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode180" xsi:type="Element" elementRef="legend_strategy" x="206" y="3376" w="160" h="32">
+          <style>
+            <fillColor r="245" g="222" b="170"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode181" xsi:type="Element" elementRef="legend_business" x="40" y="3414" w="160" h="32">
+          <style>
+            <fillColor r="255" g="255" b="181"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode182" xsi:type="Element" elementRef="legend_application" x="206" y="3414" w="160" h="32">
+          <style>
+            <fillColor r="181" g="255" b="255"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode183" xsi:type="Element" elementRef="legend_technology" x="40" y="3452" w="160" h="32">
+          <style>
+            <fillColor r="201" g="231" b="183"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode184" xsi:type="Element" elementRef="legend_implementation" x="206" y="3452" w="160" h="32">
+          <style>
+            <fillColor r="255" g="224" b="224"/>
+            <lineColor r="90" g="90" b="90"/>
+            <font name="Segoe UI" size="8"><color r="20" g="20" b="20"/></font>
+          </style>
+        </node>
+        <node identifier="pnode185" xsi:type="Element" elementRef="viewinfo_A_pv4" x="420" y="3340" w="340" h="150">
+          <style>
+            <fillColor r="232" g="232" b="232"/>
+            <lineColor r="120" g="120" b="120"/>
+            <font name="Segoe UI" size="8"><color r="40" g="40" b="40"/></font>
+          </style>
+        </node>
+        <connection identifier="pconn19" xsi:type="Relationship" relationshipRef="r338" source="pnode82" target="pnode102">
+          <bendpoint x="275" y="840" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1500" />
+        </connection>
+        <connection identifier="pconn20" xsi:type="Relationship" relationshipRef="r406" source="pnode82" target="pnode138">
+          <bendpoint x="275" y="840" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="70" />
+        </connection>
+        <connection identifier="pconn21" xsi:type="Relationship" relationshipRef="r339" source="pnode83" target="pnode103">
+          <bendpoint x="275" y="620" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1390" />
+        </connection>
+        <connection identifier="pconn22" xsi:type="Relationship" relationshipRef="r407" source="pnode83" target="pnode139">
+          <bendpoint x="275" y="620" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="290" />
+        </connection>
+        <connection identifier="pconn23" xsi:type="Relationship" relationshipRef="r340" source="pnode84" target="pnode104">
+          <bendpoint x="275" y="2380" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1830" />
+        </connection>
+        <connection identifier="pconn24" xsi:type="Relationship" relationshipRef="r408" source="pnode84" target="pnode140">
+          <bendpoint x="275" y="2380" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="510" />
+        </connection>
+        <connection identifier="pconn25" xsi:type="Relationship" relationshipRef="r341" source="pnode85" target="pnode105">
+          <bendpoint x="275" y="2600" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1940" />
+        </connection>
+        <connection identifier="pconn26" xsi:type="Relationship" relationshipRef="r409" source="pnode85" target="pnode141">
+          <bendpoint x="275" y="2600" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="730" />
+        </connection>
+        <connection identifier="pconn27" xsi:type="Relationship" relationshipRef="r342" source="pnode86" target="pnode106">
+          <bendpoint x="275" y="1170" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1720" />
+        </connection>
+        <connection identifier="pconn28" xsi:type="Relationship" relationshipRef="r410" source="pnode86" target="pnode142">
+          <bendpoint x="275" y="1170" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="2930" />
+        </connection>
+        <connection identifier="pconn29" xsi:type="Relationship" relationshipRef="r343" source="pnode87" target="pnode107">
+          <bendpoint x="275" y="1060" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1610" />
+        </connection>
+        <connection identifier="pconn30" xsi:type="Relationship" relationshipRef="r411" source="pnode87" target="pnode143">
+          <bendpoint x="275" y="1060" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3150" />
+        </connection>
+        <connection identifier="pconn31" xsi:type="Relationship" relationshipRef="r344" source="pnode88" target="pnode102">
+          <bendpoint x="275" y="950" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1500" />
+        </connection>
+        <connection identifier="pconn32" xsi:type="Relationship" relationshipRef="r412" source="pnode88" target="pnode144">
+          <bendpoint x="275" y="950" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="180" />
+        </connection>
+        <connection identifier="pconn33" xsi:type="Relationship" relationshipRef="r345" source="pnode89" target="pnode103">
+          <bendpoint x="275" y="730" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1390" />
+        </connection>
+        <connection identifier="pconn34" xsi:type="Relationship" relationshipRef="r413" source="pnode89" target="pnode145">
+          <bendpoint x="275" y="730" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="400" />
+        </connection>
+        <connection identifier="pconn35" xsi:type="Relationship" relationshipRef="r346" source="pnode90" target="pnode104">
+          <bendpoint x="275" y="2490" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1830" />
+        </connection>
+        <connection identifier="pconn36" xsi:type="Relationship" relationshipRef="r347" source="pnode91" target="pnode105">
+          <bendpoint x="275" y="2710" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="3315" />
+          <bendpoint x="275" y="1940" />
+        </connection>
+        <connection identifier="pconn37" xsi:type="Relationship" relationshipRef="r348" source="pnode102" target="pnode108">
+          <bendpoint x="555" y="1500" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="1280" />
+        </connection>
+        <connection identifier="pconn38" xsi:type="Relationship" relationshipRef="r354" source="pnode102" target="pnode114">
+          <bendpoint x="555" y="1500" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="1390" />
+        </connection>
+        <connection identifier="pconn39" xsi:type="Relationship" relationshipRef="r349" source="pnode103" target="pnode109">
+          <bendpoint x="555" y="1390" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="1610" />
+        </connection>
+        <connection identifier="pconn40" xsi:type="Relationship" relationshipRef="r355" source="pnode103" target="pnode115">
+          <bendpoint x="555" y="1390" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="1720" />
+        </connection>
+        <connection identifier="pconn41" xsi:type="Relationship" relationshipRef="r350" source="pnode104" target="pnode110">
+          <bendpoint x="555" y="1830" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="1170" />
+        </connection>
+        <connection identifier="pconn42" xsi:type="Relationship" relationshipRef="r351" source="pnode105" target="pnode111">
+          <bendpoint x="555" y="1940" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="1500" />
+        </connection>
+        <connection identifier="pconn43" xsi:type="Relationship" relationshipRef="r352" source="pnode106" target="pnode112">
+          <bendpoint x="555" y="1720" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="2050" />
+        </connection>
+        <connection identifier="pconn44" xsi:type="Relationship" relationshipRef="r353" source="pnode107" target="pnode113">
+          <bendpoint x="555" y="1610" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="835" y="3315" />
+          <bendpoint x="835" y="2160" />
+        </connection>
+        <connection identifier="pconn45" xsi:type="Relationship" relationshipRef="r356" source="pnode118" target="pnode108">
+          <bendpoint x="1115" y="1500" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1280" />
+        </connection>
+        <connection identifier="pconn46" xsi:type="Relationship" relationshipRef="r362" source="pnode118" target="pnode114">
+          <bendpoint x="1115" y="1500" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1390" />
+        </connection>
+        <connection identifier="pconn47" xsi:type="Relationship" relationshipRef="r357" source="pnode119" target="pnode109">
+          <bendpoint x="1115" y="1720" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1610" />
+        </connection>
+        <connection identifier="pconn48" xsi:type="Relationship" relationshipRef="r363" source="pnode119" target="pnode115">
+          <bendpoint x="1115" y="1720" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1720" />
+        </connection>
+        <connection identifier="pconn49" xsi:type="Relationship" relationshipRef="r358" source="pnode120" target="pnode110">
+          <bendpoint x="1115" y="1390" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1170" />
+        </connection>
+        <connection identifier="pconn50" xsi:type="Relationship" relationshipRef="r359" source="pnode121" target="pnode111">
+          <bendpoint x="1115" y="1610" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1500" />
+        </connection>
+        <connection identifier="pconn51" xsi:type="Relationship" relationshipRef="r360" source="pnode122" target="pnode112">
+          <bendpoint x="1115" y="1830" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="2050" />
+        </connection>
+        <connection identifier="pconn52" xsi:type="Relationship" relationshipRef="r361" source="pnode123" target="pnode113">
+          <bendpoint x="1115" y="1940" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="2160" />
+        </connection>
+        <connection identifier="pconn53" xsi:type="Relationship" relationshipRef="r50" source="pnode124" target="pnode138">
+          <bendpoint x="2235" y="1390" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="70" />
+        </connection>
+        <connection identifier="pconn54" xsi:type="Relationship" relationshipRef="r56" source="pnode124" target="pnode144">
+          <bendpoint x="2235" y="1390" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="180" />
+        </connection>
+        <connection identifier="pconn55" xsi:type="Relationship" relationshipRef="r51" source="pnode125" target="pnode139">
+          <bendpoint x="2235" y="1500" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="290" />
+        </connection>
+        <connection identifier="pconn56" xsi:type="Relationship" relationshipRef="r57" source="pnode125" target="pnode145">
+          <bendpoint x="2235" y="1500" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="400" />
+        </connection>
+        <connection identifier="pconn57" xsi:type="Relationship" relationshipRef="r52" source="pnode126" target="pnode140">
+          <bendpoint x="2235" y="1610" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="510" />
+        </connection>
+        <connection identifier="pconn58" xsi:type="Relationship" relationshipRef="r58" source="pnode126" target="pnode146">
+          <bendpoint x="2235" y="1610" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="620" />
+        </connection>
+        <connection identifier="pconn59" xsi:type="Relationship" relationshipRef="r53" source="pnode127" target="pnode141">
+          <bendpoint x="2235" y="1720" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="730" />
+        </connection>
+        <connection identifier="pconn60" xsi:type="Relationship" relationshipRef="r59" source="pnode127" target="pnode147">
+          <bendpoint x="2235" y="1720" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="840" />
+        </connection>
+        <connection identifier="pconn61" xsi:type="Relationship" relationshipRef="r54" source="pnode128" target="pnode142">
+          <bendpoint x="2235" y="1830" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="2930" />
+        </connection>
+        <connection identifier="pconn62" xsi:type="Relationship" relationshipRef="r60" source="pnode128" target="pnode148">
+          <bendpoint x="2235" y="1830" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3040" />
+        </connection>
+        <connection identifier="pconn63" xsi:type="Relationship" relationshipRef="r55" source="pnode129" target="pnode143">
+          <bendpoint x="2235" y="1940" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3150" />
+        </connection>
+        <connection identifier="pconn64" xsi:type="Relationship" relationshipRef="r61" source="pnode129" target="pnode149">
+          <bendpoint x="2235" y="1940" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3260" />
+        </connection>
+        <connection identifier="pconn65" xsi:type="Relationship" relationshipRef="r42" source="pnode130" target="pnode138">
+          <bendpoint x="1955" y="1280" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="70" />
+        </connection>
+        <connection identifier="pconn66" xsi:type="Relationship" relationshipRef="r43" source="pnode131" target="pnode139">
+          <bendpoint x="1955" y="1390" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="290" />
+        </connection>
+        <connection identifier="pconn67" xsi:type="Relationship" relationshipRef="r44" source="pnode132" target="pnode140">
+          <bendpoint x="1955" y="1500" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="510" />
+        </connection>
+        <connection identifier="pconn68" xsi:type="Relationship" relationshipRef="r45" source="pnode133" target="pnode141">
+          <bendpoint x="1955" y="1610" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="730" />
+        </connection>
+        <connection identifier="pconn69" xsi:type="Relationship" relationshipRef="r46" source="pnode134" target="pnode142">
+          <bendpoint x="1955" y="1720" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="2930" />
+        </connection>
+        <connection identifier="pconn70" xsi:type="Relationship" relationshipRef="r47" source="pnode135" target="pnode143">
+          <bendpoint x="1955" y="1830" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="3150" />
+        </connection>
+        <connection identifier="pconn71" xsi:type="Relationship" relationshipRef="r48" source="pnode136" target="pnode144">
+          <bendpoint x="1955" y="1940" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="180" />
+        </connection>
+        <connection identifier="pconn72" xsi:type="Relationship" relationshipRef="r49" source="pnode137" target="pnode145">
+          <bendpoint x="1955" y="2050" />
+          <bendpoint x="1955" y="3315" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="2235" y="400" />
+        </connection>
+        <connection identifier="pconn73" xsi:type="Relationship" relationshipRef="r62" source="pnode138" target="pnode108">
+          <bendpoint x="2235" y="70" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1280" />
+        </connection>
+        <connection identifier="pconn74" xsi:type="Relationship" relationshipRef="r63" source="pnode139" target="pnode109">
+          <bendpoint x="2235" y="290" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1610" />
+        </connection>
+        <connection identifier="pconn75" xsi:type="Relationship" relationshipRef="r64" source="pnode140" target="pnode110">
+          <bendpoint x="2235" y="510" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1170" />
+        </connection>
+        <connection identifier="pconn76" xsi:type="Relationship" relationshipRef="r65" source="pnode141" target="pnode111">
+          <bendpoint x="2235" y="730" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1500" />
+        </connection>
+        <connection identifier="pconn77" xsi:type="Relationship" relationshipRef="r66" source="pnode142" target="pnode112">
+          <bendpoint x="2235" y="2930" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="2050" />
+        </connection>
+        <connection identifier="pconn78" xsi:type="Relationship" relationshipRef="r67" source="pnode143" target="pnode113">
+          <bendpoint x="2235" y="3150" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="2160" />
+        </connection>
+        <connection identifier="pconn79" xsi:type="Relationship" relationshipRef="r68" source="pnode144" target="pnode114">
+          <bendpoint x="2235" y="180" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1390" />
+        </connection>
+        <connection identifier="pconn80" xsi:type="Relationship" relationshipRef="r69" source="pnode145" target="pnode115">
+          <bendpoint x="2235" y="400" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1720" />
+        </connection>
+        <connection identifier="pconn81" xsi:type="Relationship" relationshipRef="r70" source="pnode146" target="pnode116">
+          <bendpoint x="2235" y="620" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1830" />
+        </connection>
+        <connection identifier="pconn82" xsi:type="Relationship" relationshipRef="r71" source="pnode147" target="pnode117">
+          <bendpoint x="2235" y="840" />
+          <bendpoint x="2235" y="3315" />
+          <bendpoint x="1115" y="3315" />
+          <bendpoint x="1115" y="1940" />
+        </connection>
+        <connection identifier="pconn83" xsi:type="Relationship" relationshipRef="r390" source="pnode173" target="pnode102">
+          <bendpoint x="555" y="1555" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="1500" />
+        </connection>
+        <connection identifier="pconn84" xsi:type="Relationship" relationshipRef="r395" source="pnode173" target="pnode107">
+          <bendpoint x="555" y="1555" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="1610" />
+        </connection>
+        <connection identifier="pconn85" xsi:type="Relationship" relationshipRef="r391" source="pnode174" target="pnode103">
+          <bendpoint x="555" y="1445" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="1390" />
+        </connection>
+        <connection identifier="pconn86" xsi:type="Relationship" relationshipRef="r392" source="pnode175" target="pnode104">
+          <bendpoint x="555" y="1775" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="1830" />
+        </connection>
+        <connection identifier="pconn87" xsi:type="Relationship" relationshipRef="r393" source="pnode176" target="pnode105">
+          <bendpoint x="555" y="1885" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="1940" />
+        </connection>
+        <connection identifier="pconn88" xsi:type="Relationship" relationshipRef="r394" source="pnode177" target="pnode106">
+          <bendpoint x="555" y="1665" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="3315" />
+          <bendpoint x="555" y="1720" />
+        </connection>
+      </view>
+    </diagrams>
+  </views>
+</model>
