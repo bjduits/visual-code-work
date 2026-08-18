@@ -31,6 +31,7 @@ from typing import Dict, List
 
 from dotenv import load_dotenv
 
+import external_signals
 from gather_trading_research import (
     YAHOO_HEADERS,
     analyze_crypto,
@@ -108,7 +109,7 @@ def fetch_crypto_markets_by_id(coin_ids: List[str]) -> List[Dict]:
     return response.json()
 
 
-def scan_crypto(positions: Dict[str, Dict], top_n: int = 10) -> Dict[str, List[Dict]]:
+def scan_crypto(positions: Dict[str, Dict], fear_greed: Dict, top_n: int = 10) -> Dict[str, List[Dict]]:
     universe = fetch_crypto_universe(per_page=100)
     universe_ids = {asset["id"] for asset in universe}
 
@@ -128,9 +129,14 @@ def scan_crypto(positions: Dict[str, Dict], top_n: int = 10) -> Dict[str, List[D
     trending = [by_id[cid] for cid in trending_ids if cid in by_id][:top_n]
 
     def analyze_all(assets: List[Dict]) -> List[Dict]:
+        # Funding rate is intentionally skipped here (unlike the focused
+        # watchlist in gather_trading_research.py): this scan covers 100+
+        # assets per run, and a per-asset Binance call for all of them would
+        # be slow and risk rate-limiting. Fear & Greed is a single shared
+        # call, so it's cheap to apply market-wide.
         results = []
         for asset in assets:
-            entry = analyze_crypto(asset, positions)
+            entry = analyze_crypto(asset, positions, fear_greed=fear_greed)
             entry["platform"] = CRYPTO_PLATFORM
             results.append(entry)
         return results
@@ -181,7 +187,7 @@ def quote_to_asset(quote: Dict) -> Dict:
     }
 
 
-def scan_stocks(positions: Dict[str, Dict], count: int = 10) -> Dict[str, List[Dict]]:
+def scan_stocks(positions: Dict[str, Dict], vix: Dict, count: int = 10) -> Dict[str, List[Dict]]:
     screens = {
         "day_gainers": "top_gainers",
         "day_losers": "top_losers",
@@ -202,7 +208,9 @@ def scan_stocks(positions: Dict[str, Dict], count: int = 10) -> Dict[str, List[D
             asset = quote_to_asset(quote)
             if asset.get("regularMarketPrice") is None:
                 continue
-            entry = analyze_stock(asset, positions)
+            # Analyst signal is skipped here for the same reason funding rate
+            # is skipped in scan_crypto: too many assets for a per-asset call.
+            entry = analyze_stock(asset, positions, vix=vix)
             entry["platform"] = STOCK_PLATFORM
             results.append(entry)
         output[label] = results
@@ -210,7 +218,11 @@ def scan_stocks(positions: Dict[str, Dict], count: int = 10) -> Dict[str, List[D
     return output
 
 
-def build_summary(crypto_scan: Dict[str, List[Dict]], stock_scan: Dict[str, List[Dict]]) -> str:
+def build_summary(
+    crypto_scan: Dict[str, List[Dict]],
+    stock_scan: Dict[str, List[Dict]],
+    market_context: Dict = None,
+) -> str:
     lines = [
         f"Market Scanner Report - {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
@@ -219,6 +231,18 @@ def build_summary(crypto_scan: Dict[str, List[Dict]], stock_scan: Dict[str, List
         "This is not financial advice.",
         "",
     ]
+
+    market_context = market_context or {}
+    fear_greed = market_context.get("fear_greed")
+    vix = market_context.get("vix")
+    if fear_greed or vix:
+        lines.append("Market Context:")
+        if fear_greed:
+            lines.append(f"- Crypto Fear & Greed Index: {fear_greed['value']} ({fear_greed['classification']})")
+        if vix:
+            change_txt = f", {vix['change_pct']:+.2f}% vs prev close" if vix.get("change_pct") is not None else ""
+            lines.append(f"- VIX: {vix['value']}{change_txt}")
+        lines.append("")
 
     def crypto_lines(title: str, assets: List[Dict]) -> List[str]:
         out = [title]
@@ -231,6 +255,8 @@ def build_summary(crypto_scan: Dict[str, List[Dict]], stock_scan: Dict[str, List
                 f"${asset['current_price']} | 24h: {asset['change_24h_pct']}% | 7d: {asset['change_7d_pct']}% | "
                 f"momentum: {asset['momentum']} | risk: {asset['risk_level']} | score: {asset['score']}"
             )
+            for note in asset.get("context_notes", []):
+                out.append(f"    context: {note}")
         out.append("")
         return out
 
@@ -245,6 +271,8 @@ def build_summary(crypto_scan: Dict[str, List[Dict]], stock_scan: Dict[str, List
                 f"${asset['current_price']} | 1d: {asset['change_pct']}% | 7d: {asset['change_7d_pct']}% | "
                 f"momentum: {asset['momentum']} | risk: {asset['risk_level']} | score: {asset['score']}"
             )
+            for note in asset.get("context_notes", []):
+                out.append(f"    context: {note}")
         out.append("")
         return out
 
@@ -281,23 +309,27 @@ def main():
 
     positions = load_positions()
 
+    fear_greed = external_signals.fetch_fear_greed_index()
+    vix = external_signals.fetch_vix(YAHOO_HEADERS)
+
     crypto_scan: Dict[str, List[Dict]] = {}
     try:
-        crypto_scan = scan_crypto(positions)
+        crypto_scan = scan_crypto(positions, fear_greed)
     except Exception as exc:
         logger.error(f"Crypto scan failed: {exc}")
 
     stock_scan: Dict[str, List[Dict]] = {}
     try:
-        stock_scan = scan_stocks(positions)
+        stock_scan = scan_stocks(positions, vix)
     except Exception as exc:
         logger.error(f"Stock scan failed: {exc}")
 
-    summary = build_summary(crypto_scan, stock_scan)
+    summary = build_summary(crypto_scan, stock_scan, {"fear_greed": fear_greed, "vix": vix})
     report = {
         "run_at": datetime.now(timezone.utc).isoformat(),
         "crypto_scan": crypto_scan,
         "stock_scan": stock_scan,
+        "market_context": {"fear_greed": fear_greed, "vix": vix},
     }
     save_report(report, summary)
 

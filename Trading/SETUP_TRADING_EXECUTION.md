@@ -205,7 +205,12 @@ network).
 - `Trading/execution/gather_trading_research.py`
   - Fetches current crypto market data from CoinGecko
   - Fetches stock quote data and 7-day history from Yahoo Finance
-  - Computes momentum, volatility, and score for each asset
+  - Fetches market-context signals (Crypto Fear & Greed Index, Binance
+    funding rates, VIX, Yahoo analyst consensus/price target) via
+    `Trading/execution/external_signals.py` -- see README_TRADING.md for
+    details. None of these require an API key.
+  - Computes momentum, volatility, and score for each asset, adjusted by
+    the market-context signals above
   - Saves a research report and summary to `.tmp/`
 
 - `Trading/execution/trading_execution_template.py`

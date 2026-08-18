@@ -181,6 +181,7 @@ def build_advice(report: Dict) -> Dict:
             "score": score,
             "estimated_profit_pct": est_profit,
             "estimated_cost_pct": est_cost,
+            "context_notes": asset.get("context_notes", []),
         }
 
         advice["all"].append(entry)
@@ -212,6 +213,8 @@ def summarize_advice(advice: Dict) -> str:
         lines.append(
             f"- {item['symbol']} ({item['name']}) [{item.get('platform', 'n/a')}]: {held_label} | advice={item.get('advice')} | qty={item.get('quantity', 'n/a')} | avg={item.get('avg_price', 'n/a')} | unrealized={item.get('unrealized_pct', 'n/a')}% | sell={item.get('sell_signal')} | risk={item['risk']} | short={item['short_term']} | long={item['long_term']} | score={item['score']} | est profit={item['estimated_profit_pct']}% | est cost={item['estimated_cost_pct']}%"
         )
+        for note in item.get("context_notes", []):
+            lines.append(f"    context: {note}")
 
     lines.append("")
     lines.append("Long-Term Candidates (6 months):")

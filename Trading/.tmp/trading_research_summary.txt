@@ -1,27 +1,39 @@
-Trading Research Report - 2026-08-06 08:12 UTC
+Trading Research Report - 2026-08-18 08:04 UTC
+
+Market Context:
+- Crypto Fear & Greed Index: 41 (Fear)
+- VIX: 15.9, +9.28% vs prev close
 
 Top Crypto Candidates:
-- Ethereum (ETH): $1652.19 | 24h: 2.0% | 7d: -0.61% | risk: low | neutral | score: 54 | est profit: 0.7% | platform: Coinmerce
-- Polkadot (DOT): $0.721327 | 24h: -2.61% | 7d: 7.72% | risk: medium | neutral | score: 53 | est profit: 2.56% | platform: Coinmerce
-- Bitcoin (BTC): $56062 | 24h: 0.81% | 7d: 0.3% | risk: low | neutral | score: 52 | est profit: 0.56% | platform: Coinmerce
-- Solana (SOL): $63.88 | 24h: -0.38% | 7d: -0.45% | risk: low | neutral | score: 51 | est profit: -0.41% | platform: Coinmerce
-- Chainlink (LINK): $7.08 | 24h: -0.14% | 7d: -2.21% | risk: low | neutral | score: 49 | est profit: -1.18% | platform: Coinmerce
+- Chainlink (LINK): $8.14 | 24h: -0.5% | 7d: 11.7% | risk: medium | neutral | score: 61 | est profit: 5.6% | platform: Coinmerce
+- Bitcoin (BTC): $55427 | 24h: 0.9% | 7d: 0.3% | risk: low | neutral | score: 52 | est profit: 0.6% | platform: Coinmerce
+- Ethereum (ETH): $1638.87 | 24h: -0.3% | 7d: 1.3% | risk: low | neutral | score: 52 | est profit: 0.5% | platform: Coinmerce
+- Solana (SOL): $65.65 | 24h: 0.3% | 7d: 0.3% | risk: low | neutral | score: 51 | est profit: 0.3% | platform: Coinmerce
+- Polkadot (DOT): $0.635415 | 24h: -3.7% | 7d: -8.6% | risk: high | moderate downtrend | score: 36 | est profit: -6.15% | platform: Coinmerce
+    context: Funding rate -0.033%/8h: shorts paying longs -- crowd is leveraged short, potential short-squeeze upside.
 
 Top Stock Candidates:
-- PLTR (Palantir Technologies Inc.): $158.43 | 1d: 20.45% | 7d: 28.25% | risk: high | strong short-term bullish | score: 91 | est profit: 20.0% | platform: Degiro.nl
-- MSFT (Microsoft Corporation): $487.46 | 1d: 25.28% | 7d: 23.93% | risk: high | strong short-term bullish | score: 91 | est profit: 20.0% | platform: Degiro.nl
-- CRWV (CoreWeave, Inc.): $89.89 | 1d: 26.98% | 7d: 33.57% | risk: high | strong short-term bullish | score: 91 | est profit: 20.0% | platform: Degiro.nl
-- ALAB (Astera Labs, Inc.): $318.43 | 1d: 12.71% | 7d: 22.36% | risk: high | strong short-term bullish | score: 91 | est profit: 17.54% | platform: Degiro.nl
-- AMZN (Amazon.com, Inc.): $272.65 | 1d: 17.83% | 7d: 18.1% | risk: high | strong short-term bullish | score: 89 | est profit: 17.97% | platform: Degiro.nl
-- RBRK (Rubrik, Inc.): $84.81 | 1d: 13.35% | 7d: 18.7% | risk: high | strong short-term bullish | score: 88 | est profit: 16.03% | platform: Degiro.nl
-- SPCE (Virgin Galactic Holdings, Inc.): $2.89 | 1d: 14.23% | 7d: 16.06% | risk: high | strong short-term bullish | score: 87 | est profit: 15.15% | platform: Degiro.nl
+- CAVA (CAVA Group, Inc.): $71.02 | 1d: 14.13% | 7d: 19.22% | risk: high | strong short-term bullish | score: 95 | est profit: 16.67% | platform: Degiro.nl
+    context: Analyst consensus bullish (mean rating 1.8/5).
+- CRWV (CoreWeave, Inc.): $106.0 | 1d: 24.22% | 7d: 16.09% | risk: high | strong short-term bullish | score: 93 | est profit: 20.0% | platform: Degiro.nl
+    context: Analyst consensus bullish (mean rating 1.8/5).
+- RBRK (Rubrik, Inc.): $101.02 | 1d: 19.41% | 7d: 13.5% | risk: high | strong short-term bullish | score: 89 | est profit: 16.45% | platform: Degiro.nl
+    context: Analyst consensus bullish (mean rating 1.1/5).
+- RDDT (Reddit, Inc.): $164.5 | 1d: 9.03% | 7d: 10.14% | risk: high | strong short-term bullish | score: 85 | est profit: 9.59% | platform: Degiro.nl
+    context: Analyst consensus bullish (mean rating 1.9/5).
+- MAERSK-B.CO (A.P. Møller - Mærsk A/S): $21650.0 | 1d: 25.87% | 7d: 25.87% | risk: high | strong short-term bullish | score: 84 | est profit: 20.0% | platform: Degiro.nl
+    context: Analyst consensus bearish (mean rating 3.5/5) despite recent price action -- divergence warning.
+    context: Price is already 26.3% above the average analyst target -- limited fundamental upside left by that measure.
+- PLTR (Palantir Technologies Inc.): $172.55 | 1d: 10.67% | 7d: 1.18% | risk: high | moderate bullish | score: 78 | est profit: 5.92% | platform: Degiro.nl
+    context: Analyst consensus bullish (mean rating 1.8/5).
+- CRCL (Circle Internet Group): $74.59 | 1d: 17.87% | 7d: 7.39% | risk: high | strong short-term bullish | score: 78 | est profit: 12.63% | platform: Degiro.nl
 
 Key News Headlines:
-- [The Times of India] HSBC picks ICICI Bank, Titan, 8 other stocks to ride a potential $25 billion FII inflow as AI trade volatility looms (2026-08-05T07:30:02Z)
-- [RTE] A new state investment scheme is coming. Will it work for you? (2026-08-05T06:09:59Z)
-- [The-independent.com] Seven £1 recipes from Miguel Barclay that make healthy eating affordable (2026-08-05T05:00:00Z)
-- [The Times of India] Inside LIC’s Rs 16 lakh crore portfolio: Its biggest stock buys and sells in June quarter (2026-08-05T03:02:53Z)
-- [The Times of India] ETMarkets Smart Talk| Large caps offer stability, but alpha lies in selective mid- and small-caps: Rakesh Vyas (2026-08-05T02:33:53Z)
+- [The Times of India] Stock picks of the week: 5 stocks with consistent score improvement and upside potential of up to 23% (2026-08-17T07:56:59Z)
+- [CNBC] CNBC Daily Open: U.S.-Iran ceasefire set to expire (2026-08-17T06:04:10Z)
+- [Naturalnews.com] Apple Surpasses Nvidia as World’s Most Valuable Company (2026-08-17T06:00:00Z)
+- [The Times of India] How India's digital infrastructure opened global markets to Indian investors (2026-08-17T05:02:58Z)
+- [Lawyersgunsmoneyblog.com] Ever wonder why most fund managers can’t beat the S&P 500? (2026-08-17T04:05:14Z)
 
 Notes:
 - Use this report as a short-term research guide, not a trade signal.

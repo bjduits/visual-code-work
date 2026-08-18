@@ -23,6 +23,8 @@ from typing import List, Dict, Optional
 
 from dotenv import load_dotenv
 
+import external_signals
+
 # Load environment variables
 env_path = Path(__file__).parent.parent.parent / ".env"
 load_dotenv(env_path)
@@ -258,7 +260,12 @@ def score_crypto(change_24h: float, change_7d: float, volume: float) -> int:
     return score
 
 
-def analyze_crypto(asset: Dict, positions: Dict[str, Dict]) -> Dict:
+def analyze_crypto(
+    asset: Dict,
+    positions: Dict[str, Dict],
+    fear_greed: Optional[Dict] = None,
+    funding_rate_pct: Optional[float] = None,
+) -> Dict:
     current = asset.get("current_price")
     change_24h = asset.get("price_change_percentage_24h_in_currency") or 0.0
     change_7d = asset.get("price_change_percentage_7d_in_currency") or 0.0
@@ -296,6 +303,9 @@ def analyze_crypto(asset: Dict, positions: Dict[str, Dict]) -> Dict:
     estimated_cost_pct = 0.18
     estimated_profit_pct = min(max((change_7d + change_24h) / 2, -15.0), 25.0)
     score = score_crypto(change_24h, change_7d, volume)
+    score, risk_level, context_notes = external_signals.apply_crypto_context(
+        score, risk_level, change_7d, fear_greed, funding_rate_pct
+    )
     hold_info = evaluate_holdings(asset.get("symbol", ""), current, positions, momentum, risk_level, volatility)
 
     return {
@@ -314,6 +324,9 @@ def analyze_crypto(asset: Dict, positions: Dict[str, Dict]) -> Dict:
         "estimated_cost_pct": round(estimated_cost_pct, 2),
         "estimated_profit_pct": round(estimated_profit_pct, 2),
         "score": score,
+        "sentiment_fear_greed": fear_greed,
+        "funding_rate_pct": funding_rate_pct,
+        "context_notes": context_notes,
         "source": "CoinGecko",
         "platform": os.getenv("CRYPTO_PLATFORM", "Coinmerce"),
         **hold_info
@@ -350,7 +363,12 @@ def score_stock(asset: Dict) -> int:
     return score
 
 
-def analyze_stock(asset: Dict, positions: Dict[str, Dict]) -> Dict:
+def analyze_stock(
+    asset: Dict,
+    positions: Dict[str, Dict],
+    vix: Optional[Dict] = None,
+    analyst: Optional[Dict] = None,
+) -> Dict:
     current = asset.get("regularMarketPrice")
     change_pct = asset.get("regularMarketChangePercent") or 0.0
     change_7d = compute_stock_7d_change(asset)
@@ -394,6 +412,8 @@ def analyze_stock(asset: Dict, positions: Dict[str, Dict]) -> Dict:
     estimated_cost_pct = 0.25
     estimated_profit_pct = min(max((change_pct + change_7d) / 2, -15.0), 20.0)
 
+    score, risk_level, context_notes = external_signals.apply_stock_context(score, risk_level, vix, analyst)
+
     hold_info = evaluate_holdings(asset.get("symbol", ""), current, positions, momentum, risk_level, volatility)
 
     return {
@@ -412,23 +432,45 @@ def analyze_stock(asset: Dict, positions: Dict[str, Dict]) -> Dict:
         "estimated_cost_pct": round(estimated_cost_pct, 2),
         "estimated_profit_pct": round(estimated_profit_pct, 2),
         "score": score,
+        "vix": vix,
+        "analyst_signal": analyst,
+        "context_notes": context_notes,
         "source": "Yahoo Finance",
         "platform": os.getenv("STOCK_PLATFORM", "Degiro.nl"),
         **hold_info
     }
 
 
-def build_summary(crypto_analysis: List[Dict], stock_analysis: List[Dict], news: List[Dict]) -> str:
+def build_summary(
+    crypto_analysis: List[Dict],
+    stock_analysis: List[Dict],
+    news: List[Dict],
+    market_context: Optional[Dict] = None,
+) -> str:
     lines = [
         f"Trading Research Report - {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
-        "Top Crypto Candidates:",
     ]
 
+    market_context = market_context or {}
+    fear_greed = market_context.get("fear_greed")
+    vix = market_context.get("vix")
+    if fear_greed or vix:
+        lines.append("Market Context:")
+        if fear_greed:
+            lines.append(f"- Crypto Fear & Greed Index: {fear_greed['value']} ({fear_greed['classification']})")
+        if vix:
+            change_txt = f", {vix['change_pct']:+.2f}% vs prev close" if vix.get("change_pct") is not None else ""
+            lines.append(f"- VIX: {vix['value']}{change_txt}")
+        lines.append("")
+
+    lines.append("Top Crypto Candidates:")
     for asset in sorted(crypto_analysis, key=lambda x: x.get("score", 0), reverse=True)[:7]:
         lines.append(
             f"- {asset['name']} ({asset['symbol'].upper()}): ${asset['current_price']} | 24h: {asset['change_24h_pct']}% | 7d: {asset['change_7d_pct']}% | risk: {asset.get('risk_level', 'n/a')} | {asset['momentum']} | score: {asset['score']} | est profit: {asset.get('estimated_profit_pct', 0)}% | platform: {asset.get('platform', 'n/a')}"
         )
+        for note in asset.get("context_notes", []):
+            lines.append(f"    context: {note}")
 
     lines.append("")
     lines.append("Top Stock Candidates:")
@@ -436,6 +478,8 @@ def build_summary(crypto_analysis: List[Dict], stock_analysis: List[Dict], news:
         lines.append(
             f"- {asset['symbol'].upper()} ({asset['name']}): ${asset['current_price']} | 1d: {asset['change_pct']}% | 7d: {asset['change_7d_pct']}% | risk: {asset.get('risk_level', 'n/a')} | {asset['momentum']} | score: {asset['score']} | est profit: {asset.get('estimated_profit_pct', 0)}% | platform: {asset.get('platform', 'n/a')}"
         )
+        for note in asset.get("context_notes", []):
+            lines.append(f"    context: {note}")
 
     lines.append("")
     lines.append("Key News Headlines:")
@@ -497,17 +541,35 @@ def main():
 
     positions = load_positions()
 
+    # Market-context signals: independent of any single asset's own recent
+    # price action, used to pull the score back down on crowded/over-extended
+    # setups instead of only ever rewarding recent moves. See
+    # external_signals.py for rationale.
+    fear_greed = external_signals.fetch_fear_greed_index()
+    vix = external_signals.fetch_vix(YAHOO_HEADERS)
+    logger.info(f"Fear & Greed index: {fear_greed}")
+    logger.info(f"VIX: {vix}")
+
     if crypto_focus:
         try:
             crypto_assets = fetch_crypto_data(crypto_focus)
-            crypto_results = [analyze_crypto(asset, positions) for asset in crypto_assets]
+            crypto_results = []
+            for asset in crypto_assets:
+                binance_symbol = external_signals.binance_symbol_for(asset.get("id", ""), asset.get("symbol", ""))
+                funding_rate_pct = external_signals.fetch_funding_rate(binance_symbol)
+                crypto_results.append(analyze_crypto(asset, positions, fear_greed, funding_rate_pct))
         except Exception as exc:
             logger.error(f"Crypto data fetch failed: {exc}")
 
     if stock_focus:
         try:
             stock_assets = fetch_stock_data([symbol.upper() for symbol in stock_focus])
-            stock_results = [analyze_stock(asset, positions) for asset in stock_assets if asset.get("regularMarketPrice") is not None]
+            stock_results = []
+            for asset in stock_assets:
+                if asset.get("regularMarketPrice") is None:
+                    continue
+                analyst = external_signals.fetch_analyst_signal(asset.get("symbol", ""), YAHOO_HEADERS)
+                stock_results.append(analyze_stock(asset, positions, vix, analyst))
         except Exception as exc:
             logger.error(f"Stock data fetch failed: {exc}")
 
@@ -522,13 +584,15 @@ def main():
         "EURCHF": fetch_fx_rate("EURCHF=X"),
     }
 
-    summary = build_summary(crypto_results, stock_results, news_results)
+    market_context = {"fear_greed": fear_greed, "vix": vix}
+    summary = build_summary(crypto_results, stock_results, news_results, market_context)
     report = {
         "run_at": datetime.now(timezone.utc).isoformat(),
         "crypto_analysis": crypto_results,
         "stock_analysis": stock_results,
         "news": news_results,
         "fx_rates": fx_rates,
+        "market_context": market_context,
     }
     save_report(report, summary)
 

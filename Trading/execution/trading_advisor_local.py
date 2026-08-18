@@ -59,12 +59,15 @@ def load_report() -> Dict:
 def build_prompt(report: Dict) -> str:
     lines = [PROMPT_TEMPLATE, "Asset analysis:"]
     for asset in report.get("crypto_analysis", []) + report.get("stock_analysis", []):
-        lines.append(
+        line = (
             f"- {asset.get('symbol')} ({asset.get('name')}): score={asset.get('score')} "
             f"risk={asset.get('risk_level')} short={asset.get('momentum')} "
             f"long={asset.get('long_term_note')} profit={asset.get('estimated_profit_pct')}% "
             f"cost={asset.get('estimated_cost_pct')}% platform={asset.get('platform', 'n/a')}"
         )
+        if asset.get("context_notes"):
+            line += " context=[" + "; ".join(asset["context_notes"]) + "]"
+        lines.append(line)
     lines.append("\nProvide a concise advisor summary.")
     return "\n".join(lines)
 

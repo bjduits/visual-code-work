@@ -197,13 +197,17 @@ def build_assets(report: Dict) -> List[Dict]:
             "unrealized_pct": asset.get("unrealized_pct"),
             "sell_signal": sell_signal,
             "advice": compute_advice(held, sell_signal, score),
+            "context_notes": asset.get("context_notes", []),
         })
     return assets
 
 
-def build_prompt(assets: List[Dict], headlines: List[Dict], fx_rates: Dict) -> str:
+def build_prompt(assets: List[Dict], headlines: List[Dict], fx_rates: Dict, market_context: Optional[Dict] = None) -> str:
     eur_usd = fx_rates.get("EURUSD")
     eur_chf = fx_rates.get("EURCHF")
+    market_context = market_context or {}
+    fear_greed = market_context.get("fear_greed")
+    vix = market_context.get("vix")
     lines = [
         "Je bent een warme, vriendelijke beleggingsadviseur die schrijft voor een "
         "particuliere belegger. De belegger houdt zijn geld voornamelijk in EUR aan, "
@@ -237,12 +241,28 @@ def build_prompt(assets: List[Dict], headlines: List[Dict], fx_rates: Dict) -> s
         "8) Hoe de recente geschiedenis (24u/7-daagse trend) dit beeld vormt.\n"
         "9) Een vriendelijke afsluiting die benadrukt dat dit educatief onderzoek "
         "is, geen financieel advies, en dat de lezer alles zelf moet verifiëren.\n\n"
+    ]
+
+    context_bits = []
+    if fear_greed:
+        context_bits.append(f"Crypto Fear & Greed Index: {fear_greed['value']} ({fear_greed['classification']})")
+    if vix:
+        context_bits.append(f"VIX (aandelenmarkt-angstindex): {vix['value']}")
+    if context_bits:
+        lines.append(
+            "Bredere marktcontext (gebruik dit om koopadvies te temperen bij euforie/paniek, "
+            "verzin geen extra cijfers): " + "; ".join(context_bits) + "\n"
+        )
+
+    lines.append(
         "Marktdata (symbool, naam, type, prijs, valuta, recente en 7-daagse "
         "verandering, momentum, langetermijnnotitie, risico, score, ons eigen "
-        "Koop/Volg/Vermijd/Verkoop-advies, geschat rendement/kosten, platform):\n"
-    ]
+        "Koop/Volg/Vermijd/Verkoop-advies, geschat rendement/kosten, platform, "
+        "aanvullende context-signalen zoals sentiment/funding-rate/analistenmening "
+        "die de score al bijstellen):\n"
+    )
     for a in assets:
-        lines.append(
+        line = (
             f"- {a['symbol']} ({a['name']}, {a['type']}): prijs={a['current_price']} "
             f"{a['currency']} recente_verandering={a['change_recent_pct']}% "
             f"7d_verandering={a['change_7d_pct']}% momentum={a['momentum']} "
@@ -251,6 +271,9 @@ def build_prompt(assets: List[Dict], headlines: List[Dict], fx_rates: Dict) -> s
             f"geschat_rendement={a['estimated_profit_pct']}% "
             f"geschatte_kosten={a['estimated_cost_pct']}% platform={a['platform']}"
         )
+        if a.get("context_notes"):
+            line += " context_signalen=[" + "; ".join(a["context_notes"]) + "]"
+        lines.append(line)
 
     lines.append("\nActuele nieuwskoppen (titel — bron):")
     if headlines:
@@ -289,7 +312,14 @@ def save_text_output(content: str) -> None:
     logger.info(f"Claude advisor narrative saved to {TEXT_OUTPUT_PATH}")
 
 
-def build_pdf(assets: List[Dict], narrative: str, headlines: List[Dict], fx_rates: Dict, generated_at: str) -> None:
+def build_pdf(
+    assets: List[Dict],
+    narrative: str,
+    headlines: List[Dict],
+    fx_rates: Dict,
+    generated_at: str,
+    market_context: Optional[Dict] = None,
+) -> None:
     styles = getSampleStyleSheet()
     title_style = ParagraphStyle(
         "TitleFriendly", parent=styles["Title"], textColor=colors.HexColor("#1a3d5c")
@@ -354,7 +384,30 @@ def build_pdf(assets: List[Dict], narrative: str, headlines: List[Dict], fx_rate
         "voor toekomstige resultaten.",
         body,
     ))
-    story.append(Spacer(1, 8))
+    market_context = market_context or {}
+    fear_greed = market_context.get("fear_greed")
+    vix = market_context.get("vix")
+    if fear_greed or vix:
+        story.append(Paragraph("Marktcontext", h2))
+        if fear_greed:
+            story.append(Paragraph(
+                f"Crypto Fear &amp; Greed Index: <b>{fear_greed['value']}</b> "
+                f"({escape(fear_greed['classification'])}). Dit meet de stemming onder "
+                "crypto-beleggers; extreme hebzucht bij een asset die al hard is gestegen "
+                "verlaagt de score hierboven (kans op een correctie), extreme angst is een "
+                "signaal om niet zomaar tegen een dalende trend in te kopen.",
+                body,
+            ))
+        if vix:
+            change_txt = f" ({vix['change_pct']:+.2f}% t.o.v. vorige slotkoers)" if vix.get("change_pct") is not None else ""
+            story.append(Paragraph(
+                f"VIX (angstindex Amerikaanse aandelenmarkt): <b>{vix['value']}</b>{change_txt}. "
+                "Een hoge VIX (boven ~25) duidt op een onrustige markt en verhoogt het risico "
+                "van aandelenposities hierboven; een lage VIX (onder ~14) duidt op een rustige, "
+                "mogelijk complacente markt.",
+                body,
+            ))
+        story.append(Spacer(1, 8))
 
     ranked = sorted(assets, key=lambda x: -x["score"])
 
@@ -437,6 +490,8 @@ def build_pdf(assets: List[Dict], narrative: str, headlines: List[Dict], fx_rate
                 f"Valuta: {escape(a['funding_advice'])}",
                 body,
             ))
+            for note in a.get("context_notes", []):
+                story.append(Paragraph(f"&nbsp;&nbsp;&bull; <i>{escape(note)}</i>", small))
 
     watch = [a for a in ranked if a["advice"] == "Watch"]
     if watch:
@@ -451,6 +506,8 @@ def build_pdf(assets: List[Dict], narrative: str, headlines: List[Dict], fx_rate
                 f"Risico: {escape(RISK_NL.get(a['risk'], a['risk']))}.",
                 body,
             ))
+            for note in a.get("context_notes", []):
+                story.append(Paragraph(f"&nbsp;&nbsp;&bull; <i>{escape(note)}</i>", small))
 
     holdings = [a for a in ranked if a["held"]]
     if holdings:
@@ -494,7 +551,8 @@ def main() -> None:
     assets = build_assets(report)
     headlines = report.get("news", [])
     fx_rates = report.get("fx_rates", {})
-    prompt = build_prompt(assets, headlines, fx_rates)
+    market_context = report.get("market_context", {})
+    prompt = build_prompt(assets, headlines, fx_rates, market_context)
     try:
         narrative = run_claude(prompt)
     except Exception as exc:
@@ -505,7 +563,7 @@ def main() -> None:
 
     generated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
     try:
-        build_pdf(assets, narrative, headlines, fx_rates, generated_at)
+        build_pdf(assets, narrative, headlines, fx_rates, generated_at, market_context)
     except Exception as exc:
         logger.error(f"PDF generation failed: {exc}")
         return
